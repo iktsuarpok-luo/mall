@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, desc, pic_url, sort_order, floor_price, add_time, update_time, deleted
+    id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted
   </sql>
   <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.BrandExample" resultMap="BaseResultMap">
     select

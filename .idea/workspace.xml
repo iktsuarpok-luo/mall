@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e80081c7-1ab4-41ec-ba27-34da490b6133" name="Default Changelist" comment="&quot;zxin 配置管理完成&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/MallApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/MallApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/BaseRespModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/BaseRespModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/System.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/System.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/mapper/SystemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/mapper/SystemMapper.java" afterDir="false" />
+    <list default="true" id="e80081c7-1ab4-41ec-ba27-34da490b6133" name="Default Changelist" comment="&quot;张鑫 配置管理完成&quot;">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/L1Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/BrandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/IssueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/KeywordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/StorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/BrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/IssueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/KeywordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/RegionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/IssueServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/KeywordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/RegionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/StorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/lxt/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/resources/application-db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Region.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/RegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/lxt/RegionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/SystemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/SystemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/BrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/BrandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/CategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/IssueMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/IssueMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/KeywordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/KeywordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/StorageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/StorageMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,23 +49,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/zxin/ConfigController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3591">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="54">
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/main/resources/application-db.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="162">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -109,15 +154,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/config/CorsConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -138,13 +174,15 @@
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Express.java" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/System.java" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/BaseRespModel.java" />
-        <option value="$PROJECT_DIR$/project/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/mapper/SystemMapper.java" />
         <option value="$PROJECT_DIR$/project/src/main/resources/com/cskaoyan/mall/mapper/SystemMapper.xml" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/util/MallUtil.java" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/zxin/ConfigService.java" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/service/zxin/ConfigServiceImpl.java" />
         <option value="$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/zxin/ConfigController.java" />
+        <option value="$PROJECT_DIR$/project/src/main/resources/application-db.properties" />
+        <option value="$PROJECT_DIR$/project/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/project/.gitignore" />
       </list>
     </option>
   </component>
@@ -173,8 +211,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-18" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1386" />
     <option name="height" value="784" />
   </component>
@@ -262,23 +300,6 @@
             </path>
             <path>
               <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -339,7 +360,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565970588927" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565971278434" />
     <property name="last_opened_file_path" value="F:/java/Spring/project_erp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -376,7 +397,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565922691759</updated>
-      <workItem from="1565922693620" duration="32301000" />
+      <workItem from="1565922693620" duration="32990000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;zxin 配置管理完成&quot;">
       <created>1565970447541</created>
@@ -389,10 +410,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32301000" />
+    <option name="totallyTimeSpent" value="32990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" side_tool="true" />
       <window_info id="Image Layers" order="0" />
@@ -434,20 +456,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;zxin 配置管理完成&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;zxin 配置管理完成&quot;" />
+    <MESSAGE value="&quot;张鑫 配置管理完成&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;张鑫 配置管理完成&quot;" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/bean/Permission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -729,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -817,13 +826,6 @@
         <state relative-caret-position="-1782" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/MallApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -837,11 +839,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/main/java/com/cskaoyan/mall/controller/zxin/ConfigController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3591">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/main/resources/application-db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
