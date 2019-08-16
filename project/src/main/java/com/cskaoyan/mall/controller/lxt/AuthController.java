@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class AuthController {
     @RequestMapping("auth/login")
     @ResponseBody
-    @CrossOrigin("http://localhost:9528")
+//    @CrossOrigin("http://localhost:9528")
     public HashMap login(String username, String password){
         HashMap map = new HashMap();
         map.put("errno",0);
@@ -22,7 +22,7 @@ public class AuthController {
     }
     @RequestMapping("auth/info")
     @ResponseBody
-    @CrossOrigin("http://localhost:9528")
+
     public HashMap info(){
         HashMap map = new HashMap();
         map.put("errno",0);
