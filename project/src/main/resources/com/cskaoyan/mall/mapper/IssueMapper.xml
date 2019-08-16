@@ -101,12 +101,16 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Issue">
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
     insert into cskaoyan_mall_issue (id, question, answer, 
       add_time, update_time, deleted
       )
     values (#{id,jdbcType=INTEGER}, #{question,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
       #{addTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
       )
+
   </insert>
   <insert id="insertSelective" parameterType="com.cskaoyan.mall.bean.Issue">
     insert into cskaoyan_mall_issue

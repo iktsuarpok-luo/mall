@@ -17,11 +17,11 @@ public class BrandController {
     @Autowired
     BrandService brandService;
     @RequestMapping("list")
-    public BaseRespModel show(int page,int limit,String sort,String order){
+    public BaseRespModel show(int page,int limit,String sort,String order,String name,String id){
         BaseRespModel resp = new BaseRespModel();
         try {
             HashMap data = new HashMap();
-            List<Brand> items = brandService.getBrandList(page,limit,sort,order);
+            List<Brand> items = brandService.getBrandList(page,limit,sort,order,name,id);
             long total = brandService.countBrand();
             data.put("items",items);
             data.put("total",total);
