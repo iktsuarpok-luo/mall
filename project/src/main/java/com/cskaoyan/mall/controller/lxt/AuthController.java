@@ -1,5 +1,6 @@
 package com.cskaoyan.mall.controller.lxt;
 
+import com.cskaoyan.mall.bean.BaseRespModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,31 +14,27 @@ import java.util.HashMap;
 @RequestMapping("admin/auth")
 public class AuthController {
     @RequestMapping("login")
-    @ResponseBody
-//    @CrossOrigin("http://localhost:9528")
-    public HashMap login(String username, String password){
-        HashMap map = new HashMap();
-        map.put("errno",0);
-        map.put("data","4139bb1c-b077-4bff-a69c-a0cc39eecdb3");
-        map.put("errmsg","成功");
-        return map;
+    public BaseRespModel<String> login(String username, String password){
+        BaseRespModel<String> resp = new BaseRespModel<>();
+        resp.setErrno(0);
+        resp.setData("48a3c6d1-4fb7-44f8-afa1-ffb8a6058001");
+        resp.setErrmsg("成功");
+        return resp;
     }
     @RequestMapping("info")
-    @ResponseBody
-
-    public HashMap info(){
-        HashMap map = new HashMap();
-        map.put("errno",0);
+    public BaseRespModel<HashMap> info(){
+        BaseRespModel<HashMap> resp = new BaseRespModel<>();
+        resp.setErrno(0);
+        resp.setErrmsg("成功");
         HashMap data = new HashMap();
         String[] roles = new String[]{"超级管理员"};
         data.put("roles",roles);
         data.put("name","admin123");
         String[] perms = new String[]{"*"};
         data.put("perms",perms);
-        data.put("avater","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
-        map.put("data",data);
-        map.put("errmsg","成功");
-       return map;
+        data.put("avatar","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
+        resp.setData(data);
+       return resp;
     }
 
 }
