@@ -4,13 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-@Controller
+@RestController
+@RequestMapping("admin/auth")
 public class AuthController {
-    @RequestMapping("auth/login")
+    @RequestMapping("login")
     @ResponseBody
 //    @CrossOrigin("http://localhost:9528")
     public HashMap login(String username, String password){
@@ -20,7 +22,7 @@ public class AuthController {
         map.put("errmsg","成功");
         return map;
     }
-    @RequestMapping("auth/info")
+    @RequestMapping("info")
     @ResponseBody
 
     public HashMap info(){
