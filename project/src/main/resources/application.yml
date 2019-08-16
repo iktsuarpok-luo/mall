@@ -11,7 +11,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   resources:
     static-locations: classpath:/static
-filePath: F:\newFloder\JavaThree\mall\project\target\classes\static\
+filePath: F:\newFloder\JavaThree\cskaoyan-admin\static\
 logging:
   file: spring.log
   level:

@@ -40,7 +40,7 @@ public class StorageController {
                 dest.getParentFile().mkdirs();
             }
             file.transferTo(dest);
-            String url = (filePath + fileName).replace("\\","/");
+            String url = "/static/"+fileName;
 
             Storage storage = new Storage();
             storage.setUrl(url);
