@@ -7,7 +7,7 @@ spring:
     active: db
   datasource:
     driver-class-name: ${myDriverClassName}
-    url:${myUrl}
+    url: ${myUrl}
     username: ${myUsername}
     password: ${myPassword}
     type: ${myType}

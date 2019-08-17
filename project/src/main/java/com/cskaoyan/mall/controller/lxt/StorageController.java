@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
@@ -34,7 +36,8 @@ public class StorageController {
                 Exception e = new Exception("文件格式不正确");
                 throw e;
             }
-            fileName = UUID.randomUUID() + suffixName;
+            SimpleDateFormat df=new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_");
+            fileName = df.format(new Date())+UUID.randomUUID() + suffixName;
             File dest = new File(filePath + fileName);
             if (!dest.getParentFile().exists()) {
                 dest.getParentFile().mkdirs();
@@ -58,7 +61,7 @@ public class StorageController {
             resp.setErrmsg("成功");
         }catch (Exception e){
             resp.setErrno(1);
-            resp.setErrmsg(e.getMessage());
+            resp.setErrmsg("失败");
         }
         return resp;
     }
