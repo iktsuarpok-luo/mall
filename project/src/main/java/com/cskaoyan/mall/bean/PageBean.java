@@ -3,23 +3,23 @@ package com.cskaoyan.mall.bean;
 import java.util.List;
 
 public class PageBean<T> {
-    private List<T> rows;
+    private List<T> items;
     private long total;
 
-    public PageBean(List<T> rows, long total) {
-        this.rows = rows;
+    public PageBean(List<T> items, long total) {
+        this.items = items;
         this.total = total;
     }
 
     public PageBean() {
     }
 
-    public List<T> getRows() {
-        return rows;
+    public List<T> getItems() {
+        return items;
     }
 
-    public void setRows(List<T> rows) {
-        this.rows = rows;
+    public void setItems(List<T> items) {
+        this.items = items;
     }
 
     public long getTotal() {

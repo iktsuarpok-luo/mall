@@ -2,6 +2,8 @@ package com.cskaoyan.mall.mapper;
 
 import com.cskaoyan.mall.bean.System;
 import com.cskaoyan.mall.bean.SystemExample;
+
+import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -27,4 +29,14 @@ public interface SystemMapper {
     int updateByPrimaryKeySelective(System record);
 
     int updateByPrimaryKey(System record);
+
+    List<System> selectMall();
+
+    List<System> selectExpress();
+
+    List<System> selectOrder();
+
+    List<System> selectWx();
+
+    int updateMallById(int id);
 }

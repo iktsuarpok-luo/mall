@@ -4,7 +4,9 @@ import com.cskaoyan.mall.bean.Coupon;
 import com.cskaoyan.mall.bean.CouponExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface CouponMapper {
     long countByExample(CouponExample example);
 
@@ -27,4 +29,7 @@ public interface CouponMapper {
     int updateByPrimaryKeySelective(Coupon record);
 
     int updateByPrimaryKey(Coupon record);
+
+    /*扩展部分*/
+    List<Coupon> selectCouponsBySortAndOrder(String sort, String order);
 }
