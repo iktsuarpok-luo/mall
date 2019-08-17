@@ -2,12 +2,20 @@ server:
   servlet:
     context-path: /
   port: 80
+
 spring:
   profiles:
     active: dev,common
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cskaoyanmall?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 999888
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+
+
+
+
