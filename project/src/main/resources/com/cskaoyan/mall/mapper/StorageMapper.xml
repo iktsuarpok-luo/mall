@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, key, name, type, size, url, add_time, update_time, deleted
+    id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted
   </sql>
   <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.StorageExample" resultMap="BaseResultMap">
     select
@@ -104,8 +104,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Storage">
-    insert into cskaoyan_mall_storage (id, key, name, 
-      type, size, url, add_time, 
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+    insert into cskaoyan_mall_storage (id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name,
+    cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time,
       update_time, deleted)
     values (#{id,jdbcType=INTEGER}, #{key,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
       #{type,jdbcType=VARCHAR}, #{size,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, 
