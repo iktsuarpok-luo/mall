@@ -1,5 +1,7 @@
 package com.cskaoyan.mall.bean;
 
+import java.util.HashMap;
+
 public class BaseRespModel<T> {
     T data;
     String errmsg;

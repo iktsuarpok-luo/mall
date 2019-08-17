@@ -104,6 +104,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Keyword">
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
     insert into cskaoyan_mall_keyword (id, keyword, url, 
       is_hot, is_default, sort_order, 
       add_time, update_time, deleted
