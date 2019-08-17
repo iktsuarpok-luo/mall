@@ -2,14 +2,15 @@ package com.cskaoyan.mall.controller.zt;
 
 
 import com.cskaoyan.mall.bean.BaseRespModel;
+import com.cskaoyan.mall.bean.Brand;
 import com.cskaoyan.mall.bean.Goods;
+import com.cskaoyan.mall.service.zt.GoodsBrandService;
 import com.cskaoyan.mall.service.zt.GoodsService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +21,8 @@ public class GoodsListController {
 
     @Autowired
     GoodsService goodsService;
+    @Autowired
+    GoodsBrandService goodsBrandService;
 
     /**
      * 分页显示商品列表页面
@@ -49,13 +52,46 @@ public class GoodsListController {
     }
 
     @RequestMapping("delete")
-    public HashMap delete(Integer id){
-        goodsService.delete(id);
+    public HashMap delete(@RequestBody Goods goods){
+        goodsService.delete(goods.getId());
         HashMap map = new HashMap<>();
         map.put("errno",0);
         map.put("errmsg","成功");
         return map;
     }
+
+    @RequestMapping("catAndBrand")
+    public BaseRespModel showCatgoryAndBrand(){
+
+        List<Brand> brandList = goodsBrandService.showBrandVauleAndLabel();
+
+
+        HashMap data = new HashMap();
+        data.put("brandList",brandList);
+        //data.put("categoryList",categoryList);
+
+        BaseRespModel baseRespModel = new BaseRespModel();
+        baseRespModel.setErrno(0);
+        baseRespModel.setData(data);
+        baseRespModel.setErrmsg("成功");
+        return baseRespModel;
+    }
+
+
+
+
+
+    /*@RequestMapping("detail")
+    public HashMap showDetail(){
+        List<Goods> goods = goodsService.findGoodsById()
+        return null;
+    }*/
+
+    /*@RequestMapping("update")
+    public void update(){
+
+    }*/
+
 
 
     /*@RequestMapping("list")

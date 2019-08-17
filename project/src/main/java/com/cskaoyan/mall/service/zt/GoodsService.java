@@ -12,5 +12,4 @@ public interface GoodsService {
 
     void delete(Integer id);
 
-    //List<Goods> findGoodsByGoodsSn(String goodsSn);
 }

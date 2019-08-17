@@ -90,7 +90,28 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+    /*根据order和sort查询adlist*/
+
+  </select><select id="selectByOrderAndSort" parameterType="string" resultMap="BaseResultMap">
+        SELECT
+        id,
+        NAME,
+        link,
+        url,
+        position,
+        content,
+        start_time,
+        end_time,
+        enabled,
+        add_time,
+        update_time,
+        deleted
+    FROM
+        cskaoyan_mall_ad
+    ORDER BY
+        add_time DESC
   </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

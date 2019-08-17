@@ -1,10 +1,13 @@
 package com.cskaoyan.mall.controller.zt;
 
 import com.cskaoyan.mall.bean.Comment;
+import com.cskaoyan.mall.bean.Goods;
 import com.cskaoyan.mall.service.zt.CommentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,10 +22,9 @@ public class GoodsCommentController {
     CommentService commentService;
 
     @RequestMapping("list")
-    public HashMap findAllComments(int page,int limit){
-
+    public HashMap findAllComments(int page, int limit,Integer userId,Integer valueId){
         PageHelper.startPage(page,limit);
-        List<Comment> comments = commentService.findAllComments();
+        List<Comment> comments = commentService.findAllCommentsOrByUserIdOrByValueId(userId,valueId);
         PageInfo commentsPageInfo = new PageInfo(comments);
 
         HashMap data = new HashMap<>();
@@ -31,6 +33,15 @@ public class GoodsCommentController {
 
         HashMap map = new HashMap();
         map.put("data",data);
+        map.put("errno",0);
+        map.put("errmsg","成功");
+        return map;
+    }
+
+    @RequestMapping("delete")
+    public HashMap delete(@RequestBody Comment comment){
+        commentService.delete(comment.getId());
+        HashMap map = new HashMap<>();
         map.put("errno",0);
         map.put("errmsg","成功");
         return map;

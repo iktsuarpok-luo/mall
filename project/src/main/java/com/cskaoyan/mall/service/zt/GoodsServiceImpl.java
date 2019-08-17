@@ -49,7 +49,7 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public void delete(Integer id) {
-        goodsMapper.deleteById(id);
+        goodsMapper.deleteByPrimaryKey(id);
     }
 }
 

@@ -82,8 +82,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, desc, tag, total, discount, min, limit, type, status, goods_type, goods_value, 
-    code, time_type, days, start_time, end_time, add_time, update_time, deleted
+    id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value,
+    code, time_type, `days`, start_time, end_time, add_time, update_time, deleted
   </sql>
   <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.CouponExample" resultMap="BaseResultMap">
     select
@@ -98,6 +98,38 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
+  </select>
+  <select id="selectCouponsBySortAndOrder" parameterType="string" resultMap="BaseResultMap">
+       SELECT
+      id,
+      `name`,
+      `desc`,
+      tag,
+      total,
+      discount,
+      `desc`,
+      tag,
+      total,
+      discount,
+      `min`,
+      `limit`,
+      `type`,
+      `status`,
+      goods_type,
+      goods_value,
+      `code`,
+      time_type,
+      days,
+      start_time,
+      end_time,
+      add_time,
+      update_time,
+      deleted
+  FROM
+      cskaoyan_mall_coupon
+  ORDER BY
+      add_time DESC
+
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -116,11 +148,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Coupon">
-    insert into cskaoyan_mall_coupon (id, name, desc, 
+    insert into cskaoyan_mall_coupon (id, `name`, `desc`,
       tag, total, discount, 
-      min, limit, type, 
-      status, goods_type, goods_value, 
-      code, time_type, days, 
+      `min`, `limit`, `type`,
+      `status`, goods_type, goods_value,
+      `code`, time_type, days,
       start_time, end_time, add_time, 
       update_time, deleted)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{desc,jdbcType=VARCHAR}, 
@@ -138,10 +170,10 @@
         id,
       </if>
       <if test="name != null">
-        name,
+        `name`,
       </if>
       <if test="desc != null">
-        desc,
+        `desc`,
       </if>
       <if test="tag != null">
         tag,
@@ -153,16 +185,16 @@
         discount,
       </if>
       <if test="min != null">
-        min,
+        `min`,
       </if>
       <if test="limit != null">
-        limit,
+        `limit`,
       </if>
       <if test="type != null">
-        type,
+        `type`,
       </if>
       <if test="status != null">
-        status,
+        `status`,
       </if>
       <if test="goodsType != null">
         goods_type,
@@ -171,13 +203,13 @@
         goods_value,
       </if>
       <if test="code != null">
-        code,
+        `code`,
       </if>
       <if test="timeType != null">
         time_type,
       </if>
       <if test="days != null">
-        days,
+        `days`,
       </if>
       <if test="startTime != null">
         start_time,

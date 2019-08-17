@@ -555,8 +555,8 @@
     where name like CONCAT('%', #{name}, '%')
   </select>
 
-  <delete id="deleteById" parameterType="java.lang.Integer">
+  <delete id="deleteBygoodsSn">
     delete from cskaoyan_mall_goods
-    where id = #{id}
+    where goods_sn = #{goods_sn}
   </delete>
 </mapper>

@@ -4,7 +4,9 @@ import com.cskaoyan.mall.bean.Ad;
 import com.cskaoyan.mall.bean.AdExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AdMapper {
     long countByExample(AdExample example);
 
@@ -27,4 +29,9 @@ public interface AdMapper {
     int updateByPrimaryKeySelective(Ad record);
 
     int updateByPrimaryKey(Ad record);
+    /**
+     * 扩展部分
+     */
+    /*根据sort和order查询ad*/
+    List<Ad> selectByOrderAndSort(String sort, String order);
 }

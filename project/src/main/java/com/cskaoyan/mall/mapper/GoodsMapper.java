@@ -38,5 +38,5 @@ public interface GoodsMapper {
 
     List<Goods> findGoodsByNameMuti(String name);//商品名搜索商品（模糊搜索）
 
-    void deleteById(Integer id);
+    void deleteBygoodsSn(String goodsSn);
 }
