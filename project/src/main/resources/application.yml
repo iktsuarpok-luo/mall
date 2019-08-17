@@ -4,10 +4,25 @@ server:
   port: 80
 spring:
   profiles:
-    active: dev,common
+    active: db
   datasource:
+<<<<<<< HEAD
     driver-class-name: ${xwDriverClassName}
     url: ${xwUrl}
     username: ${xwUsername}
     password: ${xwPassword}
     type: ${xwType}
+=======
+    driver-class-name: ${myDriverClassName}
+    url: ${myUrl}
+    username: ${myUsername}
+    password: ${myPassword}
+    type: ${myType}
+  resources:
+    static-locations: classpath:/static
+filePath: F:\newFloder\JavaThree\cskaoyan-admin\static\
+logging:
+  file: spring.log
+  level:
+    com.cskaoyan.mall.mapper: debug
+>>>>>>> 0afb6ebfa0be1866977b0b86766121d10dc59c8d
