@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /
+  port: 80
+spring:
+  profiles:
+    active: db
+  datasource:
+    driver-class-name: ${myDriverClassName}
+    url: ${myUrl}
+    username: ${myUsername}
+    password: ${myPassword}
+    type: ${myType}
+  resources:
+    static-locations: classpath:/static
+filePath: ${staticPath}
+logging:
+  file: spring.log
+  level:
+    com.cskaoyan.mall.mapper: debug
+
