@@ -69,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, desc, enabled, add_time, update_time, deleted
+    id, cskaoyan_mall_role.name, cskaoyan_mall_role.desc, enabled, add_time, update_time, deleted
   </sql>
   <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.RoleExample" resultMap="BaseResultMap">
     select
@@ -240,4 +240,10 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getOptionData" resultType="com.cskaoyan.mall.bean.lxs.lxsRole">
+    select
+    id as value,
+    name as label
+    from cskaoyan_mall_role
+  </select>
 </mapper>

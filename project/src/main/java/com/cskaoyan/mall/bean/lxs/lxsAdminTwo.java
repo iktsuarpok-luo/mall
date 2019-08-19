@@ -1,8 +1,8 @@
-package com.cskaoyan.mall.bean;
+package com.cskaoyan.mall.bean.lxs;
 
 import java.util.Date;
 
-public class Admin {
+public class lxsAdminTwo {
     private Integer id;
 
     private String username;
@@ -21,7 +21,7 @@ public class Admin {
 
     private Boolean deleted;
 
-    private String roleIds;
+    private int[] roleIds;
 
 
 
@@ -97,11 +97,11 @@ public class Admin {
         this.deleted = deleted;
     }
 
-    public String getRoleIds() {
+    public int[] getRoleIds() {
         return roleIds;
     }
 
-    public void setRoleIds(String roleIds) {
+    public void setRoleIds(int[] roleIds) {
         this.roleIds = roleIds;
     }
 }
