@@ -1,0 +1,150 @@
+2019-08-19 15:51:52.273  INFO 8300 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on XWangooo-PC with PID 8300 (C:\MallProject\mall\project\target\classes started by xw1995 in C:\MallProject\mall)
+2019-08-19 15:51:52.317  INFO 8300 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-19 15:52:05.038  INFO 8300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-19 15:52:05.175  INFO 8300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-19 15:52:05.276  INFO 8300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-19 15:52:14.097  INFO 8300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-19 15:52:14.099  INFO 8300 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 21376 ms
+2019-08-19 15:52:26.196  INFO 8300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-19 15:52:27.590  WARN 8300 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-19 15:52:28.049  INFO 8300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-19 15:52:28.064  INFO 8300 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 38.903 seconds (JVM running for 51.077)
+2019-08-19 15:52:31.209  INFO 8300 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-19 15:52:31.216  INFO 8300 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-19 15:52:31.238  INFO 8300 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-08-19 15:52:33.228  INFO 8300 --- [http-nio-80-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-19 15:52:34.155 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-19 15:52:34.204 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-19 15:52:34.290 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-19 15:52:34.344 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-19 15:52:34.346 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-19 15:52:34.358 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-19 15:52:34.401 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-19 15:52:34.402 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-19 15:52:34.413 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-19 15:52:34.458 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-19 15:52:34.460 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-19 15:52:34.474 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-19 15:52:47.878 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage order by add_time desc 
+2019-08-19 15:52:47.884 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 
+2019-08-19 15:52:47.931 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 5
+2019-08-19 15:52:47.934 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 15:52:47.935 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 15:52:47.937 DEBUG 8300 --- [http-nio-80-exec-6] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 15:53:02.733 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage order by add_time desc 
+2019-08-19 15:53:02.736 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 
+2019-08-19 15:53:02.743 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 5
+2019-08-19 15:53:02.744 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 15:53:02.746 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 15:53:02.748 DEBUG 8300 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 15:54:13.298 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage WHERE ( key = ? ) order by add_time desc 
+2019-08-19 15:54:13.302 DEBUG 8300 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 2019_08_18_15_23_10_55379064-9947-4af2-9c70-0661c8a4a2cf.jpg(String)
+2019-08-19 15:57:42.619  INFO 8300 --- [Thread-64] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-19 15:57:42.634  INFO 8300 --- [Thread-64] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-08-19 15:58:12.788  INFO 5700 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on XWangooo-PC with PID 5700 (C:\MallProject\mall\project\target\classes started by xw1995 in C:\MallProject\mall)
+2019-08-19 15:58:12.801  INFO 5700 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-19 15:58:21.336  INFO 5700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-19 15:58:21.416  INFO 5700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-19 15:58:21.418  INFO 5700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-19 15:58:21.907  INFO 5700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-19 15:58:21.908  INFO 5700 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8812 ms
+2019-08-19 15:58:25.436  INFO 5700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-19 15:58:25.982  WARN 5700 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-19 15:58:26.235  INFO 5700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-19 15:58:26.245  INFO 5700 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 15.978 seconds (JVM running for 19.112)
+2019-08-19 15:58:44.958  INFO 5700 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-19 15:58:44.960  INFO 5700 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-19 15:58:44.985  INFO 5700 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-08-19 15:58:45.387  INFO 5700 --- [http-nio-80-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-19 15:58:48.845 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-19 15:58:48.863 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage order by add_time desc 
+2019-08-19 15:58:48.896 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-19 15:58:48.896 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 
+2019-08-19 15:58:48.946 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-19 15:58:48.951 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 5
+2019-08-19 15:58:48.954 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 15:58:48.956 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 15:58:48.961 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 15:58:48.973 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-19 15:58:48.974 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-19 15:58:48.977 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-19 15:58:48.988 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-19 15:58:48.989 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-19 15:58:48.994 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-19 15:58:49.004 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-19 15:58:49.005 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-19 15:58:49.013 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-19 15:58:55.572 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage WHERE ( cskaoyan_mall_storage.key = ? ) order by add_time desc 
+2019-08-19 15:58:55.579 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 2019_08_18_15_23_10_55379064-9947-4af2-9c70-0661c8a4a2cf.jpg(String)
+2019-08-19 15:58:55.600 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 1
+2019-08-19 15:58:55.603 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 15:58:55.604 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 15:58:55.606 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 15:59:51.569 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.U.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_user 
+2019-08-19 15:59:51.571 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.U.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:51.573 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.U.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:51.577 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, username, password, gender, birthday, last_login_time, last_login_ip, user_level, nickname, mobile, avatar, weixin_openid, status, add_time, update_time, deleted from cskaoyan_mall_user LIMIT ? 
+2019-08-19 15:59:51.577 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.selectByExample  : ==> Parameters: 20(Integer)
+2019-08-19 15:59:51.611 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.selectByExample  : <==      Total: 20
+2019-08-19 15:59:53.776 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.A.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_address 
+2019-08-19 15:59:53.778 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.A.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:53.788 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.A.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:53.792 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.AddressMapper.selectByExample    : ==>  Preparing: select id, name, user_id, province_id, city_id, area_id, address, mobile, is_default, add_time, update_time, deleted from cskaoyan_mall_address LIMIT ? 
+2019-08-19 15:59:53.792 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.AddressMapper.selectByExample    : ==> Parameters: 20(Integer)
+2019-08-19 15:59:53.796 DEBUG 5700 --- [http-nio-80-exec-4] c.c.m.m.AddressMapper.selectByExample    : <==      Total: 1
+2019-08-19 15:59:55.272 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.C.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_collect 
+2019-08-19 15:59:55.275 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.C.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:55.283 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.C.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:55.285 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.CollectMapper.selectByExample    : ==>  Preparing: select id, user_id, value_id, type, add_time, update_time, deleted from cskaoyan_mall_collect LIMIT ? 
+2019-08-19 15:59:55.286 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.CollectMapper.selectByExample    : ==> Parameters: 20(Integer)
+2019-08-19 15:59:55.292 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.CollectMapper.selectByExample    : <==      Total: 1
+2019-08-19 15:59:56.437 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.F.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_footprint 
+2019-08-19 15:59:56.439 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.F.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:56.447 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.F.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:56.450 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.FootprintMapper.selectByExample  : ==>  Preparing: select id, user_id, goods_id, add_time, update_time, deleted from cskaoyan_mall_footprint LIMIT ? 
+2019-08-19 15:59:56.453 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.FootprintMapper.selectByExample  : ==> Parameters: 20(Integer)
+2019-08-19 15:59:56.456 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.FootprintMapper.selectByExample  : <==      Total: 1
+2019-08-19 15:59:57.745 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_search_history 
+2019-08-19 15:59:57.749 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:57.756 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:57.758 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample                : ==>  Preparing: select id, user_id, keyword, `from`, add_time, update_time, deleted from cskaoyan_mall_search_history LIMIT ? 
+2019-08-19 15:59:57.759 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample                : ==> Parameters: 20(Integer)
+2019-08-19 15:59:57.766 DEBUG 5700 --- [http-nio-80-exec-10] c.c.m.m.S.selectByExample                : <==      Total: 1
+2019-08-19 15:59:58.987 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_feedback 
+2019-08-19 15:59:58.992 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : ==> Parameters: 
+2019-08-19 15:59:58.997 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : <==      Total: 1
+2019-08-19 15:59:59.000 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.FeedbackMapper.selectByExample   : ==>  Preparing: select id, user_id, username, mobile, feed_type, content, status, has_picture, pic_urls, add_time, update_time, deleted from cskaoyan_mall_feedback LIMIT ? 
+2019-08-19 15:59:59.000 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.FeedbackMapper.selectByExample   : ==> Parameters: 20(Integer)
+2019-08-19 15:59:59.007 DEBUG 5700 --- [http-nio-80-exec-1] c.c.m.m.FeedbackMapper.selectByExample   : <==      Total: 1
+2019-08-19 16:14:19.969 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage order by add_time desc 
+2019-08-19 16:14:19.972 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 
+2019-08-19 16:14:19.976 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 5
+2019-08-19 16:14:19.978 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 16:14:19.978 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 16:14:19.981 DEBUG 5700 --- [http-nio-80-exec-3] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 16:14:37.966 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage WHERE ( name like ? ) order by add_time desc 
+2019-08-19 16:14:37.969 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: %cc%(String)
+2019-08-19 16:14:37.974 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 0
+2019-08-19 16:14:37.977 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 16:14:37.977 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 16:14:37.980 DEBUG 5700 --- [http-nio-80-exec-9] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 16:14:42.123 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage WHERE ( name like ? ) order by add_time desc 
+2019-08-19 16:14:42.125 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: %c%(String)
+2019-08-19 16:14:42.127 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 3
+2019-08-19 16:14:42.128 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 16:14:42.129 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 16:14:42.135 DEBUG 5700 --- [http-nio-80-exec-2] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 16:14:54.884 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage order by add_time desc 
+2019-08-19 16:14:54.890 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: 
+2019-08-19 16:14:54.899 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 5
+2019-08-19 16:14:54.902 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 16:14:54.903 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 16:14:54.905 DEBUG 5700 --- [http-nio-80-exec-5] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 16:16:40.189 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==>  Preparing: select id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted from cskaoyan_mall_storage WHERE ( name like ? ) order by add_time desc 
+2019-08-19 16:16:40.191 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : ==> Parameters: %cf.jpg%(String)
+2019-08-19 16:16:40.192 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.selectByExample    : <==      Total: 1
+2019-08-19 16:16:40.196 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_storage 
+2019-08-19 16:16:40.197 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : ==> Parameters: 
+2019-08-19 16:16:40.211 DEBUG 5700 --- [http-nio-80-exec-7] c.c.m.m.StorageMapper.countByExample     : <==      Total: 1
+2019-08-19 17:02:52.194  INFO 5700 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-19 17:02:52.858  INFO 5700 --- [Thread-32] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

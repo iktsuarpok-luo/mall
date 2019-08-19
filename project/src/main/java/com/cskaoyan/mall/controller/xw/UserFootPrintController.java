@@ -20,13 +20,19 @@ public class UserFootPrintController {
     UserFootPrintService userFootPrintService;
     @RequestMapping("footprint/list")
     public BaseRespModel<PageBean> queryFootPrint(int page, int limit, Integer userId, Integer goodsId){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try {
         List<Footprint> footprintList = userFootPrintService.queryFootPrint(page, limit, userId, goodsId);
         PageInfo<Footprint> pageInfo = new PageInfo<>(footprintList);
         PageBean<Footprint> pageBean = new PageBean<>(footprintList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
-        respModel.setErrno(0);
+        respModel.setErrno(0);}
+        catch (Exception e){
+            respModel.setErrno(1);
+            respModel.setErrmsg("失败");
+        }
         return respModel;
     }
 }
