@@ -1,5 +1,6 @@
 package com.cskaoyan.mall.bean;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Ad {
@@ -21,11 +22,29 @@ public class Ad {
 
     private Boolean enabled;
 
-    private Date addTime;
+    private LocalDateTime addTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private Boolean deleted;
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", link='" + link + '\'' +
+                ", url='" + url + '\'' +
+                ", position=" + position +
+                ", content='" + content + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", enabled=" + enabled +
+                ", addTime=" + addTime +
+                ", updateTime=" + updateTime +
+                ", deleted=" + deleted +
+                '}';
+    }
 
     public Integer getId() {
         return id;
@@ -40,7 +59,7 @@ public class Ad {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public String getLink() {
@@ -48,7 +67,7 @@ public class Ad {
     }
 
     public void setLink(String link) {
-        this.link = link == null ? null : link.trim();
+        this.link = link;
     }
 
     public String getUrl() {
@@ -56,7 +75,7 @@ public class Ad {
     }
 
     public void setUrl(String url) {
-        this.url = url == null ? null : url.trim();
+        this.url = url;
     }
 
     public Byte getPosition() {
@@ -72,7 +91,7 @@ public class Ad {
     }
 
     public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+        this.content = content;
     }
 
     public Date getStartTime() {
@@ -99,19 +118,19 @@ public class Ad {
         this.enabled = enabled;
     }
 
-    public Date getAddTime() {
+    public LocalDateTime getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(Date addTime) {
+    public void setAddTime(LocalDateTime addTime) {
         this.addTime = addTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

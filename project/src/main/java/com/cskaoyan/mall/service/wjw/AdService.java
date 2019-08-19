@@ -8,8 +8,13 @@ import java.util.List;
  * @date 2019/8/16 11:44
  */
 public interface AdService {
-    List<Ad> selectList(String sort, String order);
 
     int add(Ad ad);
 
+    void delete(Ad ad);
+
+    int update(Ad ad);
+
+
+    List<Ad> selectList(String name, String content);
 }
