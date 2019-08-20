@@ -30,6 +30,4 @@ public interface CouponMapper {
 
     int updateByPrimaryKey(Coupon record);
 
-    /*扩展部分*/
-    List<Coupon> selectByNameAndContent(String name, String content);
 }

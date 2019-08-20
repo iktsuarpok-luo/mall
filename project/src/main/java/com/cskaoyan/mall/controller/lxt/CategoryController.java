@@ -6,6 +6,7 @@ import com.cskaoyan.mall.bean.Category;
 import com.cskaoyan.mall.bean.L1Category;
 import com.cskaoyan.mall.service.lxt.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,6 +50,47 @@ public class CategoryController {
         }catch (Exception e){
             resp.setErrno(1);
             resp.setErrmsg("失败");
+        }
+        return resp;
+    }
+    @RequestMapping("create")
+    public BaseRespModel create(@RequestBody Category category){
+        BaseRespModel resp = new BaseRespModel();
+        try{
+            category=categoryService.add(category);
+            resp.setData(category);
+            resp.setErrmsg("成功");
+            resp.setErrno(0);
+        }catch (Exception e){
+            resp.setErrmsg("失败");
+            resp.setErrno(1);
+        }
+        return resp;
+    }
+    @RequestMapping("update")
+    public BaseRespModel update(@RequestBody Category category){
+        BaseRespModel resp = new BaseRespModel();
+        try{
+            category=categoryService.update(category);
+            resp.setData(category);
+            resp.setErrmsg("成功");
+            resp.setErrno(0);
+        }catch (Exception e){
+            resp.setErrmsg("失败");
+            resp.setErrno(1);
+        }
+        return resp;
+    }
+    @RequestMapping("delete")
+    public BaseRespModel delete(@RequestBody Category category){
+        BaseRespModel resp = new BaseRespModel();
+        try{
+            categoryService.delete(category);
+            resp.setErrmsg("成功");
+            resp.setErrno(0);
+        }catch (Exception e){
+            resp.setErrmsg("失败");
+            resp.setErrno(1);
         }
         return resp;
     }

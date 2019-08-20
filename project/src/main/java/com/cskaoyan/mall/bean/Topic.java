@@ -1,6 +1,7 @@
 package com.cskaoyan.mall.bean;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Topic {
@@ -20,9 +21,9 @@ public class Topic {
 
     private String goods;
 
-    private Date addTime;
+    private LocalDateTime addTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private Boolean deleted;
 
@@ -41,7 +42,7 @@ public class Topic {
     }
 
     public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
+        this.title = title;
     }
 
     public String getSubtitle() {
@@ -49,7 +50,7 @@ public class Topic {
     }
 
     public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle == null ? null : subtitle.trim();
+        this.subtitle = subtitle;
     }
 
     public BigDecimal getPrice() {
@@ -65,7 +66,7 @@ public class Topic {
     }
 
     public void setReadCount(String readCount) {
-        this.readCount = readCount == null ? null : readCount.trim();
+        this.readCount = readCount;
     }
 
     public String getPicUrl() {
@@ -73,7 +74,7 @@ public class Topic {
     }
 
     public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl == null ? null : picUrl.trim();
+        this.picUrl = picUrl;
     }
 
     public Integer getSortOrder() {
@@ -89,22 +90,22 @@ public class Topic {
     }
 
     public void setGoods(String goods) {
-        this.goods = goods == null ? null : goods.trim();
+        this.goods = goods;
     }
 
-    public Date getAddTime() {
+    public LocalDateTime getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(Date addTime) {
+    public void setAddTime(LocalDateTime addTime) {
         this.addTime = addTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -121,6 +122,6 @@ public class Topic {
     }
 
     public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+        this.content = content;
     }
 }

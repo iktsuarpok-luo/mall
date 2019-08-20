@@ -1,6 +1,5 @@
 package com.cskaoyan.mall.service.wjw;
 
-import com.cskaoyan.mall.bean.CouponExample;
 import com.cskaoyan.mall.bean.Couponuser;
 import com.cskaoyan.mall.bean.CouponuserExample;
 import com.cskaoyan.mall.mapper.CouponuserMapper;
@@ -17,19 +16,21 @@ import java.util.List;
 public class CouponUserServiceImpl implements CouponUserService {
     @Autowired
     CouponuserMapper couponuserMapper;
+
     @Override
-    public List<Couponuser> selectListUser(short status, int couponId) {
+    public List<Couponuser> selectListUser(Short status, Integer couponId,Integer userId,String order,String sort) {
         CouponuserExample couponuserExample = new CouponuserExample();
-        if (status!=0&&couponId!=0){
-            return couponuserMapper.selectByStatusAndCouponId(status,couponId);
-        }else if (status!=0){
-            couponuserExample.createCriteria().andStatusEqualTo(status);
-            return couponuserMapper.selectByExample(couponuserExample);
-        }else if (couponId!=0){
-            couponuserExample.createCriteria().andCouponIdEqualTo(couponId);
-            return couponuserMapper.selectByExample(couponuserExample);
-        }else {
-            return couponuserMapper.selectByExample(couponuserExample);
+        CouponuserExample.Criteria criteria = couponuserExample.createCriteria();
+        if (status!=null){
+            criteria.andStatusEqualTo(status);
         }
+        if (couponId!=-1){
+            criteria.andCouponIdEqualTo(couponId);
+        }
+        if (userId!=null){
+            criteria.andUserIdEqualTo(userId);
+        }
+        couponuserExample.setOrderByClause(sort+" "+order);
+        return couponuserMapper.selectByExample(couponuserExample);
     }
 }

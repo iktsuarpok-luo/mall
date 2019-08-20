@@ -1,11 +1,11 @@
 HELP.md
 target/
 *.yml
-*.idea/
+.idea/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-
+/src/main/resources/application-db.properties
 ### STS ###
 .apt_generated
 .classpath

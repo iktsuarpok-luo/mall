@@ -3,6 +3,7 @@ package com.cskaoyan.mall.controller.wjw;
 import com.cskaoyan.mall.bean.Ad;
 import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.service.wjw.AdService;
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,8 +27,8 @@ public class AdController {
     /*显示及查找*/
     @RequestMapping("/list")
     public BaseRespModel getList(int page, int limit, String sort, String order,String name,String content){
+        PageHelper.startPage(page,limit);
         List<Ad> adList = adService.selectList(name,content);
-        adList = adList.subList(limit * (page - 1), Math.min(adList.size(), limit * page));
         BaseRespModel<HashMap> baseRespModel = new BaseRespModel<>();
         HashMap<String, Object> data = new HashMap<>();
         /*得到total值*/
@@ -66,7 +67,7 @@ public class AdController {
     public BaseRespModel update(@RequestBody Ad ad){
         BaseRespModel<Ad> respModel = new BaseRespModel<>();
         int resultAd =adService.update(ad);
-        if (resultAd>1){
+        if (resultAd>0){
             respModel.setData(ad);
             respModel.setErrno(0);
             respModel.setErrmsg("成功");

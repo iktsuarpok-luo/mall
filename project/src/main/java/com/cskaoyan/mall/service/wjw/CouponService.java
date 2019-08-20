@@ -11,11 +11,13 @@ import java.util.List;
 public interface CouponService {
 
     int add(Coupon coupon);
-
-
     void delete(Coupon coupon);
-
     int update(Coupon coupon);
 
-    List<Coupon> selectList(String name, int status, String type);
+    List<Coupon> selectList(String name, Short status, Short type,String sort,String order);
+
+    Coupon selectById(Integer id);
+
+    String generateCode();
+
 }

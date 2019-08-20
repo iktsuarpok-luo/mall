@@ -104,7 +104,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Brand">
-    insert into cskaoyan_mall_brand (id, name, desc, 
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+    insert into cskaoyan_mall_brand (id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc,
       pic_url, sort_order, floor_price, 
       add_time, update_time, deleted
       )
@@ -262,8 +265,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.cskaoyan.mall.bean.Brand">
     update cskaoyan_mall_brand
-    set name = #{name,jdbcType=VARCHAR},
-      desc = #{desc,jdbcType=VARCHAR},
+    set cskaoyan_mall_brand.name = #{name,jdbcType=VARCHAR},
+      cskaoyan_mall_brand.desc = #{desc,jdbcType=VARCHAR},
       pic_url = #{picUrl,jdbcType=VARCHAR},
       sort_order = #{sortOrder,jdbcType=TINYINT},
       floor_price = #{floorPrice,jdbcType=DECIMAL},
