@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 @Configuration
 public class ShiroConfig {
@@ -35,8 +36,9 @@ public class ShiroConfig {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //shiroFilterFactoryBean.setLoginUrl("/");//认证界面
-        HashMap<String,String> filterChainDefinitionMap = new HashMap<>();
+        HashMap<String,String> filterChainDefinitionMap = new LinkedHashMap<>();
         filterChainDefinitionMap.put("/admin/auth/login","anon");//匿名访问
+        filterChainDefinitionMap.put("/wx/**","anon");
         //filterChainDefinitionMap.put("/login","anon");
         filterChainDefinitionMap.put("/**","authc");//通过认证才能访问
 

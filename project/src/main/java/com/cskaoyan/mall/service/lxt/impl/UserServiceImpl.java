@@ -1,5 +1,6 @@
 package com.cskaoyan.mall.service.lxt.impl;
 
+import com.cskaoyan.mall.bean.User;
 import com.cskaoyan.mall.mapper.UserMapper;
 import com.cskaoyan.mall.service.lxt.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,5 +13,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public Object getUserById(int id) {
         return userMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void update(User user) {
+        userMapper.updateByPrimaryKey(user);
     }
 }
