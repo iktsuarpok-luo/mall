@@ -15,6 +15,10 @@ public class MallSessionManager extends DefaultWebSessionManager {
         if(id!=null && !"".equals(id)){
             return id;
         }
+        id = request.getHeader("X-Litemall-Token");
+        if(id!=null && !"".equals(id)){
+            return id;
+        }
         return super.getSessionId(servletRequest,servletResponse);
     }
 }
