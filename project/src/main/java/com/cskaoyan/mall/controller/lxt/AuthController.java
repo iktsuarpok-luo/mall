@@ -1,9 +1,6 @@
 package com.cskaoyan.mall.controller.lxt;
 
-import com.cskaoyan.mall.bean.Admin;
-import com.cskaoyan.mall.bean.BaseRespModel;
-import com.cskaoyan.mall.bean.Permission;
-import com.cskaoyan.mall.bean.Role;
+import com.cskaoyan.mall.bean.*;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
@@ -47,7 +44,7 @@ public class AuthController {
     public BaseRespModel login(@RequestBody lxsAdminTwo admin, HttpServletRequest request){
         BaseRespModel resp = new BaseRespModel<>();
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(admin.getUsername(),admin.getPassword());
+        UsernamePasswordToken token = new MallToken(admin.getUsername(),admin.getPassword(),"admin");
         try{
             subject.login(token);
             resp.setErrno(0);

@@ -34,10 +34,12 @@ public class ShiroConfig {
     public  ShiroFilterFactoryBean shiroFilterFactoryBean(DefaultWebSecurityManager securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-        //shiroFilterFactoryBean.setLoginUrl("/");//认证界面
+//        shiroFilterFactoryBean.setLoginUrl("http://localhost:9528");//认证界面
         HashMap<String,String> filterChainDefinitionMap = new HashMap<>();
         filterChainDefinitionMap.put("/admin/auth/login","anon");//匿名访问
-        //filterChainDefinitionMap.put("/login","anon");
+        filterChainDefinitionMap.put("/admin/auth/401","anon");//匿名访问
+        filterChainDefinitionMap.put("/admin/auth/403","anon");//匿名访问
+//        filterChainDefinitionMap.put("/wx/**","anon");
         filterChainDefinitionMap.put("/**","authc");//通过认证才能访问
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
@@ -74,7 +76,7 @@ public class ShiroConfig {
     @Bean
     public DefaultWebSessionManager sessionManager(){
         DefaultWebSessionManager sessionManager = new MallSessionManager();
-        sessionManager.setGlobalSessionTimeout(1800000);
+        sessionManager.setGlobalSessionTimeout(18000000);
         sessionManager.setDeleteInvalidSessions(true);
         return sessionManager;
 
