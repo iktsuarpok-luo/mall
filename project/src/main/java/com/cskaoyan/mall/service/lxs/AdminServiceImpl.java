@@ -6,20 +6,21 @@ import com.cskaoyan.mall.bean.lxs.lxsAdmin;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.bean.lxs.lxsRole;
 import com.cskaoyan.mall.mapper.AdminMapper;
+import com.cskaoyan.mall.mapper.KeywordMapper;
 import com.cskaoyan.mall.mapper.RoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import java.util.Date;
 import java.util.List;
-@Component
+@Service
 public class AdminServiceImpl implements AdminService{
     @Autowired
     AdminMapper adminMapper;
 
     @Autowired
     RoleMapper roleMapper;
-
-
 
     @Override
     public List<lxsAdmin> getdata() {
