@@ -1,6 +1,9 @@
 package com.cskaoyan.mall.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Grouponrules {
@@ -16,10 +19,11 @@ public class Grouponrules {
 
     private Integer discountMember;
 
-    private Date addTime;
+    private LocalDateTime addTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date expireTime;
 
     private Boolean deleted;
@@ -45,7 +49,7 @@ public class Grouponrules {
     }
 
     public void setGoodsName(String goodsName) {
-        this.goodsName = goodsName == null ? null : goodsName.trim();
+        this.goodsName = goodsName;
     }
 
     public String getPicUrl() {
@@ -53,7 +57,7 @@ public class Grouponrules {
     }
 
     public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl == null ? null : picUrl.trim();
+        this.picUrl = picUrl;
     }
 
     public BigDecimal getDiscount() {
@@ -72,19 +76,19 @@ public class Grouponrules {
         this.discountMember = discountMember;
     }
 
-    public Date getAddTime() {
+    public LocalDateTime getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(Date addTime) {
+    public void setAddTime(LocalDateTime addTime) {
         this.addTime = addTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

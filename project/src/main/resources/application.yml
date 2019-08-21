@@ -18,4 +18,3 @@ logging:
   file: spring.log
   level:
     com.cskaoyan.mall.mapper: debug
-

@@ -99,7 +99,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectCouponsBySortAndOrder" parameterType="string" resultMap="BaseResultMap">
+  <select id="selectByNameAndContent" parameterType="string" resultMap="BaseResultMap">
        SELECT
       id,
       `name`,
@@ -128,6 +128,8 @@
   FROM
       cskaoyan_mall_coupon
   ORDER BY
+    where `name` CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+    and  `content` CONCAT('%',#{content,jdbcType=VARCHAR},'%')
       add_time DESC
 
   </select>
@@ -456,17 +458,17 @@
   <update id="updateByPrimaryKey" parameterType="com.cskaoyan.mall.bean.Coupon">
     update cskaoyan_mall_coupon
     set name = #{name,jdbcType=VARCHAR},
-      desc = #{desc,jdbcType=VARCHAR},
-      tag = #{tag,jdbcType=VARCHAR},
+      `desc` = #{desc,jdbcType=VARCHAR},
+      `tag` = #{tag,jdbcType=VARCHAR},
       total = #{total,jdbcType=INTEGER},
       discount = #{discount,jdbcType=DECIMAL},
-      min = #{min,jdbcType=DECIMAL},
-      limit = #{limit,jdbcType=SMALLINT},
-      type = #{type,jdbcType=SMALLINT},
-      status = #{status,jdbcType=SMALLINT},
+      `min` = #{min,jdbcType=DECIMAL},
+      `limit` = #{limit,jdbcType=SMALLINT},
+      `type` = #{type,jdbcType=SMALLINT},
+      `status` = #{status,jdbcType=SMALLINT},
       goods_type = #{goodsType,jdbcType=SMALLINT},
       goods_value = #{goodsValue,jdbcType=VARCHAR},
-      code = #{code,jdbcType=VARCHAR},
+      `code` = #{code,jdbcType=VARCHAR},
       time_type = #{timeType,jdbcType=SMALLINT},
       days = #{days,jdbcType=SMALLINT},
       start_time = #{startTime,jdbcType=TIMESTAMP},

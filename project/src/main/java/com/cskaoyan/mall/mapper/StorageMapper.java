@@ -4,7 +4,9 @@ import com.cskaoyan.mall.bean.Storage;
 import com.cskaoyan.mall.bean.StorageExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface StorageMapper {
     long countByExample(StorageExample example);
 
