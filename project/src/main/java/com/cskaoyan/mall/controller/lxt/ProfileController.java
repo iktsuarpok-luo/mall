@@ -3,6 +3,7 @@ package com.cskaoyan.mall.controller.lxt;
 import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.service.lxs.AdminService;
+import com.cskaoyan.mall.util.Md5Utils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ public class ProfileController {
     @RequestMapping("password")
     public BaseRespModel passwordChange(String oldPassword,String newPassword){
         BaseRespModel resp = new BaseRespModel();
+        oldPassword = Md5Utils.getMd5(oldPassword);
+        newPassword = Md5Utils.getMd5(newPassword);
         try {
             Subject subject = SecurityUtils.getSubject();
             lxsAdminTwo admin = (lxsAdminTwo) subject.getPrincipal();

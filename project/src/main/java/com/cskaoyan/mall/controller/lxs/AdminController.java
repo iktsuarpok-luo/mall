@@ -3,7 +3,9 @@ package com.cskaoyan.mall.controller.lxs;
 import com.cskaoyan.mall.bean.lxs.lxsAdmin;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.bean.lxs.lxsRole;
+import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
+import com.cskaoyan.mall.util.Md5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +22,8 @@ import java.util.Map;
 public class AdminController {
     @Autowired
     AdminService adminService;
-
+    @Autowired
+    CustomRealm realm;
     @RequestMapping("admin/list")
     public Map getList(String username){
         if(username==null) {
@@ -59,6 +62,7 @@ public class AdminController {
         HashMap map = new HashMap();
         map.put("errmsg","成功");
         map.put("errno",0);
+        realm.clearCache();
         return map;
     }
     @PostMapping("admin/create")
@@ -70,6 +74,7 @@ public class AdminController {
             map.put("errno",602);
             return map;
         }
+        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
         adminService.insert(admin);
         lxsAdminTwo aa=adminService.selectByName(admin.getUsername());
         Map map = new HashMap();
@@ -80,6 +85,7 @@ public class AdminController {
     }
     @PostMapping("admin/update")
     public Map update(@RequestBody lxsAdminTwo admin){
+        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
         int i=adminService.update(admin);
         if(i==1){
             HashMap map = new HashMap();
@@ -92,6 +98,7 @@ public class AdminController {
         map.put("data",aa);
         map.put("errmsg","成功");
         map.put("errno",0);
+        realm.clearCache();
         return map;
     }
 }

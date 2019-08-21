@@ -9,6 +9,7 @@ import com.cskaoyan.mall.service.lxt.PermissionService;
 import com.cskaoyan.mall.service.lxt.RoleService;
 import com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl;
 import com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl;
+import com.cskaoyan.mall.util.Md5Utils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -44,6 +45,7 @@ public class AuthController {
     public BaseRespModel login(@RequestBody lxsAdminTwo admin, HttpServletRequest request){
         BaseRespModel resp = new BaseRespModel<>();
         Subject subject = SecurityUtils.getSubject();
+        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
         UsernamePasswordToken token = new MallToken(admin.getUsername(),admin.getPassword(),"admin");
         try{
             subject.login(token);
