@@ -93,7 +93,7 @@
     id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, 
     deleted, role_ids
   </sql>
-  <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.AdminExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.cskaoyan.mall.bean.AdminExample" resultMap="adminSelectMap">
     select
     <if test="distinct">
       distinct
@@ -366,4 +366,12 @@
         where
         username like "%"#{username}"%"
     </select>
+
+  <select id="selectByRoleIds" resultMap="adminSelectMap">
+    select
+    <include refid="Base_Column_List" />
+    from cskaoyan_mall_admin
+    where
+    role_ids like "%"#{id}"%"
+  </select>
 </mapper>

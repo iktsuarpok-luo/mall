@@ -1,0 +1,6 @@
+2019-08-18 14:10:11.193  INFO 17192 --- [main] com.cskaoyan.mall.MallApplicationTests   : Starting MallApplicationTests on lxs with PID 17192 (started by 10958 in E:\workSpace_javaEE\mall\project)
+2019-08-18 14:10:11.193  INFO 17192 --- [main] com.cskaoyan.mall.MallApplicationTests   : The following profiles are active: db
+2019-08-18 14:10:13.739  INFO 17192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-18 14:10:14.052  WARN 17192 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-18 14:10:14.197  INFO 17192 --- [main] com.cskaoyan.mall.MallApplicationTests   : Started MallApplicationTests in 3.289 seconds (JVM running for 3.918)
+2019-08-18 14:10:14.398  INFO 17192 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
