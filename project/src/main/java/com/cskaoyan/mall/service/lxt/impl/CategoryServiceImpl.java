@@ -94,6 +94,18 @@ public class CategoryServiceImpl implements CategoryService {
 
     }
 
+    @Override
+    public Category getCurrentCategory(int id) {
+        return categoryMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<Category> getSubCategory(int id) {
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.createCriteria().andPidEqualTo(id);
+        return categoryMapper.selectByExample(categoryExample);
+    }
+
     private List<Category> getChildren(List<Category> list) {
         for (Category category : list) {
                 CategoryExample categoryExample = new CategoryExample();

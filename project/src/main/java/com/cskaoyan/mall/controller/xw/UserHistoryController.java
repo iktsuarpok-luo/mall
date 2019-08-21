@@ -20,13 +20,19 @@ public class UserHistoryController {
     UserHistoryServiceImpl userHistoryService;
     @RequestMapping("history/list")
     public BaseRespModel<PageBean> queryHistory(int page, int limit, Integer userId, String keyword){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try{
         List<Searchhistory> searchhistoryList = userHistoryService.queryHistory(page, limit, userId, keyword);
         PageInfo<Searchhistory> pageInfo = new PageInfo<>(searchhistoryList);
         PageBean<Searchhistory> pageBean = new PageBean<>(searchhistoryList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
-        respModel.setErrno(0);
+        respModel.setErrno(0);}
+        catch (Exception e){
+            respModel.setErrmsg("失败");
+            respModel.setErrno(1);
+        }
         return respModel;
     }
 }

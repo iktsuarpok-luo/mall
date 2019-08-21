@@ -20,13 +20,19 @@ public class UserFeedBackController {
     UserFeedBackService userFeedBackService;
     @RequestMapping("feedback/list")
     public BaseRespModel<PageBean> queryFeedBack(int page, int limit, String username, Integer id){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try{
         List<Feedback> feedbackList = userFeedBackService.queryFeedBack(page, limit, username, id);
         PageInfo<Feedback> pageInfo = new PageInfo<>(feedbackList);
         PageBean<Feedback> pageBean = new PageBean<>(feedbackList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
-        respModel.setErrno(0);
+        respModel.setErrno(0);}
+        catch (Exception e){
+            respModel.setErrmsg("失败");
+            respModel.setErrno(1);
+        }
         return respModel;
     }
 }

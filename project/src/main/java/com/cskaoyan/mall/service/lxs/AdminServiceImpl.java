@@ -10,15 +10,17 @@ import com.cskaoyan.mall.bean.lxs.lxsAdmin;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.bean.lxs.lxsRole;
 import com.cskaoyan.mall.mapper.*;
-import org.apache.logging.log4j.util.Strings;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
 
 import java.lang.System;
-import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
 import java.util.Date;
 import java.util.List;
-@Component
+@Service
 public class AdminServiceImpl implements AdminService{
     @Autowired
     AdminMapper adminMapper;

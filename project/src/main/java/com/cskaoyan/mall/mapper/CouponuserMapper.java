@@ -4,7 +4,9 @@ import com.cskaoyan.mall.bean.Couponuser;
 import com.cskaoyan.mall.bean.CouponuserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface CouponuserMapper {
     long countByExample(CouponuserExample example);
 
@@ -27,4 +29,6 @@ public interface CouponuserMapper {
     int updateByPrimaryKeySelective(Couponuser record);
 
     int updateByPrimaryKey(Couponuser record);
+    /*扩展部分*/
+    List<Couponuser> selectByStatusAndCouponId(short status, int couponId);
 }

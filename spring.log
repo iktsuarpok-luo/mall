@@ -5631,3 +5631,841 @@ java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServle
 2019-08-21 20:31:48.148 DEBUG 11948 --- [http-nio-80-exec-10] c.c.m.mapper.LogMapper.selectByExample   : ==>  Preparing: select id, admin, ip, type, action, status, result, comment, add_time, update_time, deleted from cskaoyan_mall_log WHERE ( id is not null ) 
 2019-08-21 20:31:48.149 DEBUG 11948 --- [http-nio-80-exec-10] c.c.m.mapper.LogMapper.selectByExample   : ==> Parameters: 
 2019-08-21 20:31:48.154 DEBUG 11948 --- [http-nio-80-exec-10] c.c.m.mapper.LogMapper.selectByExample   : <==      Total: 58
+2019-08-21 20:57:25.312  INFO 5436 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on lxs with PID 5436 (E:\workSpace_javaEE\mall\project\target\classes started by 10958 in E:\workSpace_javaEE\mall)
+2019-08-21 20:57:25.315  INFO 5436 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-21 20:57:26.206  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$28c9d412] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.288  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$902e6e34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.304  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$ee52479c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.307  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$a84b834] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.324  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.360  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.392  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.443  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.445  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.451  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.456  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5b9e2542] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.462  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.543  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.544  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.560  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.561  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.573  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.574  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.582  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.583  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.594  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.594  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.595  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.598  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.599  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.619  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.620  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.621  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.622  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.627  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.633  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.696  INFO 5436 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-21 20:57:26.719  INFO 5436 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-21 20:57:26.721  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.729  INFO 5436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 20:57:26.929  INFO 5436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-21 20:57:26.943  INFO 5436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-21 20:57:26.944  INFO 5436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-21 20:57:27.020  INFO 5436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-21 20:57:27.020  INFO 5436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1667 ms
+2019-08-21 20:57:27.467  INFO 5436 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.xw.WxHomeController.homeShow()
+2019-08-21 20:57:27.536  INFO 5436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-21 20:57:28.717 DEBUG 5436 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-21 20:57:28.726 DEBUG 5436 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-21 20:57:28.735 DEBUG 5436 --- [main] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 3
+2019-08-21 20:57:28.738 DEBUG 5436 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-21 20:57:28.738 DEBUG 5436 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-21 20:57:28.748 DEBUG 5436 --- [main] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
+2019-08-21 20:57:28.755 DEBUG 5436 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-21 20:57:28.756 DEBUG 5436 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-21 20:57:28.759 DEBUG 5436 --- [main] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-21 20:57:28.763 DEBUG 5436 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon order by id desc 
+2019-08-21 20:57:28.763 DEBUG 5436 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-21 20:57:28.765 DEBUG 5436 --- [main] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 4
+2019-08-21 20:57:28.964  INFO 5436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-21 20:57:29.146  WARN 5436 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-21 20:57:29.235  INFO 5436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-21 20:57:29.237  INFO 5436 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 4.279 seconds (JVM running for 5.187)
+2019-08-21 20:57:33.791  INFO 5436 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-21 20:57:33.792  INFO 5436 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-21 20:57:33.805  INFO 5436 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-08-21 20:57:33.837  INFO 5436 --- [http-nio-80-exec-2] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-21 20:57:33.874 ERROR 5436 --- [http-nio-80-exec-9] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-21 20:57:35.156 DEBUG 5436 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:57:35.156 DEBUG 5436 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 20:57:35.159 DEBUG 5436 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 20:57:47.677 DEBUG 5436 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:57:47.678 DEBUG 5436 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 20:57:47.679 DEBUG 5436 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 20:58:12.976 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:58:12.976 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin(String)
+2019-08-21 20:58:12.978 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 20:58:12.979 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:58:12.980 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin(String)
+2019-08-21 20:58:12.981 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 20:58:12.983 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-21 20:58:12.983 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 29(Integer)
+2019-08-21 20:58:12.984 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-21 20:58:12.984 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-21 20:58:12.992 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: admin(String), 123456(String), null, 2019-08-21 20:58:12.984(Timestamp), [2,3,1](String), 29(Integer)
+2019-08-21 20:58:13.000 DEBUG 5436 --- [http-nio-80-exec-10] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-21 20:58:13.017 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 20:58:13.018 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 20:58:13.019 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 20:58:13.021 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 20:58:13.021 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 20:58:13.030 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : <==      Total: 145
+2019-08-21 20:58:13.031 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 20:58:13.032 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2019-08-21 20:58:13.033 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 20:58:13.033 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 20:58:13.033 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 3(Integer)
+2019-08-21 20:58:13.045 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 20:58:13.045 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 20:58:13.045 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2019-08-21 20:58:13.046 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 20:58:13.048 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 20:58:13.049 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==> Parameters: 2(Integer)
+2019-08-21 20:58:13.051 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : <==      Total: 34
+2019-08-21 20:58:13.052 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 20:58:13.052 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==> Parameters: 3(Integer)
+2019-08-21 20:58:13.053 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : <==      Total: 0
+2019-08-21 20:58:13.054 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 20:58:13.055 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : ==> Parameters: 1(Integer)
+2019-08-21 20:58:13.058 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.m.P.selectByExample                : <==      Total: 76
+2019-08-21 20:58:13.166 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-21 20:58:13.167 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-21 20:58:13.168 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-21 20:58:13.173 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-21 20:58:13.173 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-21 20:58:13.173 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-21 20:58:13.175 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-21 20:58:13.175 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-21 20:58:13.176 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-21 20:58:13.179 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-21 20:58:13.179 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-21 20:58:13.179 DEBUG 5436 --- [http-nio-80-exec-9] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-21 20:59:23.488 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 20:59:23.488 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 20:59:23.489 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 20:59:23.490 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 20:59:23.490 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 20:59:23.496 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.m.P.selectByExample                : <==      Total: 145
+2019-08-21 20:59:23.619 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-21 20:59:23.620 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-21 20:59:23.621 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-21 20:59:23.622 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-21 20:59:23.622 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-21 20:59:23.622 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-21 20:59:23.623 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-21 20:59:23.623 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-21 20:59:23.624 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-21 20:59:23.625 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-21 20:59:23.625 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-21 20:59:23.626 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-21 20:59:29.922 DEBUG 5436 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:59:29.922 DEBUG 5436 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 20:59:29.923 DEBUG 5436 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 20:59:56.416 DEBUG 5436 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 20:59:56.416 DEBUG 5436 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 20:59:56.417 DEBUG 5436 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:01.694 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:01.695 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:01.697 DEBUG 5436 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:18.142 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:18.142 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:18.144 DEBUG 5436 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:18.792 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:18.792 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:18.793 DEBUG 5436 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:19.136 DEBUG 5436 --- [http-nio-80-exec-1] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:19.136 DEBUG 5436 --- [http-nio-80-exec-1] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:19.138 DEBUG 5436 --- [http-nio-80-exec-1] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:22.307 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:22.307 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:22.308 DEBUG 5436 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:00:26.526  INFO 12380 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on lxs with PID 12380 (E:\workSpace_javaEE\mall\project\target\classes started by 10958 in E:\workSpace_javaEE\mall)
+2019-08-21 21:00:26.529  INFO 12380 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-21 21:00:27.390  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b5189d38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.484  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$1c7d375a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.500  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$7aa110c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.502  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$96d3815a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.521  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.554  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.580  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.622  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.624  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.630  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.635  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e7ecee68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.641  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.713  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.714  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.729  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.730  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.743  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.744  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.752  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.753  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.764  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.765  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.766  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.768  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.770  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.789  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.789  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.790  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.791  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.796  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.801  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.837  INFO 12380 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-21 21:00:27.849  INFO 12380 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-21 21:00:27.851  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:27.858  INFO 12380 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:00:28.063  INFO 12380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-21 21:00:28.077  INFO 12380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-21 21:00:28.078  INFO 12380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-21 21:00:28.159  INFO 12380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-21 21:00:28.160  INFO 12380 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1595 ms
+2019-08-21 21:00:28.485  INFO 12380 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.xw.WxHomeController.homeShow()
+2019-08-21 21:00:28.529  INFO 12380 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-21 21:00:28.630 DEBUG 12380 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-21 21:00:28.640 DEBUG 12380 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-21 21:00:28.648 DEBUG 12380 --- [main] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 3
+2019-08-21 21:00:28.651 DEBUG 12380 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-21 21:00:28.651 DEBUG 12380 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-21 21:00:28.661 DEBUG 12380 --- [main] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
+2019-08-21 21:00:28.668 DEBUG 12380 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-21 21:00:28.668 DEBUG 12380 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-21 21:00:28.670 DEBUG 12380 --- [main] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-21 21:00:28.674 DEBUG 12380 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon order by id desc 
+2019-08-21 21:00:28.674 DEBUG 12380 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-21 21:00:28.676 DEBUG 12380 --- [main] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 4
+2019-08-21 21:00:28.871  INFO 12380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-21 21:00:29.054  WARN 12380 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-21 21:00:29.145  INFO 12380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-21 21:00:29.147  INFO 12380 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 3.057 seconds (JVM running for 3.974)
+2019-08-21 21:00:33.935  INFO 12380 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-21 21:00:33.935  INFO 12380 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-21 21:00:33.942  INFO 12380 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-21 21:00:33.966  INFO 12380 --- [http-nio-80-exec-4] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-21 21:00:34.024 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:00:34.024 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:00:34.027 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:01:15.408 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:01:15.409 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:01:15.410 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:01:16.089 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:01:16.090 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:01:16.091 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:01:16.472 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:01:16.473 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:01:16.474 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:01:16.992 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:01:16.992 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:01:16.993 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:01:59.859 DEBUG 12380 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:01:59.860 DEBUG 12380 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:01:59.861 DEBUG 12380 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:02:00.735 DEBUG 12380 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:02:00.735 DEBUG 12380 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:02:00.736 DEBUG 12380 --- [http-nio-80-exec-10] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:14.782 DEBUG 12380 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:14.783 DEBUG 12380 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:14.786 DEBUG 12380 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:15.496 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:15.496 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:15.498 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:15.751 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:15.751 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:15.752 DEBUG 12380 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:15.927 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:15.928 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:15.929 DEBUG 12380 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:16.104 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:16.104 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:16.106 DEBUG 12380 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:16.271 DEBUG 12380 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:10:16.272 DEBUG 12380 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:10:16.273 DEBUG 12380 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:10:17.952  WARN 12380 --- [http-nio-80-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.lxt.AuthController.login(com.cskaoyan.mall.bean.lxs.lxsAdminTwo,javax.servlet.http.HttpServletRequest)]
+2019-08-21 21:10:17.956 ERROR 12380 --- [http-nio-80-exec-9] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-21 21:11:05.388 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:11:05.388 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:11:05.389 DEBUG 12380 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:11:16.854 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:11:16.855 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:11:16.857 DEBUG 12380 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:12:01.140  INFO 9152 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on lxs with PID 9152 (E:\workSpace_javaEE\mall\project\target\classes started by 10958 in E:\workSpace_javaEE\mall)
+2019-08-21 21:12:01.143  INFO 9152 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-21 21:12:02.129  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2cd7f8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.226  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$3a3219ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.244  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$9855f314] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.246  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$b48863ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.266  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.302  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.329  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.373  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.375  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.381  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.385  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5a1d0ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.390  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.462  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.463  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.478  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.479  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.492  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.492  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.500  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.501  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.512  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.513  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.514  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.517  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.518  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.539  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.540  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.541  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.541  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.547  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.552  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.587  INFO 9152 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-21 21:12:02.600  INFO 9152 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-21 21:12:02.601  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.609  INFO 9152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:12:02.814  INFO 9152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-21 21:12:02.829  INFO 9152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-21 21:12:02.829  INFO 9152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-21 21:12:02.909  INFO 9152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-21 21:12:02.910  INFO 9152 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1723 ms
+2019-08-21 21:12:03.241  INFO 9152 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.xw.WxHomeController.homeShow()
+2019-08-21 21:12:03.283  INFO 9152 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-21 21:12:03.398 DEBUG 9152 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-21 21:12:03.408 DEBUG 9152 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-21 21:12:03.419 DEBUG 9152 --- [main] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 3
+2019-08-21 21:12:03.422 DEBUG 9152 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-21 21:12:03.422 DEBUG 9152 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-21 21:12:03.435 DEBUG 9152 --- [main] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
+2019-08-21 21:12:03.442 DEBUG 9152 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-21 21:12:03.443 DEBUG 9152 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-21 21:12:03.448 DEBUG 9152 --- [main] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-21 21:12:03.452 DEBUG 9152 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon order by id desc 
+2019-08-21 21:12:03.453 DEBUG 9152 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-21 21:12:03.458 DEBUG 9152 --- [main] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 4
+2019-08-21 21:12:03.662  INFO 9152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-21 21:12:03.849  WARN 9152 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-21 21:12:03.956  INFO 9152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-21 21:12:03.958  INFO 9152 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 3.183 seconds (JVM running for 4.162)
+2019-08-21 21:12:09.292  INFO 9152 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-21 21:12:09.292  INFO 9152 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-21 21:12:09.302  INFO 9152 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-08-21 21:12:09.327  INFO 9152 --- [http-nio-80-exec-3] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-21 21:12:09.385 DEBUG 9152 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:12:09.385 DEBUG 9152 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:12:09.388 DEBUG 9152 --- [http-nio-80-exec-3] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:13:11.693 DEBUG 9152 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:13:11.693 DEBUG 9152 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:13:11.694 DEBUG 9152 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:13:17.243  INFO 1308 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on lxs with PID 1308 (E:\workSpace_javaEE\mall\project\target\classes started by 10958 in E:\workSpace_javaEE\mall)
+2019-08-21 21:13:17.247  INFO 1308 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-21 21:13:18.219  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd30fb42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.306  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$44959564] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.325  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$a2b96ecc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.328  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$beebdf64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.350  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.390  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.420  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.474  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.477  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.482  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.487  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$10054c72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.493  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.577  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.579  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.595  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.596  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.611  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.612  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.621  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.622  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.635  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.636  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.637  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.640  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.642  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.667  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.668  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.669  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.669  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.675  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.682  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.724  INFO 1308 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-21 21:13:18.782  INFO 1308 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-21 21:13:18.784  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:18.793  INFO 1308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-21 21:13:19.005  INFO 1308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-21 21:13:19.024  INFO 1308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-21 21:13:19.024  INFO 1308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-21 21:13:19.130  INFO 1308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-21 21:13:19.131  INFO 1308 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1834 ms
+2019-08-21 21:13:19.554  INFO 1308 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.xw.WxHomeController.homeShow()
+2019-08-21 21:13:19.609  INFO 1308 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-21 21:13:19.737 DEBUG 1308 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-21 21:13:19.746 DEBUG 1308 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-21 21:13:19.758 DEBUG 1308 --- [main] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 3
+2019-08-21 21:13:19.762 DEBUG 1308 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-21 21:13:19.762 DEBUG 1308 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-21 21:13:19.777 DEBUG 1308 --- [main] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
+2019-08-21 21:13:19.785 DEBUG 1308 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-21 21:13:19.785 DEBUG 1308 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-21 21:13:19.791 DEBUG 1308 --- [main] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-21 21:13:19.795 DEBUG 1308 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon order by id desc 
+2019-08-21 21:13:19.795 DEBUG 1308 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-21 21:13:19.800 DEBUG 1308 --- [main] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 4
+2019-08-21 21:13:20.045  INFO 1308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-21 21:13:20.264  WARN 1308 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-21 21:13:20.372  INFO 1308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-21 21:13:20.374  INFO 1308 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 3.614 seconds (JVM running for 4.791)
+2019-08-21 21:13:36.131  INFO 1308 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-21 21:13:36.132  INFO 1308 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-21 21:13:36.140  INFO 1308 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-08-21 21:13:36.167  INFO 1308 --- [http-nio-80-exec-2] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-21 21:13:48.019 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:13:48.020 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:13:48.031 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:14:09.544 DEBUG 1308 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:14:09.545 DEBUG 1308 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:14:09.551 DEBUG 1308 --- [http-nio-80-exec-5] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:15:54.920 DEBUG 1308 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:15:54.921 DEBUG 1308 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:15:54.927 DEBUG 1308 --- [http-nio-80-exec-7] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 2
+2019-08-21 21:16:41.908 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:16:41.909 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:16:41.910 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:16:41.917 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:16:41.917 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:16:41.918 DEBUG 1308 --- [http-nio-80-exec-9] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:16:41.919 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-21 21:16:41.920 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 29(Integer)
+2019-08-21 21:16:41.921 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-21 21:16:41.921 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-21 21:16:41.929 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: admin123(String), admin123(String), null, 2019-08-21 21:16:41.921(Timestamp), [1](String), 29(Integer)
+2019-08-21 21:16:41.937 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-21 21:16:41.958 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 21:16:41.958 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 21:16:41.959 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 21:16:41.961 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 21:16:41.962 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 21:16:41.972 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : <==      Total: 145
+2019-08-21 21:16:41.973 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 21:16:41.973 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2019-08-21 21:16:41.974 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 21:16:41.976 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 21:16:41.976 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : ==> Parameters: 1(Integer)
+2019-08-21 21:16:41.980 DEBUG 1308 --- [http-nio-80-exec-1] c.c.m.m.P.selectByExample                : <==      Total: 76
+2019-08-21 21:16:42.098 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-21 21:16:42.099 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:16:42.105 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-21 21:16:42.110 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-21 21:16:42.110 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:16:42.115 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-21 21:16:42.117 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-21 21:16:42.117 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-21 21:16:42.121 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-21 21:16:42.124 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-21 21:16:42.124 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-21 21:16:42.129 DEBUG 1308 --- [http-nio-80-exec-3] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-21 21:18:00.901 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:18:00.902 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:18:00.903 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:18:00.904 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:18:00.904 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:18:00.905 DEBUG 1308 --- [http-nio-80-exec-8] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:18:00.905 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-21 21:18:00.906 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 29(Integer)
+2019-08-21 21:18:00.906 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-21 21:18:00.907 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-21 21:18:00.907 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: admin123(String), admin123(String), null, 2019-08-21 21:18:00.906(Timestamp), [1](String), 29(Integer)
+2019-08-21 21:18:00.910 DEBUG 1308 --- [http-nio-80-exec-8] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-21 21:18:00.925 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 21:18:00.925 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 21:18:00.926 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 21:18:00.926 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 21:18:00.926 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 21:18:00.932 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : <==      Total: 145
+2019-08-21 21:18:06.651 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 21:18:06.653 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2019-08-21 21:18:06.660 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 21:18:18.889 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 21:18:18.891 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==> Parameters: 1(Integer)
+2019-08-21 21:18:18.937 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : <==      Total: 76
+2019-08-21 21:19:48.341 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:19:48.342 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:19:48.343 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:19:48.344 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:19:48.344 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-21 21:19:48.345 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:19:48.346 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-21 21:19:48.346 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 29(Integer)
+2019-08-21 21:19:48.346 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-21 21:19:48.347 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-21 21:19:48.347 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: admin123(String), admin123(String), null, 2019-08-21 21:19:48.347(Timestamp), [1](String), 29(Integer)
+2019-08-21 21:19:48.355 DEBUG 1308 --- [http-nio-80-exec-2] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-21 21:19:48.366 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 21:19:48.366 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 21:19:48.368 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 21:19:48.369 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 21:19:48.369 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 21:19:48.373 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : <==      Total: 146
+2019-08-21 21:19:48.374 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 21:19:48.374 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2019-08-21 21:19:48.375 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 21:19:48.375 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 21:19:48.375 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : ==> Parameters: 1(Integer)
+2019-08-21 21:19:48.377 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.P.selectByExample                : <==      Total: 77
+2019-08-21 21:19:48.491 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-21 21:19:48.491 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:19:48.492 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-21 21:19:48.492 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-21 21:19:48.493 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:19:48.493 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-21 21:19:48.493 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-21 21:19:48.494 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-21 21:19:48.494 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-21 21:19:48.495 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-21 21:19:48.495 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-21 21:19:48.496 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-21 21:20:27.958 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.getdata      : ==>  Preparing: select id, role_ids, username, avatar from cskaoyan_mall_admin 
+2019-08-21 21:20:27.958 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.getdata      : ==> Parameters: 
+2019-08-21 21:20:27.959 DEBUG 1308 --- [http-nio-80-exec-9] c.c.mall.mapper.AdminMapper.getdata      : <==      Total: 11
+2019-08-21 21:20:27.960 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.getOptionData    : ==>  Preparing: select id as value, name as label from cskaoyan_mall_role 
+2019-08-21 21:20:27.960 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.getOptionData    : ==> Parameters: 
+2019-08-21 21:20:28.053 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.getOptionData    : <==      Total: 5
+2019-08-21 21:20:30.861 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role WHERE ( id is not null ) 
+2019-08-21 21:20:30.861 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 21:20:30.862 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 21:20:33.532 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectAll                      : ==>  Preparing: select id as permission from cskaoyan_mall_list where api!=''and pid!='0' 
+2019-08-21 21:20:33.533 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectAll                      : ==> Parameters: 
+2019-08-21 21:20:33.534 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectAll                      : <==      Total: 89
+2019-08-21 21:20:33.535 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataTwo                  : ==>  Preparing: select id,label from cskaoyan_mall_list where pid='0' AND api = '' 
+2019-08-21 21:20:33.535 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataTwo                  : ==> Parameters: 
+2019-08-21 21:20:33.536 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataTwo                  : <==      Total: 8
+2019-08-21 21:20:33.537 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.537 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 用户管理(String)
+2019-08-21 21:20:33.538 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 6
+2019-08-21 21:20:33.539 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.539 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户收藏(String)
+2019-08-21 21:20:33.540 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.540 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.540 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 意见反馈(String)
+2019-08-21 21:20:33.541 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.541 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.541 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 会员管理(String)
+2019-08-21 21:20:33.542 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.542 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.542 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户足迹(String)
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 搜索历史(String)
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.543 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 收货地址(String)
+2019-08-21 21:20:33.545 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.545 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.545 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 推广管理(String)
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 团购管理(String)
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.546 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 广告管理(String)
+2019-08-21 21:20:33.548 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.548 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.548 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 专题管理(String)
+2019-08-21 21:20:33.549 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.550 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.550 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 优惠券管理(String)
+2019-08-21 21:20:33.550 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 6
+2019-08-21 21:20:33.551 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.551 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 配置管理(String)
+2019-08-21 21:20:33.552 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:33.552 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.552 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商场配置(String)
+2019-08-21 21:20:33.553 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:33.553 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.553 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 运费配置(String)
+2019-08-21 21:20:33.553 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:33.554 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.554 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单配置(String)
+2019-08-21 21:20:33.554 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:33.555 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.555 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 小程序配置(String)
+2019-08-21 21:20:33.555 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:33.556 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.556 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 其他(String)
+2019-08-21 21:20:33.556 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 1
+2019-08-21 21:20:33.556 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.557 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 权限测试(String)
+2019-08-21 21:20:33.557 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:33.557 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.558 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 统计管理(String)
+2019-08-21 21:20:33.559 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 3
+2019-08-21 21:20:33.559 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.560 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户统计(String)
+2019-08-21 21:20:33.560 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.561 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.561 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单统计(String)
+2019-08-21 21:20:33.562 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.562 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.562 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商品统计(String)
+2019-08-21 21:20:33.562 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.563 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.563 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 系统管理(String)
+2019-08-21 21:20:33.564 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:33.564 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.564 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 管理员管理(String)
+2019-08-21 21:20:33.565 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.565 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.565 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 操作日志(String)
+2019-08-21 21:20:33.566 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:33.566 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.566 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 角色管理(String)
+2019-08-21 21:20:33.567 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 7
+2019-08-21 21:20:33.567 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.567 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 对象存储(String)
+2019-08-21 21:20:33.567 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.568 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.568 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 商场管理(String)
+2019-08-21 21:20:33.568 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 5
+2019-08-21 21:20:33.568 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.569 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 品牌管理(String)
+2019-08-21 21:20:33.569 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.569 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.569 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单管理(String)
+2019-08-21 21:20:33.570 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.570 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.570 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 关键词(String)
+2019-08-21 21:20:33.577 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.578 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.578 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 类目管理(String)
+2019-08-21 21:20:33.578 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:33.578 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.579 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 通用问题(String)
+2019-08-21 21:20:33.579 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 4
+2019-08-21 21:20:33.579 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:33.579 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : ==> Parameters: 商品管理(String)
+2019-08-21 21:20:33.580 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataThree                : <==      Total: 2
+2019-08-21 21:20:33.580 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.580 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商品管理(String)
+2019-08-21 21:20:33.581 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 7
+2019-08-21 21:20:33.581 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:33.581 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : ==> Parameters: 评论管理(String)
+2019-08-21 21:20:33.582 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.251 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectAll                      : ==>  Preparing: select id as permission from cskaoyan_mall_list where api!=''and pid!='0' 
+2019-08-21 21:20:41.251 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectAll                      : ==> Parameters: 
+2019-08-21 21:20:41.253 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectAll                      : <==      Total: 89
+2019-08-21 21:20:41.253 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataTwo                  : ==>  Preparing: select id,label from cskaoyan_mall_list where pid='0' AND api = '' 
+2019-08-21 21:20:41.253 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataTwo                  : ==> Parameters: 
+2019-08-21 21:20:41.255 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataTwo                  : <==      Total: 8
+2019-08-21 21:20:41.256 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.256 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 用户管理(String)
+2019-08-21 21:20:41.257 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 6
+2019-08-21 21:20:41.257 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.257 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户收藏(String)
+2019-08-21 21:20:41.258 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.258 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.259 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 意见反馈(String)
+2019-08-21 21:20:41.260 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.260 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.260 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 会员管理(String)
+2019-08-21 21:20:41.261 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.261 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.261 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户足迹(String)
+2019-08-21 21:20:41.262 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.263 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.263 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 搜索历史(String)
+2019-08-21 21:20:41.263 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.264 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.264 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 收货地址(String)
+2019-08-21 21:20:41.265 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.265 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.265 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 推广管理(String)
+2019-08-21 21:20:41.265 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:41.266 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.266 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 团购管理(String)
+2019-08-21 21:20:41.267 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.267 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.267 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 广告管理(String)
+2019-08-21 21:20:41.268 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.268 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.269 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 专题管理(String)
+2019-08-21 21:20:41.269 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.270 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.270 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 优惠券管理(String)
+2019-08-21 21:20:41.271 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 6
+2019-08-21 21:20:41.271 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.271 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 配置管理(String)
+2019-08-21 21:20:41.272 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:41.272 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.273 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商场配置(String)
+2019-08-21 21:20:41.273 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.274 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.274 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 运费配置(String)
+2019-08-21 21:20:41.275 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.275 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.276 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单配置(String)
+2019-08-21 21:20:41.276 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.277 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.277 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 小程序配置(String)
+2019-08-21 21:20:41.278 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.278 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.278 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 其他(String)
+2019-08-21 21:20:41.279 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 1
+2019-08-21 21:20:41.279 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.279 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 权限测试(String)
+2019-08-21 21:20:41.280 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:20:41.280 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.280 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 统计管理(String)
+2019-08-21 21:20:41.281 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 3
+2019-08-21 21:20:41.281 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.282 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 用户统计(String)
+2019-08-21 21:20:41.282 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.283 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.283 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单统计(String)
+2019-08-21 21:20:41.283 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.284 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.284 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商品统计(String)
+2019-08-21 21:20:41.285 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.285 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.285 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 系统管理(String)
+2019-08-21 21:20:41.286 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 4
+2019-08-21 21:20:41.286 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.286 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 管理员管理(String)
+2019-08-21 21:20:41.287 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.288 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.288 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 操作日志(String)
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 1
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 角色管理(String)
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 7
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.289 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 对象存储(String)
+2019-08-21 21:20:41.290 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.290 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.291 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 商场管理(String)
+2019-08-21 21:20:41.291 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 5
+2019-08-21 21:20:41.291 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.292 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 品牌管理(String)
+2019-08-21 21:20:41.292 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.292 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.293 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 订单管理(String)
+2019-08-21 21:20:41.293 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.294 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.294 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 关键词(String)
+2019-08-21 21:20:41.295 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.295 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.296 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 类目管理(String)
+2019-08-21 21:20:41.297 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 5
+2019-08-21 21:20:41.297 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.297 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 通用问题(String)
+2019-08-21 21:20:41.298 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 4
+2019-08-21 21:20:41.299 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==>  Preparing: select id,label from cskaoyan_mall_list where pid=? and api='' 
+2019-08-21 21:20:41.299 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : ==> Parameters: 商品管理(String)
+2019-08-21 21:20:41.300 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataThree                : <==      Total: 2
+2019-08-21 21:20:41.300 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.300 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 商品管理(String)
+2019-08-21 21:20:41.301 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 7
+2019-08-21 21:20:41.302 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==>  Preparing: select api,id,label from cskaoyan_mall_list where api is not null and pid=? 
+2019-08-21 21:20:41.302 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : ==> Parameters: 评论管理(String)
+2019-08-21 21:20:41.303 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.S.selectDataFour                 : <==      Total: 2
+2019-08-21 21:21:52.309 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:21:52.309 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: mall123(String)
+2019-08-21 21:21:52.310 DEBUG 1308 --- [http-nio-80-exec-2] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 0
+2019-08-21 21:22:36.846 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:22:36.846 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: mall123(String)
+2019-08-21 21:22:36.848 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:22:36.850 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-21 21:22:36.850 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: mall123(String)
+2019-08-21 21:22:36.851 DEBUG 1308 --- [http-nio-80-exec-4] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-21 21:22:36.851 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-21 21:22:36.852 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 42(Integer)
+2019-08-21 21:22:36.853 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-21 21:22:36.854 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-21 21:22:36.854 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: mall123(String), mall123(String), '(String), 2019-08-21 21:22:36.854(Timestamp), [2](String), 42(Integer)
+2019-08-21 21:22:36.862 DEBUG 1308 --- [http-nio-80-exec-4] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-21 21:22:36.890 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-21 21:22:36.890 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-21 21:22:36.891 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 5
+2019-08-21 21:22:36.891 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-21 21:22:36.891 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-21 21:22:36.893 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : <==      Total: 146
+2019-08-21 21:22:36.894 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-21 21:22:36.894 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 2(Integer)
+2019-08-21 21:22:36.894 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-21 21:22:36.895 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-21 21:22:36.895 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : ==> Parameters: 2(Integer)
+2019-08-21 21:22:36.896 DEBUG 1308 --- [http-nio-80-exec-6] c.c.m.m.P.selectByExample                : <==      Total: 34
+2019-08-21 21:32:12.544 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-21 21:32:12.544 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:32:12.545 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-21 21:32:12.545 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-21 21:32:12.545 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-21 21:32:12.546 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-21 21:32:12.546 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-21 21:32:12.547 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-21 21:32:12.547 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-21 21:32:12.548 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-21 21:32:12.548 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-21 21:32:12.548 DEBUG 1308 --- [http-nio-80-exec-10] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-21 22:13:36.169  INFO 1308 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-21 22:13:36.277  INFO 1308 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  [2] sessions were stopped.

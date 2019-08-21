@@ -14,4 +14,6 @@ public interface BrandService {
     Brand update(Brand brand);
 
     void delete(Brand brand);
+
+    Brand getBrandById(int id);
 }

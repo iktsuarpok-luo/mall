@@ -27,4 +27,7 @@ public interface GrouponrulesMapper {
     int updateByPrimaryKeySelective(Grouponrules record);
 
     int updateByPrimaryKey(Grouponrules record);
+
+    List<Grouponrules> selectOneByExample(GrouponrulesExample grouponrulesExample);
+
 }
