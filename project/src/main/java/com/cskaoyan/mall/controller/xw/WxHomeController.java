@@ -29,10 +29,10 @@ public class WxHomeController {
         BaseRespModel resp = new BaseRespModel();
         try {
             HashMap data = new HashMap();
-            data.put("banner",adService.selectList("id","desc"));
+            data.put("banner",adService.selectList(null,null));
             data.put("brandList",brandService.getBrandList(1,4,"id","desc",null,null));
             data.put("channel",categoryService.getFirstCategory());
-            data.put("couponList",couponService.selectList("id","desc"));
+            data.put("couponList",couponService.selectList(null,null,null,"id","desc"));
             data.put("floorGoodsList",null);//新建bean
             data.put("grouponList",null);//等
             data.put("hotGoodsList",null);
