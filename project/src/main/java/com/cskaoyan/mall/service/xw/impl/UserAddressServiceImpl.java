@@ -2,13 +2,16 @@ package com.cskaoyan.mall.service.xw.impl;
 
 import com.cskaoyan.mall.bean.Address;
 import com.cskaoyan.mall.bean.AddressExample;
+import com.cskaoyan.mall.bean.User;
 import com.cskaoyan.mall.bean.UserExample;
 import com.cskaoyan.mall.mapper.AddressMapper;
 import com.cskaoyan.mall.service.xw.UserAddressService;
 import com.github.pagehelper.PageHelper;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -52,5 +55,43 @@ public class UserAddressServiceImpl implements UserAddressService {
         return null;
     }
 
+    @Override
+    public List<Address> getAddressListByUser(Integer id) {
+        AddressExample addressExample = new AddressExample();
+        addressExample.createCriteria().andUserIdEqualTo(id);
+        return addressMapper.selectByExample(addressExample);
     }
+
+    @Override
+    public Address getAddressById(int id) {
+        return addressMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public Address update(Address address,int id) {
+        if(address.getId()==0){
+            address.setUserId(id);
+            Date date = new Date();
+            address.setUpdateTime(date);
+            address.setAddTime(date);
+            address.setDeleted(false);
+            address.setId(null);
+            addressMapper.insert(address);
+        }else {
+            Address oldAddress = addressMapper.selectByPrimaryKey(address.getId());
+            address.setUpdateTime(new Date());
+            address.setDeleted(false);
+            address.setAddTime(oldAddress.getAddTime());
+            address.setUserId(oldAddress.getUserId());
+            addressMapper.updateByPrimaryKey(address);
+        }
+        return address;
+    }
+
+    @Override
+    public void delete(int id) {
+        addressMapper.deleteByPrimaryKey(id);
+    }
+
+}
 

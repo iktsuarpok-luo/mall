@@ -74,7 +74,7 @@ public class AdminController {
             map.put("errno",602);
             return map;
         }
-        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
+        admin.setPassword(Md5Utils.Md5Again(admin.getPassword()));
         adminService.insert(admin);
         lxsAdminTwo aa=adminService.selectByName(admin.getUsername());
         Map map = new HashMap();
@@ -85,7 +85,7 @@ public class AdminController {
     }
     @PostMapping("admin/update")
     public Map update(@RequestBody lxsAdminTwo admin){
-        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
+        admin.setPassword(Md5Utils.Md5Again(admin.getPassword()));
         int i=adminService.update(admin);
         if(i==1){
             HashMap map = new HashMap();

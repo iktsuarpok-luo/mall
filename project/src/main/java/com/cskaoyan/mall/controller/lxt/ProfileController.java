@@ -20,8 +20,8 @@ public class ProfileController {
     @RequestMapping("password")
     public BaseRespModel passwordChange(String oldPassword,String newPassword){
         BaseRespModel resp = new BaseRespModel();
-        oldPassword = Md5Utils.getMd5(oldPassword);
-        newPassword = Md5Utils.getMd5(newPassword);
+        oldPassword = Md5Utils.Md5Again(oldPassword);
+        newPassword = Md5Utils.Md5Again(newPassword);
         try {
             Subject subject = SecurityUtils.getSubject();
             lxsAdminTwo admin = (lxsAdminTwo) subject.getPrincipal();

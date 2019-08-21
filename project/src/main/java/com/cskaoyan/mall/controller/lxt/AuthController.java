@@ -45,7 +45,7 @@ public class AuthController {
     public BaseRespModel login(@RequestBody lxsAdminTwo admin, HttpServletRequest request){
         BaseRespModel resp = new BaseRespModel<>();
         Subject subject = SecurityUtils.getSubject();
-        admin.setPassword(Md5Utils.getMd5(admin.getPassword()));
+        admin.setPassword(Md5Utils.Md5Again(admin.getPassword()));
         UsernamePasswordToken token = new MallToken(admin.getUsername(),admin.getPassword(),"admin");
         try{
             subject.login(token);

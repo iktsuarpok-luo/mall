@@ -23,4 +23,8 @@ public interface OrderService {
     int countUnrecv(User user);
 
     int countUncomment(User user);
+
+    long countByType(int showType);
+
+    List<Order> getOrderListByType(int showType,int page ,int size);
 }
