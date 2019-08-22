@@ -178,7 +178,7 @@ public class GoodsListController {
         return baseRespModel;
     }
 
-    /*@RequestMapping(value = "create", method = RequestMethod.POST)
+    @RequestMapping(value = "create", method = RequestMethod.POST)
     public Map<String,Object> creat(@RequestBody JSONObject jsonObject){
         String data = jsonObject.toString();
         //解析json数据
@@ -237,6 +237,6 @@ public class GoodsListController {
         map.put("errno",0);
 
         return map;
-    }*/
+    }
 
 }
