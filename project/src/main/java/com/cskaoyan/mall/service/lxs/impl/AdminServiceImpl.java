@@ -1,4 +1,4 @@
-package com.cskaoyan.mall.service.lxs;
+package com.cskaoyan.mall.service.lxs.impl;
 
 
 
@@ -11,6 +11,7 @@ import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.bean.lxs.lxsRole;
 import com.cskaoyan.mall.mapper.*;
 
+import com.cskaoyan.mall.service.lxs.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -21,7 +22,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 @Service
-public class AdminServiceImpl implements AdminService{
+public class AdminServiceImpl implements AdminService {
     @Autowired
     AdminMapper adminMapper;
 

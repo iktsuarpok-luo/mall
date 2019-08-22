@@ -2,26 +2,15 @@ package com.cskaoyan.mall.controller.lxt;
 
 import com.cskaoyan.mall.bean.*;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
-import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
-import com.cskaoyan.mall.service.lxs.AdminServiceImpl;
 import com.cskaoyan.mall.service.lxt.PermissionService;
 import com.cskaoyan.mall.service.lxt.RoleService;
-import com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl;
-import com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.annotation.RequiresAuthentication;
-import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.Factory;
-import org.apache.shiro.util.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.apache.shiro.mgt.SecurityManager;
-import sun.security.krb5.Realm;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
