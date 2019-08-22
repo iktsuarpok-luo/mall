@@ -168,7 +168,7 @@ public class GoodsListController {
         return baseRespModel;
 
     }
-    @RequestMapping("create")
+    /*@RequestMapping("create")
     public BaseRespModel creat(@RequestBody Goods goods){
         goods = goodsService.add(goods);
         BaseRespModel baseRespModel = new BaseRespModel();
@@ -176,7 +176,7 @@ public class GoodsListController {
         baseRespModel.setData(goods);
         baseRespModel.setErrmsg("成功");
         return baseRespModel;
-    }
+    }*/
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
     public Map<String,Object> creat(@RequestBody JSONObject jsonObject){
