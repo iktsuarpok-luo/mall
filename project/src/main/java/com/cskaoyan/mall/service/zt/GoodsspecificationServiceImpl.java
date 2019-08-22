@@ -30,8 +30,7 @@ public class GoodsspecificationServiceImpl implements GoodsspecificationService 
     @Override
     public List<Goodsspecification> findSpecificationByValueAndGoodsId(Integer id, String name) {
         GoodsspecificationExample goodsspecificationExample = new GoodsspecificationExample();
-        goodsspecificationExample.createCriteria().andGoodsIdEqualTo(id);
-        goodsspecificationExample.createCriteria().andValueEqualTo(name);
+        goodsspecificationExample.createCriteria().andGoodsIdEqualTo(id).andSpecificationEqualTo(name);
         return goodsspecificationMapper.selectByExample(goodsspecificationExample);
     }
 }

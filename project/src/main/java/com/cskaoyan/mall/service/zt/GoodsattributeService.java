@@ -9,4 +9,6 @@ public interface GoodsattributeService {
     List<Goodsattribute> findGoodsattributesByGoodsId(Integer goodsID);
 
     void create(String goodsSn, Goodsattribute[] attributes);
+
+    List<Goodsattribute> findGoodsattributesByGoods(int id);
 }

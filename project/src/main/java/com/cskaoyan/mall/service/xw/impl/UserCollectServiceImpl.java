@@ -65,4 +65,38 @@ public class UserCollectServiceImpl implements UserCollectService {
         collectExample.createCriteria().andUserIdEqualTo(userId);
         return (int) collectMapper.countByExample(collectExample);
     }
+
+    @Override
+    public Collect addCollect(Collect collect) {
+        collectMapper.insert(collect);
+        return collect;
+    }
+
+    @Override
+    public Collect getCollect(Integer userId, Byte type, Integer valueId) {
+        CollectExample collectExample = new CollectExample();
+        collectExample.createCriteria().andUserIdEqualTo(userId);
+        collectExample.createCriteria().andTypeEqualTo(type);
+        collectExample.createCriteria().andValueIdEqualTo(valueId);
+        List<Collect> collects = collectMapper.selectByExample(collectExample);
+        if(collects.size()==0){
+            return null;
+        }else {
+            return collects.get(0);
+        }
+    }
+
+    @Override
+    public void delete(Collect collect) {
+        collectMapper.deleteByPrimaryKey(collect.getId());
+    }
+
+    @Override
+    public List<Collect> myCollect(int page, int limit, Integer userId, int type) {
+        CollectExample collectExample = new CollectExample();
+        PageHelper.startPage(page,limit);
+        collectExample.createCriteria().andTypeEqualTo((byte) type).andUserIdEqualTo(userId);
+        List<Collect> collectList = collectMapper.selectByExample(collectExample);
+        return collectList;
+    }
 }

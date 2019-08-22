@@ -3,13 +3,14 @@ package com.cskaoyan.mall.controller.wjw;
 import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.bean.Goods;
 import com.cskaoyan.mall.bean.Groupon;
+
+
 import com.cskaoyan.mall.bean.Grouponrules;
 import com.cskaoyan.mall.service.wjw.GroupRuleService;
 import com.cskaoyan.mall.service.wjw.GrouponService;
 import com.cskaoyan.mall.service.zt.GoodsService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +42,6 @@ public class GrouponController {
         PageHelper.startPage(page,limit);
         BaseRespModel<Object> baseRespModel = new BaseRespModel<>();
         List<Grouponrules> grouponList= groupRuleService.getList(sort,order,goodsId);
-        grouponList = grouponList.subList(limit * (page - 1), Math.min(grouponList.size(), limit * page));
         PageInfo<Grouponrules> pageInfo = new PageInfo<>(grouponList);
         long total = pageInfo.getTotal();
         HashMap<String, Object> map = new HashMap<>();

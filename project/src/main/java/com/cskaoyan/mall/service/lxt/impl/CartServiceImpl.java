@@ -61,4 +61,16 @@ public class CartServiceImpl implements CartService {
         cartExample.createCriteria().andUserIdEqualTo(id);
         return (int) cartMapper.countByExample(cartExample);
     }
+
+    @Override
+    public int count(Integer id) {
+        CartExample cartExample = new CartExample();
+        cartExample.createCriteria().andUserIdEqualTo(id);
+        List<Cart> list = cartMapper.selectByExample(cartExample);
+        int count = 0;
+        for (Cart cart : list) {
+            count+=cart.getNumber();
+        }
+        return count;
+    }
 }

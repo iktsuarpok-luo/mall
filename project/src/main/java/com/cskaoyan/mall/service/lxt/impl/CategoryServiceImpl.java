@@ -80,9 +80,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(Category category) {
-        storageService.deleteByUrl(category.getPicUrl());
-        storageService.deleteByUrl(category.getIconUrl());
-
+        if (category.getPicUrl()!=null&&category.getPicUrl()!=""){
+            storageService.deleteByUrl(category.getPicUrl());
+        }
+        if(category.getIconUrl()!=null&&category.getIconUrl()!=""){
+            storageService.deleteByUrl(category.getIconUrl());
+        }
         StorageExample storageExample = new StorageExample();
         List<String> UrlList = new ArrayList<>();
         UrlList.add(category.getIconUrl());
@@ -103,6 +106,13 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getSubCategory(int id) {
         CategoryExample categoryExample = new CategoryExample();
         categoryExample.createCriteria().andPidEqualTo(id);
+        return categoryMapper.selectByExample(categoryExample);
+    }
+
+    @Override
+    public List<Category> getCategoryByPid() {
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.createCriteria().andPidEqualTo(0);
         return categoryMapper.selectByExample(categoryExample);
     }
 

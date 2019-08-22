@@ -38,16 +38,14 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public int countComment(Integer id, int i) {
         CommentExample commentExample = new CommentExample();
-        commentExample.createCriteria().andValueIdEqualTo(id);
-        commentExample.createCriteria().andTypeEqualTo((byte) i);
+        commentExample.createCriteria().andValueIdEqualTo(id).andTypeEqualTo((byte) i);
         return (int) commentMapper.countByExample(commentExample);
     }
 
     @Override
     public List<Comment> selectComments(Integer id, int i) {
         CommentExample commentExample = new CommentExample();
-        commentExample.createCriteria().andValueIdEqualTo(id);
-        commentExample.createCriteria().andTypeEqualTo((byte) i);
+        commentExample.createCriteria().andValueIdEqualTo(id).andTypeEqualTo((byte) i);
         return commentMapper.selectByExample(commentExample);
     }
 }

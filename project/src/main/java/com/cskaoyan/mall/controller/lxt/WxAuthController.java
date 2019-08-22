@@ -38,8 +38,8 @@ public class WxAuthController {
     public BaseRespModel sendMsg(HttpServletRequest request,@RequestBody User user){
         BaseRespModel resp = new BaseRespModel();
         try {
-//            String code = String.valueOf((int)((Math.random()*9+1)*1000));
-            String code = "1234";
+            String code = String.valueOf((int)((Math.random()*9+1)*1000));
+
             Subject subject = SecurityUtils.getSubject();
             subject.getSession().setAttribute("code",code);
             code = "{code:"+code+"}";

@@ -23,4 +23,5 @@ public interface GroupRuleService {
 
     Grouponrules selectRulesById(Integer rulesId);
 
+    List<Grouponrules> getLimitList(int i, String id, String desc);
 }

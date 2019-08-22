@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.management.Attribute;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -145,6 +146,35 @@ public class GoodsServiceImpl implements GoodsService {
             result.addAll(goodsMapper.selectByExample(goodsExample2));
         }
         return result;
+    }
+
+    // 热销商品
+    @Override
+    public List<Goods> getHotGoodsList() {
+        List<Goods> goods = null;
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(true);
+        goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    // 最新上市商品
+    @Override
+    public List<Goods> getNewGoodsList() {
+        List<Goods> goods = null;
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(true);
+        goods = goodsMapper.selectByExample(goodsExample);
+
+        return goods;
+    }
+
+    @Override
+    public List<Goods> getFloorGoodsList(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
     }
 }
 

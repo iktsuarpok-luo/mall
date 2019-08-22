@@ -10,4 +10,12 @@ public interface UserCollectService {
     int count(Integer id, int type);
 
     int check(Integer goodsId, Integer userId, int type);
+
+    Collect addCollect(Collect collect);
+
+    Collect getCollect(Integer userId, Byte type, Integer valueId);
+
+    void delete(Collect collect);
+
+    List<Collect> myCollect(int page, int limit, Integer userId, int type);
 }

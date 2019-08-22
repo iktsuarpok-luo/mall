@@ -16,4 +16,8 @@ public interface TopicService {
     int update(Topic topic);
 
     List<Topic> getList(String title,String subtitle,String sort,String order);
+
+    List<Topic> getHomeList();
+
+    Topic getDetailById(int id);
 }

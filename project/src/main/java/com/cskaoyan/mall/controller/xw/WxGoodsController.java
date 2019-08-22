@@ -99,16 +99,11 @@ public class WxGoodsController {
         try{
             HashMap data = new HashMap();
             Goods goods = goodsService.findGoodsById(id);
-            data.put("attribute",goodsattributeService.findGoodsattributesByGoodsId(id));
+            data.put("attribute",goodsattributeService.findGoodsattributesByGoods(id));
             data.put("brand",brandService.getBrandById(goods.getBrandId()));
-            HashMap comment = new HashMap();
-            comment.put("count",commentService.countComment(goods.getId(),0));
-            comment.put("data",commentService.selectComments(goods.getId(),0));
-            data.put("comment",comment);
             data.put("groupon",groupRuleService.getList(goods.getId()));
             data.put("info",goods);
             data.put("issue",issueService.getAllIssue());
-            data.put("productList",goodsproductService.findProductById(goods.getId()));
             data.put("shareImg",goods.getShareUrl());//猜测
             List specificationList = new ArrayList();
             HashMap specification = new HashMap();
@@ -117,15 +112,24 @@ public class WxGoodsController {
             if (((List<Goodsspecification>)specification.get("valueList")).size()!=0){
                 specificationList.add(specification);
             }
-            specification.put("name","颜色");
-            specification.put("valueList",goodsspecificationService.findSpecificationByValueAndGoodsId(goods.getId(),(String) specification.get("name")));
-            if (((List<Goodsspecification>)specification.get("valueList")).size()!=0){
-                specificationList.add(specification);
+            HashMap specification1 = new HashMap();
+            specification1.put("name","颜色");
+            specification1.put("valueList",goodsspecificationService.findSpecificationByValueAndGoodsId(goods.getId(),(String) specification1.get("name")));
+            if (((List<Goodsspecification>)specification1.get("valueList")).size()!=0){
+                specificationList.add(specification1);
             }
+            data.put("productList",goodsproductService.findProductById(goods.getId()));
             data.put("specificationList",specificationList);
             Subject subject = SecurityUtils.getSubject();
             User user = (User) subject.getPrincipal();
-            data.put("userHasCollect",userCollectService.check(goods.getId(),user.getId(),0));
+            if(user!=null){
+                HashMap comment = new HashMap();
+                comment.put("count",commentService.countComment(goods.getId(),0));
+                List<Comment> comments = commentService.selectComments(goods.getId(), 0);
+                comment.put("data",comments.subList(0,Math.min(3,comments.size())));
+                data.put("comment",comment);
+                data.put("userHasCollect",userCollectService.check(goods.getId(),user.getId(),0));
+            }
             resp.setData(data);
             resp.setErrno(0);
             resp.setErrmsg("成功");

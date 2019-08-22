@@ -85,6 +85,15 @@ public class UserAddressServiceImpl implements UserAddressService {
             address.setUserId(oldAddress.getUserId());
             addressMapper.updateByPrimaryKey(address);
         }
+        if (address.getIsDefault()){
+            AddressExample addressExample = new AddressExample();
+            addressExample.createCriteria().andIdNotEqualTo(address.getId());
+            List<Address> list = addressMapper.selectByExample(addressExample);
+            for (Address address1 : list) {
+                address1.setIsDefault(false);
+                addressMapper.updateByPrimaryKey(address1);
+            }
+        }
         return address;
     }
 

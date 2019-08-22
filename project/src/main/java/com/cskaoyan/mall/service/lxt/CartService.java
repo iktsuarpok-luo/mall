@@ -14,4 +14,6 @@ public interface CartService {
     CartTotal updateCheck(Check check);
 
     int countGoods(Integer id);
+
+    int count(Integer id);
 }
