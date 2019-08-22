@@ -7,6 +7,7 @@ import com.cskaoyan.mall.service.lxt.BrandService;
 import com.cskaoyan.mall.service.lxt.CategoryService;
 import com.cskaoyan.mall.service.wjw.AdService;
 import com.cskaoyan.mall.service.wjw.CouponService;
+import com.cskaoyan.mall.service.wjw.TopicService;
 import com.cskaoyan.mall.service.wjw.GroupRuleService;
 import com.cskaoyan.mall.service.wjw.GrouponService;
 import com.cskaoyan.mall.service.zt.GoodsService;
@@ -29,6 +30,8 @@ public class WxHomeController {
     CategoryService categoryService;
     @Autowired
     CouponService couponService;
+    @Autowired
+    TopicService topicService;
     @Autowired
     GroupRuleService groupRuleService;
     @Autowired
