@@ -339,24 +339,22 @@
     where cmg.id = #{id,jdbcType=INTEGER}
   </select>
 
-
-
-  <!--&lt;!&ndash;查询结果封装进map&ndash;&gt;
-  <resultMap id="ListContainsMap" type="com.cskaoyan.mall.bean.Category">
+  <!--查询结果封装进map-->
+  <resultMap id="ListContainsMap" type="com.cskaoyan.mall.bean.zt.ZtCategory">
     <result property="id"   column="`vaule`" jdbcType="INTEGER"  javaType="java.lang.Integer"/>
     <result property="name" column="`label`" jdbcType="VARCHAR"  javaType="java.lang.String"/>
-      <collection property="children" column="children" ofType="com.cskaoyan.mall.bean.Category" select="findSonCategory"/>
   </resultMap>
-  &lt;!&ndash;查询父分类&ndash;&gt;
-  <select id="findCategoryList" resultMap="ListContainsMap">
+  <!--查询父分类-->
+  <select id="findCategoryListByPidEqualZero" resultMap="ListContainsMap">
     select
-    *
+    id as vaule,
+    `name` as label
     from cskaoyan_mall_category
     where pid=0
   </select>
 
-  &lt;!&ndash;根据父分类查询子分类&ndash;&gt;
-  <select id="findSonCategory" resultMap="ListContainsMap">
+  <!--根据父分类查询子分类-->
+  <select id="findSonCategoryByPid" resultMap="ListContainsMap">
    select
     cmc.id as `vaule`,
     cmc.`name` as label
@@ -364,12 +362,7 @@
     left join cskaoyan_mall_goods cmg on cmg.category_id = cmc.id
     where pid = #{id,jdbcType=INTEGER}
     group by cmc.name
-  </select>-->
-
-
-
-
-
+  </select>
 
   <resultMap id="BaseResultMap1" type="com.cskaoyan.mall.bean.Category">
     <id column="vaule" jdbcType="INTEGER" property="id" />
@@ -384,7 +377,6 @@
     where cmc.pid=#{pid}
     group by cmc.name
   </select>
-
 
 
 

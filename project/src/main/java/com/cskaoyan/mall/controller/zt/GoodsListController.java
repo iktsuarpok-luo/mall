@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.lang.System;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -79,7 +80,7 @@ public class GoodsListController {
     public BaseRespModel showCatgoryAndBrand(){
 
         List<Brand> brandList = ztBrandService.showBrandVauleAndLabel();
-        List<ZtCategory> categoryList = ztcategoryService.showCategoryList();
+        List<Map> categoryList = ztcategoryService.showCategoryList();
 
         HashMap data = new HashMap();
         data.put("brandList",brandList);
@@ -96,7 +97,11 @@ public class GoodsListController {
     public BaseRespModel showDetail(@Param("id") int id){
         Goods goods = goodsService.findGoodsById(id);
         List<Goodsattribute> attributes = goodsattributeService.findGoodsattributesByGoodsId(id);
-        List categoryIds = ztcategoryService.findcategoryIdsById(id);
+        List  categoryIds = new ArrayList();
+        int pid = (int)ztcategoryService.findcategoryIdsById(id).get(0);
+        int parentId = categoryService.getCurrentCategory(pid).getPid();
+        categoryIds.add(parentId);
+        categoryIds.add(pid);
         List<Goodsproduct> products = goodsproductService.findProductById(id);
         List<Goodsspecification> specifications = goodsspecificationService.findSpecificationById(id);
 
@@ -119,7 +124,6 @@ public class GoodsListController {
         //解析json
         String data = jsonObject.toJSONString();
         JSONObject json = JSON.parseObject(data);
-
         //解析goods,封装进javabean
         String goodsStr = json.getString("goods");
         ObjectMapper objectMapper = new ObjectMapper();
@@ -160,23 +164,12 @@ public class GoodsListController {
                 e.printStackTrace();
             }
         }
-
         goodsService.update(goods,attributes,products,specifications);
         BaseRespModel baseRespModel = new BaseRespModel<>();
         baseRespModel.setErrno(0);
         baseRespModel.setErrmsg("成功");
         return baseRespModel;
-
     }
-    /*@RequestMapping("create")
-    public BaseRespModel creat(@RequestBody Goods goods){
-        goods = goodsService.add(goods);
-        BaseRespModel baseRespModel = new BaseRespModel();
-        baseRespModel.setErrno(0);
-        baseRespModel.setData(goods);
-        baseRespModel.setErrmsg("成功");
-        return baseRespModel;
-    }*/
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
     public Map<String,Object> creat(@RequestBody JSONObject jsonObject){
