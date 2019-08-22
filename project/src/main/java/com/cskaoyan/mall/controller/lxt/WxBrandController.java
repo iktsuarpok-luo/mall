@@ -13,6 +13,22 @@ import java.util.HashMap;
 public class WxBrandController {
     @Autowired
     BrandService brandService;
+    @RequestMapping("list")
+    public BaseRespModel list(int page,int size){
+        BaseRespModel resp = new BaseRespModel();
+        try {
+            HashMap data = new HashMap();
+            data.put("brandList",brandService.getBrandList(page,size,"id","desc",null,null));
+            data.put("totalPages",Math.ceil(brandService.countBrand()/size));
+            resp.setData(data);
+            resp.setErrno(0);
+            resp.setErrmsg("成功");
+        }catch (Exception e){
+            resp.setErrmsg("失败");
+            resp.setErrno(1);
+        }
+        return resp;
+    }
     @RequestMapping("detail")
     public BaseRespModel detail(int id){
         BaseRespModel resp = new BaseRespModel();

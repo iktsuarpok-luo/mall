@@ -3,6 +3,8 @@ package com.cskaoyan.mall.mapper;
 import com.cskaoyan.mall.bean.Permission;
 import com.cskaoyan.mall.bean.PermissionExample;
 import java.util.List;
+
+import com.cskaoyan.mall.bean.lxs.data.datafour;
 import org.apache.ibatis.annotations.Param;
 
 public interface PermissionMapper {
@@ -27,4 +29,10 @@ public interface PermissionMapper {
     int updateByPrimaryKeySelective(Permission record);
 
     int updateByPrimaryKey(Permission record);
+
+    void insertdata(@Param("data") datafour datafour);
+
+    void deleteByRoleId(@Param("roleid") int roleId);
+
+    String getApi(@Param("permission") String permission);
 }

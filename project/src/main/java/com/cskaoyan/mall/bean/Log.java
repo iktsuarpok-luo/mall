@@ -1,5 +1,7 @@
 package com.cskaoyan.mall.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Log {
@@ -88,7 +90,7 @@ public class Log {
     public void setComment(String comment) {
         this.comment = comment == null ? null : comment.trim();
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     public Date getAddTime() {
         return addTime;
     }
@@ -96,7 +98,7 @@ public class Log {
     public void setAddTime(Date addTime) {
         this.addTime = addTime;
     }
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     public Date getUpdateTime() {
         return updateTime;
     }
@@ -111,5 +113,22 @@ public class Log {
 
     public void setDeleted(Boolean deleted) {
         this.deleted = deleted;
+    }
+
+    @Override
+    public String toString() {
+        return "Log{" +
+                "id=" + id +
+                ", admin='" + admin + '\'' +
+                ", ip='" + ip + '\'' +
+                ", type=" + type +
+                ", action='" + action + '\'' +
+                ", status=" + status +
+                ", result='" + result + '\'' +
+                ", comment='" + comment + '\'' +
+                ", addTime=" + addTime +
+                ", updateTime=" + updateTime +
+                ", deleted=" + deleted +
+                '}';
     }
 }

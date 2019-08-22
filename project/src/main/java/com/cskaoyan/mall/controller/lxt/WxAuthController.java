@@ -128,7 +128,7 @@ public class WxAuthController {
             user.setLastLoginTime(new Date());
             userService.update(user);
             data.put("token",subject.getSession().getId());
-            long time = new Date().getTime()+180000;
+            long time = new Date().getTime()+18000000;
             data.put("tokenExpire",new Date(time));
             HashMap userInfo = new HashMap();
             userInfo.put("nickName",user.getNickname());

@@ -225,4 +225,20 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <insert id="insertdata" parameterType="com.cskaoyan.mall.bean.lxs.data.datafour" >
+     insert into
+     cskaoyan_mall_list
+     (api,id,label,pid)
+     values
+     (#{data.api},#{data.id},#{data.label},#{data.pid})
+ </insert>
+  <delete id="deleteByRoleId" parameterType="java.lang.Integer">
+     delete from cskaoyan_mall_permission
+    where role_id = #{roleid,jdbcType=INTEGER}
+  </delete>
+
+  <select id="getApi" parameterType="java.lang.String" resultType="java.lang.String">
+    select api from cskaoyan_mall_list
+    where id = #{permission,jdbcType=VARCHAR}
+  </select>
 </mapper>

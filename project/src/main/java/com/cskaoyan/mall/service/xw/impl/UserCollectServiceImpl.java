@@ -48,4 +48,12 @@ public class UserCollectServiceImpl implements UserCollectService {
         }
         return null;
     }
+
+    @Override
+    public int count(Integer id, int type) {
+        CollectExample collectExample = new CollectExample();
+        collectExample.createCriteria().andUserIdEqualTo(id);
+        collectExample.createCriteria().andTypeEqualTo((byte) type);
+        return (int)collectMapper.countByExample(collectExample);
+    }
 }

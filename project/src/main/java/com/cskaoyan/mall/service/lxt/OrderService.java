@@ -24,7 +24,7 @@ public interface OrderService {
 
     int countUncomment(User user);
 
-    long countByType(int showType);
+    long countByType(int showType,int id);
 
-    List<Order> getOrderListByType(int showType,int page ,int size);
+    List<Order> getOrderListByType(int showType,int page ,int size,int id);
 }

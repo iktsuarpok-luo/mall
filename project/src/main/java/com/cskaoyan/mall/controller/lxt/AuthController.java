@@ -2,6 +2,7 @@ package com.cskaoyan.mall.controller.lxt;
 
 import com.cskaoyan.mall.bean.*;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
+import com.cskaoyan.mall.mapper.PermissionMapper;
 import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
 import com.cskaoyan.mall.service.lxs.AdminServiceImpl;
@@ -41,6 +42,8 @@ public class AuthController {
     RoleService roleService;
     @Autowired
     PermissionService permissionService;
+    @Autowired
+    PermissionMapper permissionMapper;
     @RequestMapping("login")
     public BaseRespModel login(@RequestBody lxsAdminTwo admin, HttpServletRequest request){
         BaseRespModel resp = new BaseRespModel<>();
@@ -90,8 +93,11 @@ public class AuthController {
                 perms.add("*");
             }else{
                 for (Permission permission : Allpermissions) {
-                    if(subject.isPermitted(permission.getPermission())){
-                        perms.add(permission.getPermission());
+                    if(permission.getPermission().equals("*")){
+                        continue;
+                    }
+                    if(subject.isPermitted(permissionMapper.getApi(permission.getPermission()))){
+                        perms.add(permissionMapper.getApi(permission.getPermission()));
                     }
                 }
             }

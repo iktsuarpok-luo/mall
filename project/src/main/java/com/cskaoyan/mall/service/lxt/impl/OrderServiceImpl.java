@@ -113,18 +113,19 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public long countByType(int showType) {
+    public long countByType(int showType,int id) {
 
         OrderExample orderExample = new OrderExample();
         if (showType != 0) {
             orderExample.createCriteria().andOrderStatusBetween((short) (showType * 100), (short) ((showType + 1) * 100));
         }
+        orderExample.createCriteria().andUserIdEqualTo(id);
         return orderMapper.countByExample(orderExample);
     }
 
 
     @Override
-    public List<Order> getOrderListByType(int showType, int page, int size) {
+    public List<Order> getOrderListByType(int showType, int page, int size,int id) {
         Short[] orderStatusArray = new Short[0];
         switch (showType) {
             case 0:
@@ -144,6 +145,6 @@ public class OrderServiceImpl implements OrderService {
                 break;
         }
 
-        return this.getOrderList(page, size, "id", "desc", null, null, orderStatusArray);
+        return this.getOrderList(page, size, "id", "desc", null, String.valueOf(id), orderStatusArray);
     }
 }
