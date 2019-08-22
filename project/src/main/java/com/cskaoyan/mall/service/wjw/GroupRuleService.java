@@ -22,4 +22,6 @@ public interface GroupRuleService {
     int update(Grouponrules grouponrules);
 
     Grouponrules selectRulesById(Integer rulesId);
+
+    List<Grouponrules> getLimitList(int i, String id, String desc);
 }

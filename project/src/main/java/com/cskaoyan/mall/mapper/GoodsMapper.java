@@ -41,4 +41,7 @@ public interface GoodsMapper {
     void deleteBygoodsSn(String goodsSn);
 
     int updateById(@Param("goodsSn") Integer id);
+
+    /*热销商品*/
+    List<Goods> selectHotGoodsByExample(GoodsExample example);
 }

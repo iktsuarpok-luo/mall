@@ -65,4 +65,12 @@ public class CouponServiceImpl implements CouponService{
         String random = RandomUtils.getRandomString(8);
         return random;
     }
+
+    @Override
+    public List<Coupon> selectLimitList(int i, String sort, String order) {
+        CouponExample couponExample = new CouponExample();
+        List<Coupon> couponList = couponMapper.selectByExample(couponExample);
+        couponExample.setOrderByClause(sort+" "+order);
+        return couponList.subList(0,i);
+    }
 }
