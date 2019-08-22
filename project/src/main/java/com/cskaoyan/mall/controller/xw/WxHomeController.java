@@ -6,6 +6,8 @@ import com.cskaoyan.mall.service.lxt.CategoryService;
 import com.cskaoyan.mall.service.wjw.AdService;
 import com.cskaoyan.mall.service.wjw.CouponService;
 import com.cskaoyan.mall.service.wjw.TopicService;
+import com.cskaoyan.mall.service.wjw.GroupRuleService;
+import com.cskaoyan.mall.service.wjw.GrouponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,8 @@ public class WxHomeController {
     CouponService couponService;
     @Autowired
     TopicService topicService;
+    @Autowired
+    GroupRuleService groupRuleService;
 
     @RequestMapping("index")
     public BaseRespModel homeShow(){

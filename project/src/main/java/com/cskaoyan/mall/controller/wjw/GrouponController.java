@@ -4,9 +4,9 @@ import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.bean.Goods;
 import com.cskaoyan.mall.bean.Groupon;
 import com.cskaoyan.mall.bean.Grouponrules;
-import com.cskaoyan.mall.service.wjw.GoodsService;
 import com.cskaoyan.mall.service.wjw.GroupRuleService;
 import com.cskaoyan.mall.service.wjw.GrouponService;
+import com.cskaoyan.mall.service.zt.GoodsService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -41,7 +41,6 @@ public class GrouponController {
         PageHelper.startPage(page,limit);
         BaseRespModel<Object> baseRespModel = new BaseRespModel<>();
         List<Grouponrules> grouponList= groupRuleService.getList(sort,order,goodsId);
-        grouponList = grouponList.subList(limit * (page - 1), Math.min(grouponList.size(), limit * page));
         PageInfo<Grouponrules> pageInfo = new PageInfo<>(grouponList);
         long total = pageInfo.getTotal();
         HashMap<String, Object> map = new HashMap<>();
@@ -69,7 +68,7 @@ public class GrouponController {
             rowData.put("subGroupons",subgrouponList);
             Grouponrules grouponrules = groupRuleService.selectRulesById(groupon.getRulesId());
             rowData.put("rules",grouponrules);
-            Goods goods = goodsService.selectById(grouponrules.getGoodsId());
+            Goods goods = goodsService.findGoodsById(grouponrules.getGoodsId());
             rowData.put("goods",goods);
             items.add(rowData);
         }
@@ -88,7 +87,7 @@ public class GrouponController {
     public BaseRespModel add(@RequestBody Grouponrules grouponrules){
         BaseRespModel<Grouponrules> baseRespModel = new BaseRespModel<>();
         Integer goodsId = grouponrules.getGoodsId();
-        Goods goods =goodsService.selectById(goodsId);
+        Goods goods =goodsService.findGoodsById(goodsId);
         grouponrules.setGoodsName(goods.getName());
         grouponrules.setPicUrl(goods.getPicUrl());
         grouponrules.setDeleted(false);

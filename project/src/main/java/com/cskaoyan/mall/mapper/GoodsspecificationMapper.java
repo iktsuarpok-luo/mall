@@ -27,4 +27,6 @@ public interface GoodsspecificationMapper {
     int updateByPrimaryKeySelective(Goodsspecification record);
 
     int updateByPrimaryKey(Goodsspecification record);
+
+    List<Goodsspecification> findSpecificationById(int id);
 }

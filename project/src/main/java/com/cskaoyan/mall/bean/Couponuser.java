@@ -1,5 +1,6 @@
 package com.cskaoyan.mall.bean;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Couponuser {
@@ -19,9 +20,9 @@ public class Couponuser {
 
     private Integer orderId;
 
-    private Date addTime;
+    private LocalDateTime addTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private Boolean deleted;
 
@@ -89,19 +90,19 @@ public class Couponuser {
         this.orderId = orderId;
     }
 
-    public Date getAddTime() {
+    public LocalDateTime getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(Date addTime) {
+    public void setAddTime(LocalDateTime addTime) {
         this.addTime = addTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 
