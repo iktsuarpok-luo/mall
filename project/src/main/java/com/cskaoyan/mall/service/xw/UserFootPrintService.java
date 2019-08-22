@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface UserFootPrintService {
     List<Footprint> queryFootPrint(int page, int limit, Integer userId, Integer goodsId);
+
+    int countFootprintById(Integer id);
 }

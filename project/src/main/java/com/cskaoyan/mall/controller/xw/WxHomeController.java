@@ -66,7 +66,7 @@ public class WxHomeController {
             data.put("grouponList",groupRuleService.getLimitList(4,"id","desc"));//等
             data.put("hotGoodsList",goodsService.getHotGoodsList().subList(0,Math.min(6,goodsService.getHotGoodsList().size())));
             data.put("newGoodsList",goodsService.getNewGoodsList().subList(0,Math.min(6,goodsService.getNewGoodsList().size())));
-            data.put("topicList",null);//肖旺写
+            data.put("topicList",topicService.getHomeList());//肖旺写
             resp.setData(data);
             resp.setErrmsg("成功");
             resp.setErrno(0);
