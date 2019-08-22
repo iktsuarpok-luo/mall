@@ -65,4 +65,49 @@ public class OrderServiceImpl implements OrderService {
         ordergoodsExample.createCriteria().andOrderIdEqualTo(id);
         return ordergoodsMapper.selectByExample(ordergoodsExample);
     }
+
+    @Override
+    public int countUnpaid(User user) {
+        OrderExample orderExample = new OrderExample();
+        List list = new ArrayList();
+        list.add(101);
+        list.add(102);
+        list.add(103);
+        orderExample.createCriteria().andUserIdEqualTo(user.getId()).andOrderStatusIn(list);
+        int l = (int)orderMapper.countByExample(orderExample);
+        return l;
+    }
+
+    @Override
+    public int countUnship(User user) {
+        OrderExample orderExample = new OrderExample();
+        List list = new ArrayList();
+        list.add(201);
+        list.add(202);
+        list.add(203);
+        orderExample.createCriteria().andUserIdEqualTo(user.getId()).andOrderStatusIn(list);
+        int l = (int)orderMapper.countByExample(orderExample);
+        return l;
+    }
+
+    @Override
+    public int countUnrecv(User user) {
+        OrderExample orderExample = new OrderExample();
+        List list = new ArrayList();
+        list.add(301);
+        orderExample.createCriteria().andUserIdEqualTo(user.getId()).andOrderStatusIn(list);
+        int l = (int)orderMapper.countByExample(orderExample);
+        return l;
+    }
+
+    @Override
+    public int countUncomment(User user) {
+        OrderExample orderExample = new OrderExample();
+        List list = new ArrayList();
+        list.add(401);
+        list.add(402);
+        orderExample.createCriteria().andUserIdEqualTo(user.getId()).andOrderStatusIn(list);
+        int l = (int)orderMapper.countByExample(orderExample);
+        return l;
+    }
 }

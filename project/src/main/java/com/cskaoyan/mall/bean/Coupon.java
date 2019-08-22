@@ -1,6 +1,7 @@
 package com.cskaoyan.mall.bean;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Coupon {
@@ -38,9 +39,9 @@ public class Coupon {
 
     private Date endTime;
 
-    private Date addTime;
+    private LocalDateTime addTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private Boolean deleted;
 
@@ -57,7 +58,7 @@ public class Coupon {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public String getDesc() {
@@ -65,7 +66,7 @@ public class Coupon {
     }
 
     public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+        this.desc = desc;
     }
 
     public String getTag() {
@@ -73,7 +74,7 @@ public class Coupon {
     }
 
     public void setTag(String tag) {
-        this.tag = tag == null ? null : tag.trim();
+        this.tag = tag;
     }
 
     public Integer getTotal() {
@@ -137,7 +138,7 @@ public class Coupon {
     }
 
     public void setGoodsValue(String goodsValue) {
-        this.goodsValue = goodsValue == null ? null : goodsValue.trim();
+        this.goodsValue = goodsValue;
     }
 
     public String getCode() {
@@ -145,7 +146,7 @@ public class Coupon {
     }
 
     public void setCode(String code) {
-        this.code = code == null ? null : code.trim();
+        this.code = code;
     }
 
     public Short getTimeType() {
@@ -180,19 +181,19 @@ public class Coupon {
         this.endTime = endTime;
     }
 
-    public Date getAddTime() {
+    public LocalDateTime getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(Date addTime) {
+    public void setAddTime(LocalDateTime addTime) {
         this.addTime = addTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

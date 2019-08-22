@@ -13,12 +13,12 @@ spring:
     type: ${myType}
   resources:
     static-locations: classpath:/static
+  aop:
+    auto: true
+    proxy-target-class: true
 filePath: ${staticPath}
 logging:
   file: spring.log
   level:
     com.cskaoyan.mall.mapper: debug
-
-
-
 

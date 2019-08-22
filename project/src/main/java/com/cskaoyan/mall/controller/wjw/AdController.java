@@ -6,6 +6,7 @@ import com.cskaoyan.mall.service.wjw.AdService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,10 +24,11 @@ public class AdController {
     @Autowired
     private AdService adService;
 
+    /*显示及查找*/
     @RequestMapping("/list")
-    public BaseRespModel getList(int page, int limit, String sort, String order){
-//        PageHelper.startPage(page,limit);
-        List<Ad> adList = adService.selectList(sort,order);
+    public BaseRespModel getList(int page, int limit, String sort, String order,String name,String content){
+        PageHelper.startPage(page,limit);
+        List<Ad> adList = adService.selectList(name,content);
         BaseRespModel<HashMap> baseRespModel = new BaseRespModel<>();
         HashMap<String, Object> data = new HashMap<>();
         /*得到total值*/
@@ -43,21 +45,35 @@ public class AdController {
     }
     /*增*/
     @RequestMapping("/create")
-    public BaseRespModel create(Ad ad){
+    public BaseRespModel create(@RequestBody Ad ad){
         int i = adService.add(ad);
-        BaseRespModel<HashMap> baseRespModel = new BaseRespModel<>();
-        HashMap<String,Object> data = new HashMap<>();
-        if (i>1){
-            baseRespModel.setData(data);
-            baseRespModel.setErrmsg("成功");
-            baseRespModel.setErrno(0);
-            return baseRespModel;
+        BaseRespModel<Ad> baseRespModel = new BaseRespModel<>();
+        baseRespModel.setData(ad);
+        baseRespModel.setErrmsg("成功");
+        baseRespModel.setErrno(0);
+        return baseRespModel;
+    }
+    /*删*/
+    @RequestMapping("/delete")
+    public BaseRespModel delete(@RequestBody Ad ad){
+        BaseRespModel<Object> respModel = new BaseRespModel<>();
+        adService.delete(ad);
+        respModel.setErrmsg("成功");
+        respModel.setErrno(0);
+        return respModel;
+    }
+    /*改*/
+    @RequestMapping("/update")
+    public BaseRespModel update(@RequestBody Ad ad){
+        BaseRespModel<Ad> respModel = new BaseRespModel<>();
+        int resultAd =adService.update(ad);
+        if (resultAd>0){
+            respModel.setData(ad);
+            respModel.setErrno(0);
+            respModel.setErrmsg("成功");
+            return respModel;
         }else {
             return null;
         }
     }
-//    /*删*/
-//    @RequestMapping("/delete")
-//    public
-
 }
