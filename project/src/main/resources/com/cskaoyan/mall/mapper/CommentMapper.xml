@@ -303,4 +303,19 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+  <select id="findCommentByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cskaoyan_mall_comment
+    where user_id = #{user_id}
+  </select>
+
+  <select id="findCommentByVauleId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cskaoyan_mall_comment
+    where value_id = #{value_id}
+  </select>
 </mapper>

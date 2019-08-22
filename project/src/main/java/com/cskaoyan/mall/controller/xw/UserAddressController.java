@@ -19,13 +19,18 @@ public class UserAddressController {
     UserAddressService userAddressService;
     @RequestMapping("address/list")
     public BaseRespModel<PageBean> queryAddress(int page, int limit, String userId, String name){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try{
         List<Address> addressList = userAddressService.queryAddress(page, limit, userId, name);
         PageInfo<Address> pageInfo = new PageInfo<>(addressList);
         PageBean<Address> pageBean = new PageBean<>(addressList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
         respModel.setErrno(0);
+        } catch (Exception e){
+            respModel.setErrno(1);
+            respModel.setErrmsg("失败");
+        }
         return respModel;
     }
 }

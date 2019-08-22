@@ -20,13 +20,18 @@ public class UserManageController {
     UserManageService userManageService;
     @RequestMapping("user/list")
     public BaseRespModel<PageBean> queryAllUser(int page,int limit,String username,String mobile){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try{
         List<User> userList = userManageService.queryAllUser(page, limit, username, mobile);
         PageInfo<User> pageInfo = new PageInfo<>(userList);
         PageBean<User> pageBean = new PageBean<>(userList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
-        respModel.setErrno(0);
+        respModel.setErrno(0);}catch (Exception e){
+            respModel.setErrno(1);
+            respModel.setErrmsg("失败");
+        }
         return respModel;
     }
 }

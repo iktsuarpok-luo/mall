@@ -27,4 +27,8 @@ public interface CommentMapper {
     int updateByPrimaryKeySelective(Comment record);
 
     int updateByPrimaryKey(Comment record);
+
+    List<Comment> findCommentByUserId(Integer userId);
+
+    List<Comment> findCommentByVauleId(Integer vauleId);
 }

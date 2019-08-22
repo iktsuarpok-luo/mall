@@ -90,15 +90,16 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
-    /*根据order和sort查询adlist*/
 
-  </select><select id="selectByOrderAndSort" parameterType="string" resultMap="BaseResultMap">
+    /*根据order和sort查询adlist*/
+  </select>
+  <select id="selectByOrderAndSort" parameterType="string" resultMap="BaseResultMap">
         SELECT
         id,
-        NAME,
+        `NAME`,
         link,
         url,
-        position,
+        `position`,
         content,
         start_time,
         end_time,
@@ -110,6 +111,27 @@
         cskaoyan_mall_ad
     ORDER BY
         add_time DESC
+  </select>
+
+  <select id="selectByNameAndContent" parameterType="string" resultMap="BaseResultMap">
+        SELECT
+        id,
+        `NAME`,
+        link,
+        url,
+        `position`,
+        content,
+        start_time,
+        end_time,
+        enabled,
+        add_time,
+        update_time,
+        deleted
+    FROM
+        cskaoyan_mall_ad
+    where `name` like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+    and `content` like CONCAT('%',#{content,jdbcType=VARCHAR},'%')
+    ORDER BY add_time DESC
   </select>
 
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -129,8 +151,8 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Ad">
-    insert into cskaoyan_mall_ad (id, name, link, 
-      url, position, content, 
+    insert into cskaoyan_mall_ad (id, `name`, link,
+      url, `position`, content,
       start_time, end_time, enabled, 
       add_time, update_time, deleted
       )

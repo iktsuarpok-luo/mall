@@ -14,7 +14,7 @@ public class Goods {
 
     private Integer brandId;
 
-    private String gallery;
+    private String[] gallery;
 
     private String keywords;
 
@@ -86,12 +86,12 @@ public class Goods {
         this.brandId = brandId;
     }
 
-    public String getGallery() {
+    public String[] getGallery() {
         return gallery;
     }
 
-    public void setGallery(String gallery) {
-        this.gallery = gallery == null ? null : gallery.trim();
+    public void setGallery(String[] gallery) {
+        this.gallery = gallery;
     }
 
     public String getKeywords() {
@@ -131,7 +131,7 @@ public class Goods {
     }
 
     public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl == null ? null : picUrl.trim();
+        this.picUrl = picUrl;
     }
 
     public String getShareUrl() {

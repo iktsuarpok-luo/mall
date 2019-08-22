@@ -76,4 +76,9 @@ public class BrandServiceImpl implements BrandService {
 
         brandMapper.deleteByPrimaryKey(brand.getId());
     }
+
+    @Override
+    public Brand getBrandById(int id) {
+        return brandMapper.selectByPrimaryKey(id);
+    }
 }

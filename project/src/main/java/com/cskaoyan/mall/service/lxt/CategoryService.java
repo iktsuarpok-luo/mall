@@ -14,4 +14,8 @@ public interface CategoryService {
     Category update(Category category);
 
     void delete(Category category);
+
+    Category getCurrentCategory(int id);
+
+    List<Category> getSubCategory(int id);
 }

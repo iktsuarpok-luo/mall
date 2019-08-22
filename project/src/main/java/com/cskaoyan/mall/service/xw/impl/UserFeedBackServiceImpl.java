@@ -2,8 +2,6 @@ package com.cskaoyan.mall.service.xw.impl;
 
 import com.cskaoyan.mall.bean.Feedback;
 import com.cskaoyan.mall.bean.FeedbackExample;
-import com.cskaoyan.mall.bean.Footprint;
-import com.cskaoyan.mall.bean.FootprintExample;
 import com.cskaoyan.mall.mapper.FeedbackMapper;
 import com.cskaoyan.mall.service.xw.UserFeedBackService;
 import com.github.pagehelper.PageHelper;

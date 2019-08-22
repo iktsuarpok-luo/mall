@@ -18,13 +18,18 @@ public class UserCollectController {
     UserCollectService userCollectService;
     @RequestMapping("collect/list")
     public BaseRespModel<PageBean> queryCollect(int page, int limit, Integer userId, Integer valueId){
+        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
+        try{
         List<Collect> collectList = userCollectService.queryCollect(page, limit, userId, valueId);
         PageInfo<Collect> pageInfo = new PageInfo<>(collectList);
         PageBean<Collect> pageBean = new PageBean<>(collectList, pageInfo.getTotal());
-        BaseRespModel<PageBean> respModel = new BaseRespModel<>();
         respModel.setData(pageBean);
         respModel.setErrmsg("成功");
         respModel.setErrno(0);
+        }catch (Exception e){
+            respModel.setErrno(1);
+            respModel.setErrmsg("失败");
+        }
         return respModel;
     }
 }

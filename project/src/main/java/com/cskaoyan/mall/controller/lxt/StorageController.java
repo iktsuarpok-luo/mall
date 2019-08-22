@@ -28,6 +28,7 @@ public class StorageController {
     StorageService storageService;
     @RequestMapping("create")
     public BaseRespModel addPic(MultipartFile file) throws IOException {
+        String type = file.getContentType();
         BaseRespModel resp = new BaseRespModel();
         try {
             String fileName = file.getOriginalFilename();  // 文件名
@@ -49,7 +50,7 @@ public class StorageController {
             storage.setUrl(url);
             storage.setSize((int) file.getSize());
             storage.setKey(fileName);
-            storage.setType(suffixName);
+            storage.setType(type);
             storage.setDeleted(false);
             storage.setName(fileName);
             Date date = new Date();

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mall.mapper.SystemPermissionsMapper">
+    <select id="selectDataTwo" resultType="com.cskaoyan.mall.bean.lxs.data.datatwo">
+        select
+        id,label
+        from cskaoyan_mall_list
+        where pid='0' AND
+				 api = ''
+    </select>
+
+    <select id="selectDataThree" resultType="com.cskaoyan.mall.bean.lxs.data.datathree">
+        select
+        id,label from cskaoyan_mall_list
+        where pid=#{id} and api=''
+    </select>
+    <select id="selectDataFour" resultType="com.cskaoyan.mall.bean.lxs.data.datafour">
+        select
+        api,id,label
+        from cskaoyan_mall_list
+        where api is not null and pid=#{id}
+    </select>
+
+    <select id="selectPermission" resultType="com.cskaoyan.mall.bean.Permission">
+        select permission
+        from cskaoyan_mall_permission
+        where role_id=#{id}
+    </select>
+
+    <select id="selectAll" resultType="com.cskaoyan.mall.bean.Permission">
+        select id as permission
+        from cskaoyan_mall_list
+        where api!=''and pid!='0'
+    </select>
+
+
+</mapper>

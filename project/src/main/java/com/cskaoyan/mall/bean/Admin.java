@@ -23,6 +23,8 @@ public class Admin {
 
     private String roleIds;
 
+
+
     public Integer getId() {
         return id;
     }
@@ -100,6 +102,6 @@ public class Admin {
     }
 
     public void setRoleIds(String roleIds) {
-        this.roleIds = roleIds == null ? null : roleIds.trim();
+        this.roleIds = roleIds;
     }
 }

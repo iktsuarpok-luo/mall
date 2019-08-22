@@ -3,6 +3,8 @@ package com.cskaoyan.mall.mapper;
 import com.cskaoyan.mall.bean.Role;
 import com.cskaoyan.mall.bean.RoleExample;
 import java.util.List;
+
+import com.cskaoyan.mall.bean.lxs.lxsRole;
 import org.apache.ibatis.annotations.Param;
 
 public interface RoleMapper {
@@ -27,4 +29,10 @@ public interface RoleMapper {
     int updateByPrimaryKeySelective(Role record);
 
     int updateByPrimaryKey(Role record);
+
+    List<lxsRole> getOptionData();
+
+    Role selectByName(@Param("name") String name);
+
+    List<Role> selectByNames(@Param("name") String name);
 }

@@ -34,4 +34,6 @@ public interface AdMapper {
      */
     /*根据sort和order查询ad*/
     List<Ad> selectByOrderAndSort(String sort, String order);
+
+    List<Ad> selectByNameAndContent(String name, String content);
 }
