@@ -87,4 +87,12 @@ public class GroupRuleServiceImpl implements GroupRuleService{
     public Grouponrules selectRulesById(Integer rulesId) {
         return grouponrulesMapper.selectByPrimaryKey(rulesId);
     }
+
+    @Override
+    public List<Grouponrules> getLimitList(int i, String id, String desc) {
+
+        grouponrulesMapper.selectLimitList();
+        grouponrulesList.subList(0,i);
+        return grouponrulesList;
+    }
 }

@@ -41,7 +41,6 @@ public class GrouponController {
         PageHelper.startPage(page,limit);
         BaseRespModel<Object> baseRespModel = new BaseRespModel<>();
         List<Grouponrules> grouponList= groupRuleService.getList(sort,order,goodsId);
-        grouponList = grouponList.subList(limit * (page - 1), Math.min(grouponList.size(), limit * page));
         PageInfo<Grouponrules> pageInfo = new PageInfo<>(grouponList);
         long total = pageInfo.getTotal();
         HashMap<String, Object> map = new HashMap<>();

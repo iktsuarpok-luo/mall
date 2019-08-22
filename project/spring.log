@@ -1,57 +1,225 @@
-2019-08-21 16:09:09.847  INFO 21172 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on DESKTOP-EG82TKP with PID 21172 (F:\mall\mall\project\target\classes started by 15926 in F:\mall\mall\project)
-2019-08-21 16:09:09.868  INFO 21172 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
-2019-08-21 16:09:13.078  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b96bcd5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.108  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b43222b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.263  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$79ba963d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.268  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$95ed06d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.441  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.669  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:13.727  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.046  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.048  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.061  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.076  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e70673e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.095  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.597  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.608  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.679  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.681  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.684  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.690  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.767  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.770  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.774  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.982  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.986  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.990  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:14.992  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:15.005  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:15.060  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:15.427  INFO 21172 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
-2019-08-21 16:09:15.555  INFO 21172 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
-2019-08-21 16:09:15.579  INFO 21172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-21 16:09:16.856  INFO 21172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
-2019-08-21 16:09:16.921  INFO 21172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-21 16:09:16.921  INFO 21172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
-2019-08-21 16:09:17.146  INFO 21172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-21 16:09:17.147  INFO 21172 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7099 ms
-2019-08-21 16:09:19.457  INFO 21172 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public com.cskaoyan.mall.bean.BaseRespModel com.cskaoyan.mall.controller.xw.WxHomeController.homeShow()
-2019-08-21 16:09:19.856  INFO 21172 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-08-21 16:09:20.329 DEBUG 21172 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
-2019-08-21 16:09:20.360 DEBUG 21172 --- [main] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
-2019-08-21 16:09:20.394 DEBUG 21172 --- [main] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 13
-2019-08-21 16:09:20.403 DEBUG 21172 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
-2019-08-21 16:09:20.404 DEBUG 21172 --- [main] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
-2019-08-21 16:09:20.439 DEBUG 21172 --- [main] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
-2019-08-21 16:09:20.472 DEBUG 21172 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
-2019-08-21 16:09:20.473 DEBUG 21172 --- [main] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
-2019-08-21 16:09:20.482 DEBUG 21172 --- [main] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
-2019-08-21 16:09:20.494 DEBUG 21172 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon order by id desc 
-2019-08-21 16:09:20.496 DEBUG 21172 --- [main] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
-2019-08-21 16:09:20.508 DEBUG 21172 --- [main] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 14
-2019-08-21 16:09:21.645  INFO 21172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-21 16:09:22.580  WARN 21172 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
-2019-08-21 16:09:23.090  INFO 21172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
-2019-08-21 16:09:23.100  INFO 21172 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 15.034 seconds (JVM running for 23.656)
-2019-08-21 16:15:22.783  INFO 21172 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-21 16:15:22.797  INFO 21172 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-08-22 00:07:17.444  INFO 22376 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-22 00:07:17.512  INFO 22376 --- [Thread-15] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-08-22 00:07:34.399  INFO 18400 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on DESKTOP-EG82TKP with PID 18400 (F:\mall\mall\project\target\classes started by 15926 in F:\mall\mall\project)
+2019-08-22 00:07:34.404  INFO 18400 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-22 00:07:36.984  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$2fac6caf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.002  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c847d28d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.075  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$8dd04617] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.078  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$aa02b6af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.136  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.231  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.271  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.433  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.435  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.446  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.460  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fb1c23bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.476  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.714  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.721  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.762  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.763  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.765  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.770  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.808  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.809  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.810  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.845  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.847  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.848  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.849  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.857  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.873  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:37.997  INFO 18400 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-22 00:07:38.036  INFO 18400 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-22 00:07:38.040  INFO 18400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-22 00:07:38.701  INFO 18400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-22 00:07:38.751  INFO 18400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-22 00:07:38.752  INFO 18400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-22 00:07:38.972  INFO 18400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-22 00:07:38.973  INFO 18400 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4465 ms
+2019-08-22 00:07:40.188  INFO 18400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-22 00:07:40.557  WARN 18400 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-22 00:07:40.766  INFO 18400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-22 00:07:40.773  INFO 18400 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 7.48 seconds (JVM running for 11.702)
+2019-08-22 00:08:30.988  INFO 18400 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-22 00:08:30.989  INFO 18400 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-22 00:08:31.010  INFO 18400 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2019-08-22 00:08:31.070  INFO 18400 --- [http-nio-80-exec-1] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-22 00:08:31.070  INFO 18400 --- [http-nio-80-exec-2] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-22 00:08:31.337  INFO 18400 --- [http-nio-80-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-22 00:08:31.635 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-22 00:08:31.659 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-22 00:08:31.686 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 13
+2019-08-22 00:08:31.694 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-22 00:08:31.695 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-22 00:08:31.725 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 49
+2019-08-22 00:08:31.748 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-22 00:08:31.749 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-22 00:08:31.754 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-22 00:08:31.759 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon 
+2019-08-22 00:08:31.760 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-22 00:08:31.770 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 14
+2019-08-22 00:08:31.774 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.G.selectByExample                : ==>  Preparing: select id, goods_id, goods_name, pic_url, discount, discount_member, add_time, update_time, expire_time, deleted from cskaoyan_mall_groupon_rules 
+2019-08-22 00:08:31.775 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.G.selectByExample                : ==> Parameters: 
+2019-08-22 00:08:31.779 DEBUG 18400 --- [http-nio-80-exec-2] c.c.m.m.G.selectByExample                : <==      Total: 7
+2019-08-22 00:09:09.985 DEBUG 18400 --- [http-nio-80-exec-3] c.c.m.m.G.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_groupon_rules WHERE (deleted = ?) 
+2019-08-22 00:09:09.986 DEBUG 18400 --- [http-nio-80-exec-3] c.c.m.m.G.selectByExample_COUNT          : ==> Parameters: false(Boolean)
+2019-08-22 00:09:09.988 DEBUG 18400 --- [http-nio-80-exec-3] c.c.m.m.G.selectByExample_COUNT          : <==      Total: 1
+2019-08-22 00:09:09.991 DEBUG 18400 --- [http-nio-80-exec-3] c.c.m.m.G.selectByExample                : ==>  Preparing: select id, goods_id, goods_name, pic_url, discount, discount_member, add_time, update_time, expire_time, deleted from cskaoyan_mall_groupon_rules WHERE ( deleted = ? ) order by add_timedesc LIMIT ? 
+2019-08-22 00:09:09.992 DEBUG 18400 --- [http-nio-80-exec-3] c.c.m.m.G.selectByExample                : ==> Parameters: false(Boolean), 10(Integer)
+2019-08-22 00:09:10.104 ERROR 18400 --- [http-nio-80-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'add_timedesc' in 'order clause'
+### The error may exist in com/cskaoyan/mall/mapper/GrouponrulesMapper.xml
+### The error may involve com.cskaoyan.mall.mapper.GrouponrulesMapper.selectByExample-Inline
+### The error occurred while setting parameters
+### SQL: select                 id, goods_id, goods_name, pic_url, discount, discount_member, add_time, update_time,      expire_time, deleted         from cskaoyan_mall_groupon_rules                    WHERE (  deleted = ? )                        order by add_timedesc LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'add_timedesc' in 'order clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'add_timedesc' in 'order clause'] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'add_timedesc' in 'order clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_111]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_111]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1242) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498) ~[druid-1.1.12.jar:1.1.12]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.4.6.jar:3.4.6]
+	at com.sun.proxy.$Proxy105.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.6.jar:3.4.6]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136) ~[pagehelper-5.1.4.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.4.6.jar:3.4.6]
+	at com.sun.proxy.$Proxy103.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.6.jar:3.4.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.6.jar:3.4.6]
+	at com.sun.proxy.$Proxy87.selectByExample(Unknown Source) ~[na:na]
+	at com.cskaoyan.mall.service.wjw.GroupRuleServiceImpl.getList(GroupRuleServiceImpl.java:51) ~[classes/:na]
+	at com.cskaoyan.mall.service.wjw.GroupRuleServiceImpl.getList(GroupRuleServiceImpl.java:34) ~[classes/:na]
+	at com.cskaoyan.mall.controller.wjw.WxGrouponController.getList(WxGrouponController.java:28) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[servlet-api.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[servlet-api.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.3.jar:1.2.3]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.3.jar:1.2.3]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.3.jar:1.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-08-22 00:09:10.114 ERROR 18400 --- [http-nio-80-exec-3] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+
+2019-08-22 00:16:00.510  INFO 18400 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-22 00:16:00.540  INFO 18400 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
