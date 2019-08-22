@@ -27,4 +27,6 @@ public interface GoodsproductMapper {
     int updateByPrimaryKeySelective(Goodsproduct record);
 
     int updateByPrimaryKey(Goodsproduct record);
+
+    List<Goodsproduct> findProductById(Integer goodsId);
 }

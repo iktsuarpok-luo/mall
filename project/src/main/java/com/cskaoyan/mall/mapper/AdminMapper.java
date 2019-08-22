@@ -3,7 +3,6 @@ package com.cskaoyan.mall.mapper;
 import com.cskaoyan.mall.bean.Admin;
 import com.cskaoyan.mall.bean.AdminExample;
 import java.util.List;
-
 import com.cskaoyan.mall.bean.lxs.lxsAdmin;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import org.apache.ibatis.annotations.Param;
@@ -42,4 +41,7 @@ public interface AdminMapper {
     lxsAdminTwo selectById(@Param("id") Integer id);
 
     List<lxsAdmin> searchByName(@Param("username") String username);
+
+
+    List<Admin> selectByRoleIds(@Param("id") String s);
 }

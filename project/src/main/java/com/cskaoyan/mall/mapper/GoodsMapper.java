@@ -33,4 +33,12 @@ public interface GoodsMapper {
     int updateByPrimaryKeyWithBLOBs(Goods record);
 
     int updateByPrimaryKey(Goods record);
+
+    List<Goods> findGoodsByGoodsSn(String goodsSn);//商品号搜索商品
+
+    List<Goods> findGoodsByNameMuti(String name);//商品名搜索商品（模糊搜索）
+
+    void deleteBygoodsSn(String goodsSn);
+
+    int updateById(@Param("goodsSn") Integer id);
 }

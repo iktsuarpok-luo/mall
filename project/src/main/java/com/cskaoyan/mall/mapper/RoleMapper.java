@@ -31,4 +31,8 @@ public interface RoleMapper {
     int updateByPrimaryKey(Role record);
 
     List<lxsRole> getOptionData();
+
+    Role selectByName(@Param("name") String name);
+
+    List<Role> selectByNames(@Param("name") String name);
 }

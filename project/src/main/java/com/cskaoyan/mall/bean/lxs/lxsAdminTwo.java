@@ -1,5 +1,6 @@
 package com.cskaoyan.mall.bean.lxs;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class lxsAdminTwo {
@@ -103,5 +104,21 @@ public class lxsAdminTwo {
 
     public void setRoleIds(int[] roleIds) {
         this.roleIds = roleIds;
+    }
+
+    @Override
+    public String toString() {
+        return "lxsAdminTwo{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", lastLoginIp='" + lastLoginIp + '\'' +
+                ", lastLoginTime=" + lastLoginTime +
+                ", avatar='" + avatar + '\'' +
+                ", addTime=" + addTime +
+                ", updateTime=" + updateTime +
+                ", deleted=" + deleted +
+                ", roleIds=" + Arrays.toString(roleIds) +
+                '}';
     }
 }

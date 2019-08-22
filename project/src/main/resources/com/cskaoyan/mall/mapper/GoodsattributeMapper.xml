@@ -103,7 +103,7 @@
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Goodsattribute">
     insert into cskaoyan_mall_goods_attribute (id, goods_id, attribute, 
-      value, add_time, update_time, 
+      `value`, add_time, update_time,
       deleted)
     values (#{id,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, #{attribute,jdbcType=VARCHAR}, 
       #{value,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
@@ -239,5 +239,33 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="findGoodsattributesByGoodsId" resultMap="BaseResultMap">
+    SELECT
+	cmga.id,
+	cmga.goods_id,
+	cmga.attribute,
+	cmga.add_time,
+	cmga.update_time,
+	cmga.deleted
+FROM
+	cskaoyan_mall_goods_attribute cmga
+	left join cskaoyan_mall_goods cmg
+	on cmga.goods_id = cmg.id
+WHERE
+	cmga.goods_id = #{goods_id,jdbcType=INTEGER}
+  </select>
+
+  <update id="updateByGoodsId" parameterType="com.cskaoyan.mall.bean.Goodsattribute">
+    update cskaoyan_mall_goods_attribute
+    set
+      attribute = #{attribute,jdbcType=VARCHAR},
+      value = #{value,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where goods_id = #{goods_id,jdbcType=INTEGER}
   </update>
 </mapper>
