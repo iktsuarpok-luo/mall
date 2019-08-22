@@ -5,6 +5,7 @@ import com.cskaoyan.mall.service.lxt.BrandService;
 import com.cskaoyan.mall.service.lxt.CategoryService;
 import com.cskaoyan.mall.service.wjw.AdService;
 import com.cskaoyan.mall.service.wjw.CouponService;
+import com.cskaoyan.mall.service.wjw.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,7 @@ public class WxHomeController {
     @Autowired
     CouponService couponService;
     @Autowired
+    TopicService topicService;
 
     @RequestMapping("index")
     public BaseRespModel homeShow(){
@@ -37,8 +39,7 @@ public class WxHomeController {
             data.put("grouponList",null);//等
             data.put("hotGoodsList",null);
             data.put("newGoodsList",null);
-            data.put("topicList",null);//肖旺写
-
+            data.put("topicList",topicService.getHomeList());
             resp.setData(data);
             resp.setErrmsg("成功");
             resp.setErrno(0);

@@ -8,7 +8,7 @@
     <result column="content" jdbcType="VARCHAR" property="content" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="has_picture" jdbcType="BIT" property="hasPicture" />
-    <result column="pic_urls" jdbcType="VARCHAR" property="picUrls" />
+    <result column="pic_urls" jdbcType="VARCHAR" property="picUrls"/>
     <result column="star" jdbcType="SMALLINT" property="star" />
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -107,6 +107,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Comment">
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
     insert into cskaoyan_mall_comment (id, value_id, type, 
       content, user_id, has_picture, 
       pic_urls, star, add_time, 

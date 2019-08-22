@@ -50,4 +50,18 @@ public class TopicServiceImpl implements TopicService{
         topicExample.setOrderByClause(sort+" "+order);
         return topicMapper.selectByExample(topicExample);
     }
+
+    //获取首页的四个topic
+    @Override
+    public List<Topic> getHomeList() {
+        TopicExample topicExample = new TopicExample();
+        List<Topic> topics = topicMapper.selectByExample(topicExample);
+        return topics.subList(0,4);
+    }
+
+    //根据id获取topic详情
+    @Override
+    public Topic getDetailById(int id) {
+        return topicMapper.selectByPrimaryKey(id);
+    }
 }
