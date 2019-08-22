@@ -30,4 +30,5 @@ public interface CouponMapper {
 
     int updateByPrimaryKey(Coupon record);
 
+    List<Coupon> selectByWx();
 }

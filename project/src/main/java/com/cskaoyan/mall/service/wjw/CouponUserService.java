@@ -10,4 +10,10 @@ import java.util.List;
  */
 public interface CouponUserService {
     List<Couponuser> selectListUser(Short status, Integer couponId,Integer userId,String sort,String order);
+
+    Integer CountCouponById(Integer couponId);
+
+    int countByUseIdAndCoupId(Integer userId, Integer couponId);
+
+    int add(Couponuser couponuser);
 }

@@ -1,11 +1,13 @@
 package com.cskaoyan.mall.service.wjw;
 
+import com.cskaoyan.mall.bean.CouponExample;
 import com.cskaoyan.mall.bean.Couponuser;
 import com.cskaoyan.mall.bean.CouponuserExample;
 import com.cskaoyan.mall.mapper.CouponuserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -32,5 +34,26 @@ public class CouponUserServiceImpl implements CouponUserService {
         }
         couponuserExample.setOrderByClause(sort+" "+order);
         return couponuserMapper.selectByExample(couponuserExample);
+    }
+
+    @Override
+    public Integer CountCouponById(Integer couponId) {
+        CouponuserExample couponuserExample = new CouponuserExample();
+        couponuserExample.or().andCouponIdEqualTo(couponId).andDeletedEqualTo(false);
+        return (int)couponuserMapper.countByExample(couponuserExample);
+    }
+
+    @Override
+    public int countByUseIdAndCoupId(Integer userId, Integer couponId) {
+        CouponuserExample couponuserExample = new CouponuserExample();
+        couponuserExample.or().andUserIdEqualTo(userId).andCouponIdEqualTo(couponId).andDeletedEqualTo(false);
+        return (int)couponuserMapper.countByExample(couponuserExample);
+    }
+
+    @Override
+    public int add(Couponuser couponuser) {
+        couponuser.setAddTime(LocalDateTime.now());
+        couponuser.setUpdateTime(LocalDateTime.now());
+        return couponuserMapper.insert(couponuser);
     }
 }

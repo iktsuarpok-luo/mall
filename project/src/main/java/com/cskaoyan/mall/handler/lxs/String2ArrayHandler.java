@@ -12,6 +12,7 @@ import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
 
 @MappedJdbcTypes(JdbcType.VARCHAR)
 @MappedTypes(int[].class)
@@ -20,7 +21,6 @@ public class String2ArrayHandler implements TypeHandler<int[]> {
     public void setParameter(PreparedStatement preparedStatement, int index, int[] ints, JdbcType jdbcType) throws SQLException {
         //int[] ints1 = {1, 2, 3, 4};
         //String value = "[1,2,3,4]";
-
         ObjectMapper objectMapper = new ObjectMapper();
         String value = null;
         try {
@@ -29,7 +29,6 @@ public class String2ArrayHandler implements TypeHandler<int[]> {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-
         //将object转换成的值 配置过去
         preparedStatement.setString(index,value);
     }
@@ -38,8 +37,6 @@ public class String2ArrayHandler implements TypeHandler<int[]> {
     public int[] getResult(ResultSet resultSet, String s) throws SQLException {
         String content = resultSet.getString(s);
         //[1,2,3,4]
-
-
         return transfer(content);
     }
 
