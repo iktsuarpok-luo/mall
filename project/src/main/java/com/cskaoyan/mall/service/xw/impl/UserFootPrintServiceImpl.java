@@ -48,4 +48,12 @@ public class UserFootPrintServiceImpl implements UserFootPrintService {
         }
         return null;
     }
+
+    @Override
+    public int countFootprintById(Integer id) {
+        FootprintExample footprintExample = new FootprintExample();
+        footprintExample.createCriteria().andUserIdEqualTo(id);
+        int l = (int)footprintMapper.countByExample(footprintExample);
+        return l;
+    }
 }
