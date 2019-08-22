@@ -240,4 +240,10 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getOptionData" resultType="com.cskaoyan.mall.bean.lxs.lxsRole">
+    select
+    id as value,
+    name as label
+    from cskaoyan_mall_role
+  </select>
 </mapper>

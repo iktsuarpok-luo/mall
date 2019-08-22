@@ -91,7 +91,7 @@ public class Goods {
     }
 
     public void setGallery(String gallery) {
-        this.gallery = gallery == null ? null : gallery.trim();
+        this.gallery = gallery;
     }
 
     public String getKeywords() {
@@ -131,7 +131,7 @@ public class Goods {
     }
 
     public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl == null ? null : picUrl.trim();
+        this.picUrl = picUrl;
     }
 
     public String getShareUrl() {

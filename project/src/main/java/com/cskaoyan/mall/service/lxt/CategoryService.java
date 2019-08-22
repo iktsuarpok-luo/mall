@@ -8,4 +8,10 @@ public interface CategoryService {
     List<Category> getCategoryList();
 
     List<Category> getFirstCategory();
+
+    Category add(Category category);
+
+    Category update(Category category);
+
+    void delete(Category category);
 }

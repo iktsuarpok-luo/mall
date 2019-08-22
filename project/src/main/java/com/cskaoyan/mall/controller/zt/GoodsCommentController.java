@@ -15,13 +15,13 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("admin/comment/")
+//@RequestMapping("admin/comment/")
 public class GoodsCommentController {
 
     @Autowired
     CommentService commentService;
 
-    @RequestMapping("list")
+    @RequestMapping("admin/comment/list")
     public HashMap findAllComments(int page, int limit,Integer userId,Integer valueId){
         PageHelper.startPage(page,limit);
         List<Comment> comments = commentService.findAllCommentsOrByUserIdOrByValueId(userId,valueId);
@@ -38,12 +38,20 @@ public class GoodsCommentController {
         return map;
     }
 
-    @RequestMapping("delete")
+    @RequestMapping("admin/comment/delete")
     public HashMap delete(@RequestBody Comment comment){
         commentService.delete(comment.getId());
         HashMap map = new HashMap<>();
         map.put("errno",0);
         map.put("errmsg","成功");
+        return map;
+    }
+
+    @RequestMapping("admin/order/reply")
+    public HashMap reply(){
+        HashMap map = new HashMap<>();
+        map.put("errno",622);
+        map.put("errmsg","订单商品已回复！");
         return map;
     }
 

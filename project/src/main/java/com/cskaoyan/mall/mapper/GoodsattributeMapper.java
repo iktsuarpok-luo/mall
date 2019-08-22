@@ -5,6 +5,8 @@ import com.cskaoyan.mall.bean.GoodsattributeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import javax.management.Attribute;
+
 public interface GoodsattributeMapper {
     long countByExample(GoodsattributeExample example);
 
@@ -27,4 +29,9 @@ public interface GoodsattributeMapper {
     int updateByPrimaryKeySelective(Goodsattribute record);
 
     int updateByPrimaryKey(Goodsattribute record);
+
+
+    List<Goodsattribute> findGoodsattributesByGoodsId(Integer goodsId);
+
+    int updateByGoodsId(Attribute[] attributes);
 }

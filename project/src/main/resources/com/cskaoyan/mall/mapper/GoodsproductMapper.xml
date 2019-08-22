@@ -105,7 +105,7 @@
   </delete>
   <insert id="insert" parameterType="com.cskaoyan.mall.bean.Goodsproduct">
     insert into cskaoyan_mall_goods_product (id, goods_id, specifications, 
-      price, number, url, 
+      price, `number`, url,
       add_time, update_time, deleted
       )
     values (#{id,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, #{specifications,jdbcType=VARCHAR}, 
@@ -272,4 +272,24 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+  <select id="findProductById" resultMap="BaseResultMap">
+    SELECT
+	cmgp.id,
+	cmgp.goods_id,
+	cmgp.specifications,
+	cmgp.price,
+	cmgp.number,
+	cmgp.url,
+	cmgp.add_time,
+	cmgp.update_time,
+	cmgp.deleted
+FROM
+	cskaoyan_mall_goods_product cmgp
+	LEFT JOIN cskaoyan_mall_goods cmg ON cmgp.goods_id = cmg.id
+WHERE
+	cmgp.goods_id = #{goods_id,jdbcType=INTEGER}
+  </select>
 </mapper>
