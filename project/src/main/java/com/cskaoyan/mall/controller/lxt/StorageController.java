@@ -8,29 +8,24 @@ import com.cskaoyan.mall.bean.Storage;
 import com.cskaoyan.mall.service.lxt.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.UUID;
 
-@RequestMapping("admin/storage")
+@RequestMapping(value = {"admin/storage","wx/storage"})
 @RestController
 public class StorageController {
     @Value("${filePath}")
     String filePath;
     @Autowired
     StorageService storageService;
-    @RequestMapping("create")
+    @RequestMapping(value = {"create","upload"})
     public BaseRespModel addPic(MultipartFile file) throws IOException {
         //oss
         InputStream inputStream = file.getInputStream();

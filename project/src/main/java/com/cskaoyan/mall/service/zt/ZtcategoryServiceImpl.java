@@ -10,8 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class ZtcategoryServiceImpl implements ZtcategoryService {
@@ -26,6 +28,53 @@ public class ZtcategoryServiceImpl implements ZtcategoryService {
     }
 
     @Override
+    public List<Map> showCategoryList() {
+        List<Map> categoryLists = new ArrayList<>();
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.createCriteria().andPidEqualTo(0);
+        List<Category> bigCategories = categoryMapper.selectByExample(categoryExample);
+        for (Category category : bigCategories) {
+            Map<String, Object> categoryMap = new HashMap<>();
+            Integer id = category.getId();
+            categoryMap.put("value", id);
+            String name = category.getName();
+            categoryMap.put("label", name);
+            categoryExample = new CategoryExample();
+            categoryExample.createCriteria().andPidEqualTo(id);
+            List<Category> smallCategoryLists = categoryMapper.selectByExample(categoryExample);
+            List<Map> children = new ArrayList<>();
+            for (Category c : smallCategoryLists) {
+                Map<String, Object> tempMap = new HashMap<>();
+                Integer categoryId = c.getId();
+                String categoryName = c.getName();
+                tempMap.put("value", categoryId);
+                tempMap.put("label", categoryName);
+                children.add(tempMap);
+            }
+            categoryMap.put("children", children);
+            categoryLists.add(categoryMap);
+        }
+        /*HashMap map = new HashMap();
+        map.put("value",);
+        map.put("label",)
+        List<ZtCategory> categoryList = ztCategoryMapper.findCategoryListByPidEqualZero();
+        List<Integer> pidList = null;
+        for (int i = 0; i <categoryList.size() ; i++) {
+            //获取每个pid，装进pidList
+             pidList=categoryList.stream().map(ZtCategory::getVaule).collect(Collectors.toList());
+        }
+        List childrenList = null;
+        for (int i = 0; i < pidList.size(); i++) {
+            childrenList.add(ztCategoryMapper.findSonCategoryByPid(pidList.get(i)));
+        }
+        for (int i = 0; i <categoryList.size() ; i++) {
+            categoryList.addAll(childrenList);
+        }
+        categoryList.addAll(childrenList);*/
+        return categoryLists;
+    }
+
+   /* @Override
     public List<ZtCategory> showCategoryList() {
         List<ZtCategory> result = new ArrayList<>();
         CategoryExample example = new CategoryExample();
@@ -62,5 +111,5 @@ public class ZtcategoryServiceImpl implements ZtcategoryService {
             category.setChildren(children);
         }
         return list;
-    }
+    }*/
 }

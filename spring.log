@@ -1,0 +1,655 @@
+2019-08-23 00:50:46.763  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 00:50:46.763  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 00:50:46.868  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 00:50:46.874  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 01:04:26.299 DEBUG 10612 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand where id = ? 
+2019-08-23 01:04:26.302 DEBUG 10612 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : ==> Parameters: 1046001(Integer)
+2019-08-23 01:04:26.315 DEBUG 10612 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : <==      Total: 1
+2019-08-23 01:04:30.393 ERROR 10612 --- [http-nio-80-exec-8] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-23 01:04:30.407 ERROR 10612 --- [http-nio-80-exec-9] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-23 01:04:50.598 ERROR 10612 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-23 01:04:50.639 ERROR 10612 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2019-08-23 01:50:46.765  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 01:50:46.765  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 01:50:46.792  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 01:50:46.792  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 02:50:46.763  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 02:50:46.763  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 02:50:46.763  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 02:50:46.763  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 03:50:46.763  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 03:50:46.763  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Validating all active sessions...
+2019-08-23 03:50:46.763  INFO 10612 --- [Thread-15] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 03:50:46.763  INFO 10612 --- [Thread-16] a.s.s.m.AbstractValidatingSessionManager : Finished session validation.  No sessions were stopped.
+2019-08-23 04:12:22.149  INFO 13032 --- [main] com.cskaoyan.mall.MallApplication        : Starting MallApplication on DESKTOP-G9RBSU1 with PID 13032 (F:\newFloder\JavaThree\mall\project\target\classes started by x in F:\newFloder\JavaThree\mall)
+2019-08-23 04:12:22.152  INFO 13032 --- [main] com.cskaoyan.mall.MallApplication        : The following profiles are active: db
+2019-08-23 04:12:24.120  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e24476b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.218  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.cskaoyan.mall.config.ShiroConfig$$EnhancerBySpringCGLIB$$7588e18d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.241  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'corsConfig' of type [com.cskaoyan.mall.config.CorsConfig$$EnhancerBySpringCGLIB$$d3acbaf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.244  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic$$EnhancerBySpringCGLIB$$efdf2b8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.271  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.323  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.364  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.425  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.428  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactoryBean' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.436  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.445  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$40f8989b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.452  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.571  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.575  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.614  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.617  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleMapper' of type [com.sun.proxy.$Proxy72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.668  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.669  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'logMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.688  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.689  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'systemPermissionsMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.714  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.715  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.717  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'adminServiceImpl' of type [com.cskaoyan.mall.service.lxs.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.720  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.724  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.751  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.752  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.753  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userServiceImpl' of type [com.cskaoyan.mall.service.lxt.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.754  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.cskaoyan.mall.realm.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.762  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.771  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [com.cskaoyan.mall.config.MallSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.851  INFO 13032 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Cache with name 'com.cskaoyan.mall.realm.CustomRealm.authorizationCache' does not yet exist.  Creating now.
+2019-08-23 04:12:24.873  INFO 13032 --- [main] o.a.shiro.cache.ehcache.EhCacheManager   : Added EhCache named [com.cskaoyan.mall.realm.CustomRealm.authorizationCache]
+2019-08-23 04:12:24.876  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:24.890  INFO 13032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 04:12:25.272  INFO 13032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-08-23 04:12:25.296  INFO 13032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-23 04:12:25.297  INFO 13032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-08-23 04:12:25.412  INFO 13032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-23 04:12:25.412  INFO 13032 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3195 ms
+2019-08-23 04:12:26.450  INFO 13032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-23 04:12:26.721  WARN 13032 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-23 04:12:26.882  INFO 13032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-08-23 04:12:26.885  INFO 13032 --- [main] com.cskaoyan.mall.MallApplication        : Started MallApplication in 5.442 seconds (JVM running for 6.448)
+2019-08-23 04:13:26.004  INFO 13032 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-23 04:13:26.005  INFO 13032 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-23 04:13:26.027  INFO 13032 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-08-23 04:13:26.073  INFO 13032 --- [http-nio-80-exec-2] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-08-23 04:13:30.183  INFO 13032 --- [http-nio-80-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-23 04:13:30.411 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.mapper.AdMapper.selectByExample    : ==>  Preparing: select id, name, link, url, position, content, start_time, end_time, enabled, add_time, update_time, deleted from cskaoyan_mall_ad /*根据order和sort查询adlist*/ 
+2019-08-23 04:13:30.425 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.mapper.AdMapper.selectByExample    : ==> Parameters: 
+2019-08-23 04:13:30.438 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.mapper.AdMapper.selectByExample    : <==      Total: 3
+2019-08-23 04:13:30.443 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by id desc 
+2019-08-23 04:13:30.443 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-23 04:13:30.460 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 50
+2019-08-23 04:13:30.474 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( level = ? ) 
+2019-08-23 04:13:30.475 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: L1(String)
+2019-08-23 04:13:30.478 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-23 04:13:30.483 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CouponMapper.selectByExample     : ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from cskaoyan_mall_coupon 
+2019-08-23 04:13:30.483 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CouponMapper.selectByExample     : ==> Parameters: 
+2019-08-23 04:13:30.486 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CouponMapper.selectByExample     : <==      Total: 4
+2019-08-23 04:13:30.488 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.488 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 0(Integer)
+2019-08-23 04:13:30.494 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-23 04:13:30.495 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.496 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1005000(Integer)
+2019-08-23 04:13:30.498 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 10
+2019-08-23 04:13:30.506 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.507 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008002(Integer)
+2019-08-23 04:13:30.537 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 40
+2019-08-23 04:13:30.538 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.539 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008008(Integer)
+2019-08-23 04:13:30.548 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 23
+2019-08-23 04:13:30.549 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.549 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008009(Integer)
+2019-08-23 04:13:30.560 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 37
+2019-08-23 04:13:30.561 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.561 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008016(Integer)
+2019-08-23 04:13:30.563 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 3
+2019-08-23 04:13:30.564 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.564 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1010003(Integer)
+2019-08-23 04:13:30.565 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.566 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.566 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1011003(Integer)
+2019-08-23 04:13:30.567 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.568 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.569 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1011004(Integer)
+2019-08-23 04:13:30.574 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 15
+2019-08-23 04:13:30.575 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.576 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1015000(Integer)
+2019-08-23 04:13:30.581 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 14
+2019-08-23 04:13:30.582 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.582 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1017000(Integer)
+2019-08-23 04:13:30.588 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 27
+2019-08-23 04:13:30.590 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.591 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1036000(Integer)
+2019-08-23 04:13:30.595 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 12
+2019-08-23 04:13:30.597 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.598 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1005001(Integer)
+2019-08-23 04:13:30.599 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-23 04:13:30.601 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.601 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005007(Integer)
+2019-08-23 04:13:30.604 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.605 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.605 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005008(Integer)
+2019-08-23 04:13:30.606 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.607 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.608 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005009(Integer)
+2019-08-23 04:13:30.608 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.609 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.610 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1007000(Integer)
+2019-08-23 04:13:30.610 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.611 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.612 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008011(Integer)
+2019-08-23 04:13:30.613 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.615 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.616 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008012(Integer)
+2019-08-23 04:13:30.617 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.618 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.618 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008013(Integer)
+2019-08-23 04:13:30.619 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.620 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.620 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013005(Integer)
+2019-08-23 04:13:30.621 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.622 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.622 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1023000(Integer)
+2019-08-23 04:13:30.623 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.624 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.624 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1005002(Integer)
+2019-08-23 04:13:30.626 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 10
+2019-08-23 04:13:30.627 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.627 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005010(Integer)
+2019-08-23 04:13:30.628 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.629 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.630 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005011(Integer)
+2019-08-23 04:13:30.631 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.632 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.632 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005012(Integer)
+2019-08-23 04:13:30.633 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.634 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.634 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1005013(Integer)
+2019-08-23 04:13:30.635 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.636 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.637 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008014(Integer)
+2019-08-23 04:13:30.637 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.639 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.639 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008015(Integer)
+2019-08-23 04:13:30.643 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.644 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.645 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1027000(Integer)
+2019-08-23 04:13:30.646 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.646 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.647 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1027001(Integer)
+2019-08-23 04:13:30.647 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.648 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.648 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1035003(Integer)
+2019-08-23 04:13:30.649 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.650 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.651 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1036003(Integer)
+2019-08-23 04:13:30.652 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.653 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.653 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1008000(Integer)
+2019-08-23 04:13:30.655 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 9
+2019-08-23 04:13:30.656 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.657 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008003(Integer)
+2019-08-23 04:13:30.657 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.658 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.658 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008007(Integer)
+2019-08-23 04:13:30.659 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.660 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.661 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008010(Integer)
+2019-08-23 04:13:30.662 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.663 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.663 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008018(Integer)
+2019-08-23 04:13:30.664 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.665 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.665 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1010004(Integer)
+2019-08-23 04:13:30.666 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.667 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.667 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1012001(Integer)
+2019-08-23 04:13:30.670 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 7
+2019-08-23 04:13:30.671 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.671 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013000(Integer)
+2019-08-23 04:13:30.672 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.672 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.673 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020008(Integer)
+2019-08-23 04:13:30.673 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.674 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.674 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1022000(Integer)
+2019-08-23 04:13:30.675 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.677 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.677 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1010000(Integer)
+2019-08-23 04:13:30.679 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 11
+2019-08-23 04:13:30.680 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.681 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008004(Integer)
+2019-08-23 04:13:30.682 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.682 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.683 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1010001(Integer)
+2019-08-23 04:13:30.683 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.684 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.684 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1010002(Integer)
+2019-08-23 04:13:30.687 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.688 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.689 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013006(Integer)
+2019-08-23 04:13:30.690 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.691 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.691 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1015001(Integer)
+2019-08-23 04:13:30.692 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.692 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.693 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020009(Integer)
+2019-08-23 04:13:30.694 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.695 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.695 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020010(Integer)
+2019-08-23 04:13:30.696 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.697 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.697 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1034000(Integer)
+2019-08-23 04:13:30.698 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.698 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.699 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1035000(Integer)
+2019-08-23 04:13:30.699 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.700 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.700 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1035001(Integer)
+2019-08-23 04:13:30.701 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.702 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.703 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1035002(Integer)
+2019-08-23 04:13:30.703 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.704 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.705 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1011000(Integer)
+2019-08-23 04:13:30.707 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 7
+2019-08-23 04:13:30.707 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.708 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1011001(Integer)
+2019-08-23 04:13:30.708 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.709 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.709 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020003(Integer)
+2019-08-23 04:13:30.712 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.713 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.713 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020004(Integer)
+2019-08-23 04:13:30.714 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.715 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.715 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020005(Integer)
+2019-08-23 04:13:30.716 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.717 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.717 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020006(Integer)
+2019-08-23 04:13:30.718 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.719 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.719 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020007(Integer)
+2019-08-23 04:13:30.720 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.721 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.721 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1034001(Integer)
+2019-08-23 04:13:30.722 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.722 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.723 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1012000(Integer)
+2019-08-23 04:13:30.724 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 10
+2019-08-23 04:13:30.725 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.725 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008005(Integer)
+2019-08-23 04:13:30.726 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.727 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.728 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008006(Integer)
+2019-08-23 04:13:30.728 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.729 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.729 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008017(Integer)
+2019-08-23 04:13:30.730 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.730 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.731 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1011002(Integer)
+2019-08-23 04:13:30.731 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.732 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.732 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1012002(Integer)
+2019-08-23 04:13:30.733 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.733 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.734 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1012003(Integer)
+2019-08-23 04:13:30.737 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.737 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.738 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020000(Integer)
+2019-08-23 04:13:30.738 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.739 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.739 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1021000(Integer)
+2019-08-23 04:13:30.740 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.741 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.741 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1036001(Integer)
+2019-08-23 04:13:30.742 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.743 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.743 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1036002(Integer)
+2019-08-23 04:13:30.744 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.745 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.745 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1013001(Integer)
+2019-08-23 04:13:30.746 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 7
+2019-08-23 04:13:30.747 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.747 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1008001(Integer)
+2019-08-23 04:13:30.750 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:30.751 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.751 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1009000(Integer)
+2019-08-23 04:13:30.752 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.752 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.752 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013002(Integer)
+2019-08-23 04:13:30.753 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.754 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.754 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013003(Integer)
+2019-08-23 04:13:30.763 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.763 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.764 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1013004(Integer)
+2019-08-23 04:13:30.764 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.765 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.765 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020001(Integer)
+2019-08-23 04:13:30.766 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.766 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.767 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1020002(Integer)
+2019-08-23 04:13:30.767 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.768 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==>  Preparing: select id, cskaoyan_mall_category.name, keywords, cskaoyan_mall_category.desc, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted from cskaoyan_mall_category WHERE ( pid = ? ) 
+2019-08-23 04:13:30.768 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : ==> Parameters: 1019000(Integer)
+2019-08-23 04:13:30.769 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.CategoryMapper.selectByExample   : <==      Total: 11
+2019-08-23 04:13:30.770 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.770 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1018000(Integer)
+2019-08-23 04:13:30.771 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.772 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.772 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1025000(Integer)
+2019-08-23 04:13:30.773 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.774 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.774 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1028001(Integer)
+2019-08-23 04:13:30.774 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.775 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.775 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032000(Integer)
+2019-08-23 04:13:30.778 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 8
+2019-08-23 04:13:30.778 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.778 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032001(Integer)
+2019-08-23 04:13:30.779 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.779 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.780 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032002(Integer)
+2019-08-23 04:13:30.780 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.781 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.781 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032003(Integer)
+2019-08-23 04:13:30.781 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.782 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.782 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032004(Integer)
+2019-08-23 04:13:30.782 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.783 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.783 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1032005(Integer)
+2019-08-23 04:13:30.784 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.784 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.784 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1033000(Integer)
+2019-08-23 04:13:30.785 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.786 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:30.786 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1036004(Integer)
+2019-08-23 04:13:30.787 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 0
+2019-08-23 04:13:30.788 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( is_hot = ? ) 
+2019-08-23 04:13:30.788 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: true(Boolean)
+2019-08-23 04:13:30.794 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 25
+2019-08-23 04:13:30.794 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( is_hot = ? ) 
+2019-08-23 04:13:30.795 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: true(Boolean)
+2019-08-23 04:13:30.799 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 25
+2019-08-23 04:13:30.799 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( is_new = ? ) 
+2019-08-23 04:13:30.800 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: true(Boolean)
+2019-08-23 04:13:30.802 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 12
+2019-08-23 04:13:30.803 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( is_new = ? ) 
+2019-08-23 04:13:30.804 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: true(Boolean)
+2019-08-23 04:13:30.807 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 12
+2019-08-23 04:13:30.810 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.TopicMapper.selectByExample      : ==>  Preparing: select id, title, subtitle, price, read_count, pic_url, sort_order, goods, add_time, update_time, deleted from cskaoyan_mall_topic 
+2019-08-23 04:13:30.811 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.TopicMapper.selectByExample      : ==> Parameters: 
+2019-08-23 04:13:30.815 DEBUG 13032 --- [http-nio-80-exec-4] c.c.m.m.TopicMapper.selectByExample      : <==      Total: 20
+2019-08-23 04:13:45.643 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.mapper.UserMapper.selectByExample  : ==>  Preparing: select id, username, password, gender, birthday, last_login_time, last_login_ip, user_level, nickname, mobile, avatar, weixin_openid, status, add_time, update_time, deleted from cskaoyan_mall_user WHERE ( username = ? ) 
+2019-08-23 04:13:45.643 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.mapper.UserMapper.selectByExample  : ==> Parameters: admin123(String)
+2019-08-23 04:13:45.645 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.mapper.UserMapper.selectByExample  : <==      Total: 1
+2019-08-23 04:13:45.652 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.UserMapper.updateByPrimaryKey    : ==>  Preparing: update cskaoyan_mall_user set username = ?, password = ?, gender = ?, birthday = ?, last_login_time = ?, last_login_ip = ?, user_level = ?, nickname = ?, mobile = ?, avatar = ?, weixin_openid = ?, status = ?, add_time = ?, update_time = ?, deleted = ? where id = ? 
+2019-08-23 04:13:45.653 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.UserMapper.updateByPrimaryKey    : ==> Parameters: admin123(String), 28e05cd08488542c14ecbc1c28d8a4f0(String), 0(Byte), 2019-08-21(Date), 2019-08-23 04:13:45.652(Timestamp), 192.168.109.1(String), 0(Byte), admin123(String), 17326082529(String), (String), 043is7W420HfTO0QX3U421sgW42is7WN(String), 0(Byte), 2019-08-21 16:51:53.0(Timestamp), 2019-08-21 17:36:09.0(Timestamp), false(Boolean), 25(Integer)
+2019-08-23 04:13:45.669 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.UserMapper.updateByPrimaryKey    : <==    Updates: 1
+2019-08-23 04:13:45.852 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:13:45.852 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 101(Integer), 102(Integer), 103(Integer)
+2019-08-23 04:13:45.854 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:45.855 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:13:45.855 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 201(Integer), 202(Integer), 203(Integer)
+2019-08-23 04:13:45.856 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:45.857 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? ) ) 
+2019-08-23 04:13:45.857 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 301(Integer)
+2019-08-23 04:13:45.858 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:45.859 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? ) ) 
+2019-08-23 04:13:45.859 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 401(Integer), 402(Integer)
+2019-08-23 04:13:45.860 DEBUG 13032 --- [http-nio-80-exec-7] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:50.578 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.GoodsMapper.selectByPrimaryKey   : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted , detail from cskaoyan_mall_goods where id = ? 
+2019-08-23 04:13:50.578 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.GoodsMapper.selectByPrimaryKey   : ==> Parameters: 1127047(Integer)
+2019-08-23 04:13:50.584 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.GoodsMapper.selectByPrimaryKey   : <==      Total: 1
+2019-08-23 04:13:50.590 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==>  Preparing: select id, goods_id, attribute, value, add_time, update_time, deleted from cskaoyan_mall_goods_attribute WHERE ( goods_id = ? ) 
+2019-08-23 04:13:50.590 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==> Parameters: 1127047(Integer)
+2019-08-23 04:13:50.591 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : <==      Total: 0
+2019-08-23 04:13:50.592 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand where id = ? 
+2019-08-23 04:13:50.592 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : ==> Parameters: 0(Integer)
+2019-08-23 04:13:50.593 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.BrandMapper.selectByPrimaryKey   : <==      Total: 0
+2019-08-23 04:13:50.600 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectOneByExample             : ==>  Preparing: select id, goods_id, goods_name, pic_url, discount, discount_member, add_time, update_time, expire_time, deleted from cskaoyan_mall_groupon_rules WHERE ( goods_id = ? and deleted = ? ) limit 1 
+2019-08-23 04:13:50.600 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectOneByExample             : ==> Parameters: 1127047(Integer), false(Boolean)
+2019-08-23 04:13:50.602 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectOneByExample             : <==      Total: 0
+2019-08-23 04:13:50.605 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.IssueMapper.selectByExample      : ==>  Preparing: select id, question, answer, add_time, update_time, deleted from cskaoyan_mall_issue 
+2019-08-23 04:13:50.605 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.IssueMapper.selectByExample      : ==> Parameters: 
+2019-08-23 04:13:50.607 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.IssueMapper.selectByExample      : <==      Total: 7
+2019-08-23 04:13:50.614 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==>  Preparing: select id, goods_id, specification, value, pic_url, add_time, update_time, deleted from cskaoyan_mall_goods_specification WHERE ( goods_id = ? and specification = ? ) 
+2019-08-23 04:13:50.614 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==> Parameters: 1127047(Integer), 规格(String)
+2019-08-23 04:13:50.616 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : <==      Total: 1
+2019-08-23 04:13:50.617 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==>  Preparing: select id, goods_id, specification, value, pic_url, add_time, update_time, deleted from cskaoyan_mall_goods_specification WHERE ( goods_id = ? and specification = ? ) 
+2019-08-23 04:13:50.618 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : ==> Parameters: 1127047(Integer), 颜色(String)
+2019-08-23 04:13:50.619 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.selectByExample                : <==      Total: 0
+2019-08-23 04:13:50.620 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.findProductById                : ==>  Preparing: SELECT cmgp.id, cmgp.goods_id, cmgp.specifications, cmgp.price, cmgp.number, cmgp.url, cmgp.add_time, cmgp.update_time, cmgp.deleted FROM cskaoyan_mall_goods_product cmgp LEFT JOIN cskaoyan_mall_goods cmg ON cmgp.goods_id = cmg.id WHERE cmgp.goods_id = ? 
+2019-08-23 04:13:50.621 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.findProductById                : ==> Parameters: 1127047(Integer)
+2019-08-23 04:13:50.624 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.G.findProductById                : <==      Total: 1
+2019-08-23 04:13:50.630 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_comment WHERE ( value_id = ? and type = ? ) 
+2019-08-23 04:13:50.631 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.countByExample     : ==> Parameters: 1127047(Integer), 0(Byte)
+2019-08-23 04:13:50.632 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.countByExample     : <==      Total: 1
+2019-08-23 04:13:50.633 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.selectByExample    : ==>  Preparing: select id, value_id, type, content, user_id, has_picture, pic_urls, star, add_time, update_time, deleted from cskaoyan_mall_comment WHERE ( value_id = ? and type = ? ) 
+2019-08-23 04:13:50.633 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.selectByExample    : ==> Parameters: 1127047(Integer), 0(Byte)
+2019-08-23 04:13:50.634 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CommentMapper.selectByExample    : <==      Total: 0
+2019-08-23 04:13:50.640 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CollectMapper.countByExample     : ==>  Preparing: select count(*) from cskaoyan_mall_collect WHERE ( value_id = ? ) 
+2019-08-23 04:13:50.640 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CollectMapper.countByExample     : ==> Parameters: 1127047(Integer)
+2019-08-23 04:13:50.641 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.m.CollectMapper.countByExample     : <==      Total: 1
+2019-08-23 04:13:50.665 DEBUG 13032 --- [http-nio-80-exec-9] c.c.m.mapper.CartMapper.selectByExample  : ==>  Preparing: select id, user_id, goods_id, goods_sn, goods_name, product_id, price, number, specifications, checked, pic_url, add_time, update_time, deleted from cskaoyan_mall_cart WHERE ( user_id = ? ) 
+2019-08-23 04:13:50.666 DEBUG 13032 --- [http-nio-80-exec-9] c.c.m.mapper.CartMapper.selectByExample  : ==> Parameters: 25(Integer)
+2019-08-23 04:13:50.667 DEBUG 13032 --- [http-nio-80-exec-9] c.c.m.mapper.CartMapper.selectByExample  : <==      Total: 0
+2019-08-23 04:13:50.818 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByPrimaryKey   : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted , detail from cskaoyan_mall_goods where id = ? 
+2019-08-23 04:13:50.818 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByPrimaryKey   : ==> Parameters: 1127047(Integer)
+2019-08-23 04:13:50.821 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByPrimaryKey   : <==      Total: 1
+2019-08-23 04:13:50.822 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByExample      : ==>  Preparing: select id, goods_sn, `name`, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, add_time, update_time, deleted from cskaoyan_mall_goods WHERE ( category_id = ? ) 
+2019-08-23 04:13:50.822 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByExample      : ==> Parameters: 1012003(Integer)
+2019-08-23 04:13:50.824 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.GoodsMapper.selectByExample      : <==      Total: 9
+2019-08-23 04:13:54.306 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:13:54.306 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 101(Integer), 102(Integer), 103(Integer)
+2019-08-23 04:13:54.307 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:54.308 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:13:54.309 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 201(Integer), 202(Integer), 203(Integer)
+2019-08-23 04:13:54.310 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:54.311 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? ) ) 
+2019-08-23 04:13:54.311 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 301(Integer)
+2019-08-23 04:13:54.311 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:54.313 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? ) ) 
+2019-08-23 04:13:54.313 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 401(Integer), 402(Integer)
+2019-08-23 04:13:54.314 DEBUG 13032 --- [http-nio-80-exec-2] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:13:55.717 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM cskaoyan_mall_footprint WHERE (user_id = ?) 
+2019-08-23 04:13:55.718 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : ==> Parameters: 25(Integer)
+2019-08-23 04:13:55.719 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.F.selectByExample_COUNT          : <==      Total: 1
+2019-08-23 04:13:55.724 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.FootprintMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_footprint WHERE ( user_id = ? ) 
+2019-08-23 04:13:55.724 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.FootprintMapper.countByExample   : ==> Parameters: 25(Integer)
+2019-08-23 04:13:55.725 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.FootprintMapper.countByExample   : <==      Total: 1
+2019-08-23 04:14:28.324 ERROR 13032 --- [http-nio-80-exec-8] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServletMapping()Ljavax/servlet/http/HttpServletMapping;
+	at org.apache.catalina.core.ApplicationHttpRequest.setRequest(ApplicationHttpRequest.java:708) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationHttpRequest.<init>(ApplicationHttpRequest.java:114) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.wrapRequest(ApplicationDispatcher.java:917) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:358) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_201]
+
+2019-08-23 04:14:30.538 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-23 04:14:30.538 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-23 04:14:30.542 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-23 04:14:30.544 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where username=? 
+2019-08-23 04:14:30.545 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : ==> Parameters: admin123(String)
+2019-08-23 04:14:30.546 DEBUG 13032 --- [http-nio-80-exec-6] c.c.m.mapper.AdminMapper.selectByName    : <==      Total: 1
+2019-08-23 04:14:30.548 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.selectById   : ==>  Preparing: select id, username, password, last_login_ip, last_login_time, avatar, add_time, update_time, deleted, role_ids from cskaoyan_mall_admin where id=? 
+2019-08-23 04:14:30.548 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.selectById   : ==> Parameters: 9(Integer)
+2019-08-23 04:14:30.549 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.selectById   : <==      Total: 1
+2019-08-23 04:14:30.550 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.updateById   : ==>  Preparing: update cskaoyan_mall_admin set username = ?, password = ?, avatar = ?, update_time = ?, role_ids = ? where id = ? 
+2019-08-23 04:14:30.564 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.updateById   : ==> Parameters: admin123(String), 28e05cd08488542c14ecbc1c28d8a4f0(String), /static/2019_08_21_11_54_27_0e4098fd-cfe2-43d8-8ffa-049adf7162bb.jpg(String), 2019-08-23 04:14:30.55(Timestamp), [1](String), 9(Integer)
+2019-08-23 04:14:30.569 DEBUG 13032 --- [http-nio-80-exec-6] c.c.mall.mapper.AdminMapper.updateById   : <==    Updates: 1
+2019-08-23 04:14:30.591 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role 
+2019-08-23 04:14:30.591 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : ==> Parameters: 
+2019-08-23 04:14:30.593 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.mapper.RoleMapper.selectByExample  : <==      Total: 3
+2019-08-23 04:14:30.595 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission 
+2019-08-23 04:14:30.595 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==> Parameters: 
+2019-08-23 04:14:30.600 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : <==      Total: 64
+2019-08-23 04:14:30.601 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==>  Preparing: select id, name, `desc`, enabled, add_time, update_time, deleted from cskaoyan_mall_role where id = ? 
+2019-08-23 04:14:30.601 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2019-08-23 04:14:30.602 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.RoleMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-23 04:14:30.605 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==>  Preparing: select id, role_id, permission, add_time, update_time, deleted from cskaoyan_mall_permission WHERE ( role_id = ? ) 
+2019-08-23 04:14:30.606 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : ==> Parameters: 1(Integer)
+2019-08-23 04:14:30.607 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.P.selectByExample                : <==      Total: 1
+2019-08-23 04:14:30.773 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_goods 
+2019-08-23 04:14:30.773 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : ==> Parameters: 
+2019-08-23 04:14:30.775 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.GoodsMapper.countByExample  : <==      Total: 1
+2019-08-23 04:14:30.776 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order 
+2019-08-23 04:14:30.776 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 
+2019-08-23 04:14:30.777 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:14:30.780 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : ==>  Preparing: select count(*) from cskaoyan_mall_goods_product 
+2019-08-23 04:14:30.780 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : ==> Parameters: 
+2019-08-23 04:14:30.781 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.m.G.countByExample                 : <==      Total: 1
+2019-08-23 04:14:30.782 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : ==>  Preparing: select count(*) from cskaoyan_mall_user 
+2019-08-23 04:14:30.782 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : ==> Parameters: 
+2019-08-23 04:14:30.783 DEBUG 13032 --- [http-nio-80-exec-1] c.c.m.mapper.UserMapper.countByExample   : <==      Total: 1
+2019-08-23 04:14:35.042 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.BrandMapper.selectByExample      : ==>  Preparing: select id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted from cskaoyan_mall_brand order by add_time desc 
+2019-08-23 04:14:35.043 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.BrandMapper.selectByExample      : ==> Parameters: 
+2019-08-23 04:14:35.047 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.BrandMapper.selectByExample      : <==      Total: 50
+2019-08-23 04:14:35.048 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.BrandMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_brand 
+2019-08-23 04:14:35.048 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.BrandMapper.countByExample  : ==> Parameters: 
+2019-08-23 04:14:35.049 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.BrandMapper.countByExample  : <==      Total: 1
+2019-08-23 04:14:41.693 DEBUG 13032 --- [http-nio-80-exec-8] c.c.mall.mapper.StorageMapper.insert     : ==>  Preparing: insert into cskaoyan_mall_storage (id, cskaoyan_mall_storage.key, cskaoyan_mall_storage.name, cskaoyan_mall_storage.type, cskaoyan_mall_storage.size, url, add_time, update_time, deleted) values (?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2019-08-23 04:14:41.694 DEBUG 13032 --- [http-nio-80-exec-8] c.c.mall.mapper.StorageMapper.insert     : ==> Parameters: null, 2019_08_23_04_14_41_a5452276-60b4-4824-831c-4077ae7f03a5.jpg(String), 2019_08_23_04_14_41_a5452276-60b4-4824-831c-4077ae7f03a5.jpg(String), .jpg(String), 40963(Integer), https://lixishuang.oss-cn-beijing.aliyuncs.com/b6ec19f840f14acf91352a1c26c8acf0(String), 2019-08-23 04:14:41.692(Timestamp), 2019-08-23 04:14:41.692(Timestamp), false(Boolean)
+2019-08-23 04:14:41.699 DEBUG 13032 --- [http-nio-80-exec-8] c.c.mall.mapper.StorageMapper.insert     : <==    Updates: 1
+2019-08-23 04:14:41.700 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.StorageMapper.insert!selectKey   : ==>  Preparing: SELECT LAST_INSERT_ID() AS ID 
+2019-08-23 04:14:41.700 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.StorageMapper.insert!selectKey   : ==> Parameters: 
+2019-08-23 04:14:41.700 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.StorageMapper.insert!selectKey   : <==      Total: 1
+2019-08-23 04:14:54.112 DEBUG 13032 --- [http-nio-80-exec-10] c.c.mall.mapper.BrandMapper.insert       : ==>  Preparing: insert into cskaoyan_mall_brand (id, cskaoyan_mall_brand.name, cskaoyan_mall_brand.desc, pic_url, sort_order, floor_price, add_time, update_time, deleted ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-08-23 04:14:54.112 DEBUG 13032 --- [http-nio-80-exec-10] c.c.mall.mapper.BrandMapper.insert       : ==> Parameters: null, 啊(String), (String), https://lixishuang.oss-cn-beijing.aliyuncs.com/b6ec19f840f14acf91352a1c26c8acf0(String), 100(Byte), null, 2019-08-23 04:14:54.112(Timestamp), 2019-08-23 04:14:54.112(Timestamp), false(Boolean)
+2019-08-23 04:14:54.119 DEBUG 13032 --- [http-nio-80-exec-10] c.c.mall.mapper.BrandMapper.insert       : <==    Updates: 1
+2019-08-23 04:14:54.119 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.BrandMapper.insert!selectKey     : ==>  Preparing: SELECT LAST_INSERT_ID() AS ID 
+2019-08-23 04:14:54.119 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.BrandMapper.insert!selectKey     : ==> Parameters: 
+2019-08-23 04:14:54.120 DEBUG 13032 --- [http-nio-80-exec-10] c.c.m.m.BrandMapper.insert!selectKey     : <==      Total: 1
+2019-08-23 04:16:02.377 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:16:02.377 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 101(Integer), 102(Integer), 103(Integer)
+2019-08-23 04:16:02.378 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:16:02.379 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? , ? ) ) 
+2019-08-23 04:16:02.379 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 201(Integer), 202(Integer), 203(Integer)
+2019-08-23 04:16:02.380 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:16:02.381 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? ) ) 
+2019-08-23 04:16:02.381 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 301(Integer)
+2019-08-23 04:16:02.382 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:16:02.383 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( user_id = ? and order_status in ( ? , ? ) ) 
+2019-08-23 04:16:02.383 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 25(Integer), 401(Integer), 402(Integer)
+2019-08-23 04:16:02.384 DEBUG 13032 --- [http-nio-80-exec-3] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:16:04.340 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.OrderMapper.countByExample  : ==>  Preparing: select count(*) from cskaoyan_mall_order WHERE ( order_status between ? and ? ) 
+2019-08-23 04:16:04.340 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.OrderMapper.countByExample  : ==> Parameters: 100(Short), 200(Short)
+2019-08-23 04:16:04.341 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.mapper.OrderMapper.countByExample  : <==      Total: 1
+2019-08-23 04:16:04.342 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.OrderMapper.selectByExample      : ==>  Preparing: select id, user_id, order_sn, order_status, consignee, mobile, address, message, goods_price, freight_price, coupon_price, integral_price, groupon_price, order_price, actual_price, pay_id, pay_time, ship_sn, ship_channel, ship_time, confirm_time, comments, end_time, add_time, update_time, deleted from cskaoyan_mall_order WHERE ( user_id = ? ) order by id desc 
+2019-08-23 04:16:04.342 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.OrderMapper.selectByExample      : ==> Parameters: 25(Integer)
+2019-08-23 04:16:04.343 DEBUG 13032 --- [http-nio-80-exec-5] c.c.m.m.OrderMapper.selectByExample      : <==      Total: 2
+2019-08-23 04:18:04.199 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.OrderMapper.selectByPrimaryKey   : ==>  Preparing: select id, user_id, order_sn, order_status, consignee, mobile, address, message, goods_price, freight_price, coupon_price, integral_price, groupon_price, order_price, actual_price, pay_id, pay_time, ship_sn, ship_channel, ship_time, confirm_time, comments, end_time, add_time, update_time, deleted from cskaoyan_mall_order where id = ? 
+2019-08-23 04:18:04.199 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.OrderMapper.selectByPrimaryKey   : ==> Parameters: 4(Integer)
+2019-08-23 04:18:04.200 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.OrderMapper.selectByPrimaryKey   : <==      Total: 1
+2019-08-23 04:18:04.207 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.O.selectByExample                : ==>  Preparing: select id, order_id, goods_id, goods_name, goods_sn, product_id, number, price, specifications, pic_url, comment, add_time, update_time, deleted from cskaoyan_mall_order_goods WHERE ( order_id = ? ) 
+2019-08-23 04:18:04.208 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.O.selectByExample                : ==> Parameters: 4(Integer)
+2019-08-23 04:18:04.209 DEBUG 13032 --- [http-nio-80-exec-8] c.c.m.m.O.selectByExample                : <==      Total: 0

@@ -5,7 +5,7 @@ import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.mapper.PermissionMapper;
 import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
-import com.cskaoyan.mall.service.lxs.AdminServiceImpl;
+import com.cskaoyan.mall.service.lxs.impl.AdminServiceImpl;
 import com.cskaoyan.mall.service.lxt.PermissionService;
 import com.cskaoyan.mall.service.lxt.RoleService;
 import com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl;

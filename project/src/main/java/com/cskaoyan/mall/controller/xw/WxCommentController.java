@@ -47,7 +47,7 @@ public class WxCommentController {
         comment.setAddTime(date);
         comment.setContent(xwComment.getContent());
         comment.setHasPicture(xwComment.getHasPicture());
-        comment.setPicUrls(Arrays.toString(xwComment.getPicUrls()));
+        comment.setPicUrls(xwComment.getPicUrls());
         comment.setStar(xwComment.getStar());
         comment.setType(xwComment.getType());
         comment.setValueId(xwComment.getValueId());

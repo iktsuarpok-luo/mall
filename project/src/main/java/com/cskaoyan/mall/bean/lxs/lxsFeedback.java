@@ -1,23 +1,25 @@
-package com.cskaoyan.mall.bean;
+package com.cskaoyan.mall.bean.lxs;
 
 import java.util.Date;
 
-public class Comment {
+public class lxsFeedback {
     private Integer id;
 
-    private Integer valueId;
+    private Integer userId;
 
-    private Byte type;
+    private String username;
+
+    private String mobile;
+
+    private String feedType;
 
     private String content;
 
-    private Integer userId;
+    private Integer status;
 
     private Boolean hasPicture;
 
     private String[] picUrls;
-
-    private Short star;
 
     private Date addTime;
 
@@ -33,20 +35,36 @@ public class Comment {
         this.id = id;
     }
 
-    public Integer getValueId() {
-        return valueId;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setValueId(Integer valueId) {
-        this.valueId = valueId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public Byte getType() {
-        return type;
+    public String getUsername() {
+        return username;
     }
 
-    public void setType(Byte type) {
-        this.type = type;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile == null ? null : mobile.trim();
+    }
+
+    public String getFeedType() {
+        return feedType;
+    }
+
+    public void setFeedType(String feedType) {
+        this.feedType = feedType == null ? null : feedType.trim();
     }
 
     public String getContent() {
@@ -57,12 +75,12 @@ public class Comment {
         this.content = content == null ? null : content.trim();
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Boolean getHasPicture() {
@@ -73,20 +91,13 @@ public class Comment {
         this.hasPicture = hasPicture;
     }
 
+
     public String[] getPicUrls() {
         return picUrls;
     }
 
     public void setPicUrls(String[] picUrls) {
         this.picUrls = picUrls;
-    }
-
-    public Short getStar() {
-        return star;
-    }
-
-    public void setStar(Short star) {
-        this.star = star;
     }
 
     public Date getAddTime() {
