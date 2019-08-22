@@ -27,4 +27,6 @@ public interface OrderService {
     long countByType(int showType,int id);
 
     List<Order> getOrderListByType(int showType,int page ,int size,int id);
+
+    void update(Order order);
 }

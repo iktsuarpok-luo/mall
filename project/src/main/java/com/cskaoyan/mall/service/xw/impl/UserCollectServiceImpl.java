@@ -56,4 +56,13 @@ public class UserCollectServiceImpl implements UserCollectService {
         collectExample.createCriteria().andTypeEqualTo((byte) type);
         return (int)collectMapper.countByExample(collectExample);
     }
+
+    @Override
+    public int check(Integer goodsId, Integer userId, int type) {
+        CollectExample collectExample = new CollectExample();
+        collectExample.createCriteria().andValueIdEqualTo(goodsId);
+        collectExample.createCriteria().andTypeEqualTo((byte) type);
+        collectExample.createCriteria().andUserIdEqualTo(userId);
+        return (int) collectMapper.countByExample(collectExample);
+    }
 }

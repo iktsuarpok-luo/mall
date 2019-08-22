@@ -147,4 +147,9 @@ public class OrderServiceImpl implements OrderService {
 
         return this.getOrderList(page, size, "id", "desc", null, String.valueOf(id), orderStatusArray);
     }
+
+    @Override
+    public void update(Order order) {
+        orderMapper.updateByPrimaryKey(order);
+    }
 }

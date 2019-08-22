@@ -8,4 +8,6 @@ public interface UserCollectService {
     List<Collect> queryCollect(int page, int limit, Integer userId, Integer valueId);
 
     int count(Integer id, int type);
+
+    int check(Integer goodsId, Integer userId, int type);
 }

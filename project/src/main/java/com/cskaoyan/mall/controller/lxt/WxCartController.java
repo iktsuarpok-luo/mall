@@ -1,10 +1,9 @@
 package com.cskaoyan.mall.controller.lxt;
 
-import com.cskaoyan.mall.bean.BaseRespModel;
-import com.cskaoyan.mall.bean.Cart;
-import com.cskaoyan.mall.bean.CartTotal;
-import com.cskaoyan.mall.bean.Check;
+import com.cskaoyan.mall.bean.*;
 import com.cskaoyan.mall.service.lxt.CartService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.apache.tomcat.util.modeler.BaseModelMBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -57,6 +56,21 @@ public class WxCartController {
         }catch (Exception e){
             resp.setErrno(1);
             resp.setErrmsg("失败");
+        }
+        return resp;
+    }
+    @RequestMapping("goodscount")
+    public BaseRespModel goodsCount(){
+        BaseRespModel resp = new BaseRespModel();
+        try{
+            Subject subject = SecurityUtils.getSubject();
+            User user = (User) subject.getPrincipal();
+            resp.setData(cartService.countGoods(user.getId()));
+            resp.setErrno(0);
+            resp.setErrmsg("成功");
+        }catch (Exception e){
+            resp.setErrmsg("失败");
+            resp.setErrno(1);
         }
         return resp;
     }

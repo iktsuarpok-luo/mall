@@ -54,4 +54,11 @@ public class CartServiceImpl implements CartService {
         total.setCheckedGoodsAmount(cartMapper.getAmountByExample(cartExample2));
         return total;
     }
+
+    @Override
+    public int countGoods(Integer id) {
+        CartExample cartExample = new CartExample();
+        cartExample.createCriteria().andUserIdEqualTo(id);
+        return (int) cartMapper.countByExample(cartExample);
+    }
 }

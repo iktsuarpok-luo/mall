@@ -22,4 +22,5 @@ public interface GroupRuleService {
     int update(Grouponrules grouponrules);
 
     Grouponrules selectRulesById(Integer rulesId);
+
 }
