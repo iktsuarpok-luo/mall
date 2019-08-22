@@ -90,9 +90,9 @@ public class GroupRuleServiceImpl implements GroupRuleService{
 
     @Override
     public List<Grouponrules> getLimitList(int i, String id, String desc) {
-
-        grouponrulesMapper.selectLimitList();
-        grouponrulesList.subList(0,i);
-        return grouponrulesList;
+//        grouponrulesMapper.selectLimitList();
+//        grouponrulesList.subList(0,i);
+//        return grouponrulesList;
+        return null;
     }
 }

@@ -60,15 +60,23 @@
             <artifactId>pagehelper</artifactId>
             <version>5.1.4</version>
         </dependency>
-<<<<<<< HEAD
+
+        <!--引入oss依赖-->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.29</version>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>2.5.0</version>
         </dependency>
-    </dependencies>
-=======
->>>>>>> 03eb9a9a97bc5dbbc4d93d4fed30c5bdd1aa5fb5
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
 
 <!--引入AOP依赖-->
         <dependency>
@@ -103,8 +111,9 @@
             <artifactId>shiro-ehcache</artifactId>
             <version>1.2.3</version>
         </dependency>
+
         <dependency>
-            <groupId>net.sf.ehcahe</groupId>
+            <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <version>2.8.1</version>
         </dependency>
