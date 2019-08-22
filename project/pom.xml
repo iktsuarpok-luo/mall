@@ -60,16 +60,7 @@
             <artifactId>pagehelper</artifactId>
             <version>5.1.4</version>
         </dependency>
-<<<<<<< HEAD
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.29</version>
-        </dependency>
-    </dependencies>
-=======
->>>>>>> 03eb9a9a97bc5dbbc4d93d4fed30c5bdd1aa5fb5
-
+        
 <!--引入AOP依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
