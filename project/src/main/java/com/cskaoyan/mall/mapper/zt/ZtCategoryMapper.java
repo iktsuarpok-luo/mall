@@ -37,6 +37,10 @@ public interface ZtCategoryMapper {
     List<ZtCategory> findCategoryList();
     List<ZtCategory> findCategoryList(@Param("pid") int pid);
 
+    List<ZtCategory> findCategoryListByPidEqualZero();
+
+    List<ZtCategory> findSonCategoryByPid(Integer pid);
+
     /*int findcategoryIdById(int id);
 
     int findcategoryPidById(int id);*/

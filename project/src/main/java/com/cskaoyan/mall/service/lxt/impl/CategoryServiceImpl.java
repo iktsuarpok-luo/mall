@@ -80,9 +80,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(Category category) {
-        storageService.deleteByUrl(category.getPicUrl());
-        storageService.deleteByUrl(category.getIconUrl());
-
+        if (category.getPicUrl()!=null&&category.getPicUrl()!=""){
+            storageService.deleteByUrl(category.getPicUrl());
+        }
+        if(category.getIconUrl()!=null&&category.getIconUrl()!=""){
+            storageService.deleteByUrl(category.getIconUrl());
+        }
         StorageExample storageExample = new StorageExample();
         List<String> UrlList = new ArrayList<>();
         UrlList.add(category.getIconUrl());

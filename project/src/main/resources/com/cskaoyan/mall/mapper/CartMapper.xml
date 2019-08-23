@@ -218,6 +218,25 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+
+  <select id="getCountByExample" parameterType="com.cskaoyan.mall.bean.CartExample" resultType="java.lang.Long">
+    select COALESCE(SUM(cskaoyan_mall_cart.number),0) from cskaoyan_mall_cart
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <select id="getAmountByExample" parameterType="com.cskaoyan.mall.bean.CartExample" resultType="java.lang.Double">
+    select COALESCE(SUM(price),0) from cskaoyan_mall_cart
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+
+
+
+
   <update id="updateByExampleSelective" parameterType="map">
     update cskaoyan_mall_cart
     <set>

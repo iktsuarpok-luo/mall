@@ -34,4 +34,18 @@ public class CommentServiceImpl implements CommentService {
     public void delete(Integer id) {
         commentMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public int countComment(Integer id, int i) {
+        CommentExample commentExample = new CommentExample();
+        commentExample.createCriteria().andValueIdEqualTo(id).andTypeEqualTo((byte) i);
+        return (int) commentMapper.countByExample(commentExample);
+    }
+
+    @Override
+    public List<Comment> selectComments(Integer id, int i) {
+        CommentExample commentExample = new CommentExample();
+        commentExample.createCriteria().andValueIdEqualTo(id).andTypeEqualTo((byte) i);
+        return commentMapper.selectByExample(commentExample);
+    }
 }

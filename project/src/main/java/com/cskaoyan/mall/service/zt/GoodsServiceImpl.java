@@ -90,7 +90,7 @@ public class GoodsServiceImpl implements GoodsService {
             if(!specIds.contains(specificationId)){
                 Goodsspecification spec = goodsspecificationMapper.selectByPrimaryKey(specificationId);
                 spec.setDeleted(true);
-                goodsspecificationMapper.updateByPrimaryKey(spec);
+                goodsspecificationMapper.deleteByPrimaryKey(spec.getId());
             }
         }
 
@@ -117,7 +117,8 @@ public class GoodsServiceImpl implements GoodsService {
             if(!attrbuteIds.contains(attributeId)){
                 Goodsattribute goodsattribute = goodsattributeMapper.selectByPrimaryKey(attributeId);
                 goodsattribute.setDeleted(true);
-                goodsattributeMapper.updateByPrimaryKey(goodsattribute);
+                //goodsattributeMapper.updateByPrimaryKey(goodsattribute);
+                goodsattributeMapper.deleteByPrimaryKey(goodsattribute.getId());
             }
         }
 
@@ -133,6 +134,19 @@ public class GoodsServiceImpl implements GoodsService {
         goods.setDeleted(false);
         goods.setId(new Integer(goods.getGoodsSn()));
         goodsMapper.insert(goods);
+    }
+
+    @Override
+    public List<Goods> findRelatedGoods(Goods goods) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(goods.getCategoryId());
+        List<Goods> result = goodsMapper.selectByExample(goodsExample);
+        if(result.size()<6){
+            GoodsExample goodsExample2 = new GoodsExample();
+            goodsExample2.createCriteria().andBrandIdEqualTo(goods.getBrandId());
+            result.addAll(goodsMapper.selectByExample(goodsExample2));
+        }
+        return result;
     }
 
     // 热销商品

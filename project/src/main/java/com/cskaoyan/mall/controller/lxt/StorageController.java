@@ -18,14 +18,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-@RequestMapping("admin/storage")
+@RequestMapping(value = {"admin/storage","wx/storage"})
 @RestController
 public class StorageController {
     @Value("${filePath}")
     String filePath;
     @Autowired
     StorageService storageService;
-    @RequestMapping("create")
+    @RequestMapping(value = {"create","upload"})
     public BaseRespModel addPic(MultipartFile file) throws IOException {
         //oss
         InputStream inputStream = file.getInputStream();

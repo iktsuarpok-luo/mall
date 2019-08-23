@@ -1,7 +1,11 @@
 package com.cskaoyan.mall.Aop.lxs;
 import com.cskaoyan.mall.bean.Log;
+import com.cskaoyan.mall.bean.User;
+import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.service.lxs.AdminService;
 import com.cskaoyan.mall.util.AnnotationLog;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,15 +39,15 @@ public class LogAspect {
     }
     @AfterReturning(value = "pointcut()&&@annotation(alog)", returning = "a")
     public void myAfterReturning(Object a, AnnotationLog alog) throws UnknownHostException {
-        /*Subject subject = SecurityUtils.getSubject();
-        User user = (User) subject.getPrincipal();
-        String username = user.getUsername();*/
+        Subject subject = SecurityUtils.getSubject();
+        lxsAdminTwo user = (lxsAdminTwo) subject.getPrincipal();
+        String username = user.getUsername();
         String action = alog.value();
         String address = InetAddress.getLocalHost().getHostAddress();
         Map b= (Map) a;
         String errmsg = (String)b.get("errmsg");
         int errno = (int) b.get("errno");
-        //log.setAdmin(username);
+        log.setAdmin(username);
         log.setType(1);
         log.setAction(action);
         log.setAddTime(new Date());

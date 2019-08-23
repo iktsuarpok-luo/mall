@@ -119,7 +119,7 @@
   <select id="selectOneByExample" parameterType="com.cskaoyan.mall.bean.GrouponrulesExample" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from litemall_groupon_rules
+    from cskaoyan_mall_groupon_rules
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>

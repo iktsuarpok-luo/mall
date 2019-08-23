@@ -3,6 +3,8 @@ package com.cskaoyan.mall.mapper;
 import com.cskaoyan.mall.bean.Feedback;
 import com.cskaoyan.mall.bean.FeedbackExample;
 import java.util.List;
+
+import com.cskaoyan.mall.bean.lxs.lxsFeedback;
 import org.apache.ibatis.annotations.Param;
 
 public interface FeedbackMapper {
@@ -27,4 +29,6 @@ public interface FeedbackMapper {
     int updateByPrimaryKeySelective(Feedback record);
 
     int updateByPrimaryKey(Feedback record);
+
+    void insertfb(lxsFeedback lxsfeedback);
 }

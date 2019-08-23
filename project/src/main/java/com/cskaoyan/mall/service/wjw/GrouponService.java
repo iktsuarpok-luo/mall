@@ -12,4 +12,5 @@ public interface GrouponService {
     List<Groupon> getListRecord(String sort, String order, Integer goodsId);
 
     List<Groupon> selectGrouponById(Integer id);
+
 }

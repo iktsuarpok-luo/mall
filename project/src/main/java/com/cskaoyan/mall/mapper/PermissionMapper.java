@@ -33,4 +33,6 @@ public interface PermissionMapper {
     void insertdata(@Param("data") datafour datafour);
 
     void deleteByRoleId(@Param("roleid") int roleId);
+
+    String getApi(@Param("permission") String permission);
 }

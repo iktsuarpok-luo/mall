@@ -16,12 +16,15 @@ public interface GoodsService {
     void delete(Integer id);
 
     Goods findGoodsById(int id);
+    
 
     Goods add(Goods goods);
 
     void update(Goods goods, Goodsattribute[] attributes ,Goodsproduct[] products,Goodsspecification[] specifications);
 
     void create(Goods goods);
+
+    List<Goods> findRelatedGoods(Goods goods);
 
     /*微信小程序首页显示*/
     // 人气精选

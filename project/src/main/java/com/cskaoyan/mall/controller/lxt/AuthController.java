@@ -2,13 +2,15 @@ package com.cskaoyan.mall.controller.lxt;
 
 import com.cskaoyan.mall.bean.*;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
+import com.cskaoyan.mall.mapper.PermissionMapper;
 import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
-import com.cskaoyan.mall.service.lxs.AdminServiceImpl;
+import com.cskaoyan.mall.service.lxs.impl.AdminServiceImpl;
 import com.cskaoyan.mall.service.lxt.PermissionService;
 import com.cskaoyan.mall.service.lxt.RoleService;
 import com.cskaoyan.mall.service.lxt.impl.PermissionServiceImpl;
 import com.cskaoyan.mall.service.lxt.impl.RoleServiceImpl;
+import com.cskaoyan.mall.util.Md5Utils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -40,10 +42,13 @@ public class AuthController {
     RoleService roleService;
     @Autowired
     PermissionService permissionService;
+    @Autowired
+    PermissionMapper permissionMapper;
     @RequestMapping("login")
     public BaseRespModel login(@RequestBody lxsAdminTwo admin, HttpServletRequest request){
         BaseRespModel resp = new BaseRespModel<>();
         Subject subject = SecurityUtils.getSubject();
+        admin.setPassword(Md5Utils.Md5Again(admin.getPassword()));
         UsernamePasswordToken token = new MallToken(admin.getUsername(),admin.getPassword(),"admin");
         try{
             subject.login(token);
@@ -88,8 +93,11 @@ public class AuthController {
                 perms.add("*");
             }else{
                 for (Permission permission : Allpermissions) {
-                    if(subject.isPermitted(permission.getPermission())){
-                        perms.add(permission.getPermission());
+                    if(permission.getPermission().equals("*")){
+                        continue;
+                    }
+                    if(subject.isPermitted(permissionMapper.getApi(permission.getPermission()))){
+                        perms.add(permissionMapper.getApi(permission.getPermission()));
                     }
                 }
             }

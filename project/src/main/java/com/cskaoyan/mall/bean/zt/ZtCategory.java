@@ -10,7 +10,7 @@ public class ZtCategory {
 
     private String label;
 
-    private List<ZtCategory> children = new ArrayList<ZtCategory>();
+    private List<ZtCategory> children = new ArrayList<>();
 
     public List<ZtCategory> getChildren() {
         return children;

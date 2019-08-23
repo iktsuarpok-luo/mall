@@ -9,4 +9,8 @@ public interface UserService {
     User getUserById(int id);
 
     User selectByName(String principal);
+
+    void addUser(User user);
+
+    User getUserByMobile(String mobile);
 }

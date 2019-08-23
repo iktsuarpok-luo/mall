@@ -8,4 +8,6 @@ public interface GoodsspecificationService {
     List<Goodsspecification> findSpecificationById(int id);
 
     void create(String goodsSn, Goodsspecification[] specifications);
+
+    List<Goodsspecification> findSpecificationByValueAndGoodsId(Integer id, String name);
 }

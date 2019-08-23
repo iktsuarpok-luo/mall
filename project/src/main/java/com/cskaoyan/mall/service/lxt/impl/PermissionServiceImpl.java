@@ -22,11 +22,17 @@ public class PermissionServiceImpl implements PermissionService {
         List<Permission> permissions = permissionMapper.selectByExample(permissionExample);
         List<String> result = new ArrayList<>();
         for (Permission permission : permissions) {
-            result.add(permission.getPermission());
+            result.add(getApi(permission.getPermission()));
         }
         return result;
     }
-
+    public String getApi(String permission){
+        if(permission.equals("*")){
+            return "*";
+        }else {
+            return permissionMapper.getApi(permission);
+        }
+    }
     @Override
     public List<Permission> getAllPermissions() {
         List<Permission> permissions = permissionMapper.selectByExample(new PermissionExample());
