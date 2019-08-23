@@ -1,5 +1,7 @@
 package com.cskaoyan.mall.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Admin {
@@ -57,6 +59,7 @@ public class Admin {
         this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     public Date getLastLoginTime() {
         return lastLoginTime;
     }
@@ -73,6 +76,7 @@ public class Admin {
         this.avatar = avatar == null ? null : avatar.trim();
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     public Date getAddTime() {
         return addTime;
     }
@@ -81,6 +85,7 @@ public class Admin {
         this.addTime = addTime;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     public Date getUpdateTime() {
         return updateTime;
     }

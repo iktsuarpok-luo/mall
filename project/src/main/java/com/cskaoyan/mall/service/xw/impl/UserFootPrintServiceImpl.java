@@ -8,6 +8,7 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -55,5 +56,10 @@ public class UserFootPrintServiceImpl implements UserFootPrintService {
         footprintExample.createCriteria().andUserIdEqualTo(id);
         int l = (int)footprintMapper.countByExample(footprintExample);
         return l;
+    }
+
+    @Override
+    public void addFootPrint(Footprint footprint) {
+    footprintMapper.insert(footprint);
     }
 }

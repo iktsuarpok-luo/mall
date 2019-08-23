@@ -6,6 +6,7 @@ import com.cskaoyan.mall.service.lxt.CategoryService;
 import com.cskaoyan.mall.service.lxt.IssueService;
 import com.cskaoyan.mall.service.wjw.GroupRuleService;
 import com.cskaoyan.mall.service.xw.UserCollectService;
+import com.cskaoyan.mall.service.xw.UserFootPrintService;
 import com.cskaoyan.mall.service.zt.*;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,6 +42,8 @@ public class WxGoodsController {
     GoodsspecificationService goodsspecificationService;
     @Autowired
     UserCollectService userCollectService;
+    @Autowired
+    UserFootPrintService userFootPrintService;
     @RequestMapping("count")
     public BaseRespModel GoodsCount(){
         BaseRespModel resp = new BaseRespModel();
@@ -243,6 +247,15 @@ public class WxGoodsController {
             resp.setData(data);
             resp.setErrno(0);
             resp.setErrmsg("成功");
+            //显示详情之后加入浏览足迹
+            Date addTime = new Date();
+            Footprint footprint = new Footprint();
+            footprint.setUserId(user.getId());
+            footprint.setGoodsId(id);
+            footprint.setAddTime(addTime);
+            footprint.setUpdateTime(addTime);
+            footprint.setDeleted(false);
+            userFootPrintService.addFootPrint(footprint);
         }catch (Exception e){
             resp.setErrno(1);
             resp.setErrmsg("失败");
