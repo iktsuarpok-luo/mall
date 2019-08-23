@@ -53,7 +53,9 @@ public class TopicController {
         Topic topic = jsonObject.toJavaObject(Topic.class);
         BaseRespModel<Topic> baseRespModel = new BaseRespModel<>();
         int add = topicService.add(topic);
+//        List<Topic> topicList = topicService.getList(topic.getTitle(), topic.getSubtitle(), null, null);
         if (add>0){
+            baseRespModel.setData(topic);
             baseRespModel.setErrmsg("成功");
             baseRespModel.setErrno(0);
             return baseRespModel;

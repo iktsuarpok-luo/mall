@@ -30,4 +30,5 @@ public interface GrouponrulesMapper {
 
     List<Grouponrules> selectOneByExample(GrouponrulesExample grouponrulesExample);
 
+    Grouponrules selectByGoodsId(Integer goodsId);
 }

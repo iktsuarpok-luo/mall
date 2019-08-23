@@ -4,6 +4,7 @@ import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.bean.Grouponrules;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author ethan
@@ -23,5 +24,7 @@ public interface GroupRuleService {
 
     Grouponrules selectRulesById(Integer rulesId);
 
-    List<Grouponrules> getLimitList(int i, String id, String desc);
+    List<Map<String, Object>> getLimitList(int i, String order, String sort);
+
+    Grouponrules selectByGoodsId(Integer id);
 }

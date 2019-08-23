@@ -55,4 +55,28 @@ public class KeywordServiceImpl implements KeywordService {
         keywordMapper.updateByPrimaryKey(keyword);
         return keyword;
     }
+
+    @Override
+    public Keyword defaultKeyword() {
+        Keyword keyword = keywordMapper.selectByPrimaryKey(6);
+        return keyword;
+    }
+
+    @Override
+    public List<Keyword> hotKeywordList() {
+        KeywordExample keywordExample = new KeywordExample();
+        keywordExample.createCriteria().andIdEqualTo(6);
+        List<Keyword> keywords = keywordMapper.selectByExample(keywordExample);
+        return keywords;
+    }
+
+    @Override
+    public List<Keyword> selectHelper(String keyword) {
+        KeywordExample keywordExample = new KeywordExample();
+        String keywordLike = "%" + keyword + "%";
+        keywordExample.createCriteria().andKeywordLike(keywordLike);
+        List<Keyword> keywords = keywordMapper.selectByExample(keywordExample);
+
+        return keywords;
+    }
 }

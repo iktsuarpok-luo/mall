@@ -33,4 +33,29 @@ public interface GoodsService {
     List<Goods> getNewGoodsList();
 
     List<Goods> getFloorGoodsList(int id);
+
+    List<Goods> goodsList(int id);
+
+    int count(int id);
+
+    int countByIsNew(boolean isNew);
+
+    List<Goods> goodsListByIsNew(boolean isNew,String order,String sort);
+
+    int countByIsHot(boolean isHot);
+
+    List<Goods> goodsListByIsHot(boolean isHot, String order, String sort);
+
+    List<Goods> goodsListByIsHotAndId(boolean isHot, String order, String sort, Integer categoryId);
+
+    List<Goods> goodsListByIsNewAndId(boolean isNew, String order, String sort, Integer categoryId);
+
+
+    int CountAllGoods();
+
+    int countByKeyword(String keyword);
+
+    List<Goods> goodsListByKeyword(String keyword, String order, String sort);
+
+    List<Goods> goodsListByKeywordAndId(String keyword, String order, String sort, Integer categoryId);
 }

@@ -1,13 +1,18 @@
 package com.cskaoyan.mall.service.wjw;
+import com.cskaoyan.mall.bean.Goods;
 import com.cskaoyan.mall.bean.Grouponrules;
 import com.cskaoyan.mall.bean.GrouponrulesExample;
 import com.cskaoyan.mall.mapper.GrouponrulesMapper;
+import com.cskaoyan.mall.service.zt.GoodsService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author ethan
@@ -18,6 +23,11 @@ public class GroupRuleServiceImpl implements GroupRuleService{
     @Autowired
     GrouponrulesMapper grouponrulesMapper;
 
+    @Autowired
+    GoodsService goodsService;
+
+    @Autowired
+    GroupRuleService groupRuleService;
     /**
      * 通过goodsId查询团购规则
      * @param goodsId
@@ -58,10 +68,10 @@ public class GroupRuleServiceImpl implements GroupRuleService{
         if (goodsId!=null){
             criteria.andGoodsIdEqualTo(goodsId);
         }
-        grouponrulesExample.setOrderByClause(sort+" "+order);
-
+//        grouponrulesExample.setOrderByClause(sort+" "+order);
         criteria.andDeletedEqualTo(false);
-        return grouponrulesMapper.selectByExample(grouponrulesExample);
+        List<Grouponrules> grouponrulesList = grouponrulesMapper.selectByExample(grouponrulesExample);
+        return grouponrulesList;
     }
 
     @Override
@@ -89,11 +99,26 @@ public class GroupRuleServiceImpl implements GroupRuleService{
     }
 
     @Override
-    public List<Grouponrules> getLimitList(int i, String id, String desc) {
+    public List<Map<String, Object>> getLimitList(int i, String order, String sort) {
+        List<Grouponrules> grouponrulesList = groupRuleService.getList(sort,order,null);
+        List<Map<String, Object>> grouponData = new ArrayList<>();
+        for (Grouponrules grouponrules : grouponrulesList) {
+            HashMap<String, Object> rowData = new HashMap<>();
+            Integer grouponMember = grouponrules.getDiscountMember();
+            Integer goodsId = grouponrules.getGoodsId();
+            Goods goods = goodsService.findGoodsById(goodsId);
+            rowData.put("goods",goods);
+            int discount = grouponrules.getDiscount();
+            int grouponPrice= goods.getCounterPrice()-discount;
+            rowData.put("groupon_member",grouponMember);
+            rowData.put("groupon_price",grouponPrice);
+            grouponData.add(rowData);
+        }
+        return grouponData.subList(0, Math.min(grouponData.size(),i));
+    }
 
-        /*grouponrulesMapper.selectLimitList();
-        grouponrulesList.subList(0,i);
-        return grouponrulesList;*/
-        return null;
+    @Override
+    public Grouponrules selectByGoodsId(Integer goodsId) {
+        return grouponrulesMapper.selectByGoodsId(goodsId);
     }
 }

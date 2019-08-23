@@ -53,4 +53,9 @@ public class AdServiceImpl implements AdService{
         ad.setUpdateTime(LocalDateTime.now());
         return adMapper.updateByPrimaryKeySelective(ad);
     }
+
+    @Override
+    public Ad selectById(Integer id) {
+        return adMapper.selectByPrimaryKey(id);
+    }
 }

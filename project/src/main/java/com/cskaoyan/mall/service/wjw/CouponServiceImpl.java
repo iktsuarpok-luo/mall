@@ -73,4 +73,14 @@ public class CouponServiceImpl implements CouponService{
         couponExample.setOrderByClause(sort+" "+order);
         return couponList.subList(0,i);
     }
+
+    @Override
+    public List<Coupon> selectListBystatus(short status) {
+        return couponMapper.selectListByStatus(status);
+    }
+
+    @Override
+    public List<Coupon> selectListByCode(String code) {
+        return couponMapper.selectListByCode(code);
+    }
 }

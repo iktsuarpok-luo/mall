@@ -108,14 +108,19 @@
     from cskaoyan_mall_groupon_rules
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectByGoodsId" parameterType="com.cskaoyan.mall.bean.Grouponrules" resultMap="CollectResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cskaoyan_mall_groupon_rules
+    where goodsId = #{goodsId,jdbcType=INTEGER}
+  </select>
+
   <select id="getLimitList" parameterType="com.cskaoyan.mall.bean.Grouponrules" resultMap="CollectResultMap">
     select
     <include refid="Base_Column_List" />
     from cskaoyan_mall_groupon_rules rule
     left join cskaoyan_mall_goods good on rule.goods_id = good.id
-
   </select>
-
   <select id="selectOneByExample" parameterType="com.cskaoyan.mall.bean.GrouponrulesExample" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

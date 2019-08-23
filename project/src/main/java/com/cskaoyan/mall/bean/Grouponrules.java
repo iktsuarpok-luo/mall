@@ -15,7 +15,7 @@ public class Grouponrules {
 
     private String picUrl;
 
-    private BigDecimal discount;
+    private Integer discount;
 
     private Integer discountMember;
 
@@ -60,11 +60,11 @@ public class Grouponrules {
         this.picUrl = picUrl;
     }
 
-    public BigDecimal getDiscount() {
+    public Integer getDiscount() {
         return discount;
     }
 
-    public void setDiscount(BigDecimal discount) {
+    public void setDiscount(Integer discount) {
         this.discount = discount;
     }
 

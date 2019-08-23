@@ -3,8 +3,6 @@ package com.cskaoyan.mall.controller.wjw;
 import com.cskaoyan.mall.bean.BaseRespModel;
 import com.cskaoyan.mall.bean.Goods;
 import com.cskaoyan.mall.bean.Groupon;
-
-
 import com.cskaoyan.mall.bean.Grouponrules;
 import com.cskaoyan.mall.service.wjw.GroupRuleService;
 import com.cskaoyan.mall.service.wjw.GrouponService;
@@ -93,7 +91,9 @@ public class GrouponController {
         grouponrules.setPicUrl(goods.getPicUrl());
         grouponrules.setDeleted(false);
         int i = groupRuleService.add(grouponrules);
+//        List<Grouponrules> grouponrulesList = groupRuleService.getList(null, null, grouponrules.getGoodsId());
         if (i>0){
+            baseRespModel.setData(grouponrules);
             baseRespModel.setErrmsg("成功");
             baseRespModel.setErrno(0);
             return baseRespModel;

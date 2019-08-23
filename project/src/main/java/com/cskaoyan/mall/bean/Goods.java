@@ -34,9 +34,9 @@ public class Goods {
 
     private String unit;
 
-    private BigDecimal counterPrice;
+    private int counterPrice;
 
-    private BigDecimal retailPrice;
+    private int retailPrice;
 
     private Date addTime;
 
@@ -166,19 +166,43 @@ public class Goods {
         this.unit = unit == null ? null : unit.trim();
     }
 
-    public BigDecimal getCounterPrice() {
+    public Boolean getOnSale() {
+        return isOnSale;
+    }
+
+    public void setOnSale(Boolean onSale) {
+        isOnSale = onSale;
+    }
+
+    public Boolean getNew() {
+        return isNew;
+    }
+
+    public void setNew(Boolean aNew) {
+        isNew = aNew;
+    }
+
+    public Boolean getHot() {
+        return isHot;
+    }
+
+    public void setHot(Boolean hot) {
+        isHot = hot;
+    }
+
+    public int getCounterPrice() {
         return counterPrice;
     }
 
-    public void setCounterPrice(BigDecimal counterPrice) {
+    public void setCounterPrice(int counterPrice) {
         this.counterPrice = counterPrice;
     }
 
-    public BigDecimal getRetailPrice() {
+    public int getRetailPrice() {
         return retailPrice;
     }
 
-    public void setRetailPrice(BigDecimal retailPrice) {
+    public void setRetailPrice(int retailPrice) {
         this.retailPrice = retailPrice;
     }
 
