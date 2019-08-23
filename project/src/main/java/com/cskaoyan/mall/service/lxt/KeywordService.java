@@ -14,4 +14,10 @@ public interface KeywordService {
     void delete(Integer id);
 
     Keyword update(Keyword keyword);
+
+    Keyword defaultKeyword();
+
+    List<Keyword> hotKeywordList();
+
+    List<Keyword> selectHelper(String keyword);
 }

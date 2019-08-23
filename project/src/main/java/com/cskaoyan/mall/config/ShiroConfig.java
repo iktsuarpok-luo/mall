@@ -76,7 +76,7 @@ public class ShiroConfig {
     @Bean
     public DefaultWebSessionManager sessionManager(){
         DefaultWebSessionManager sessionManager = new MallSessionManager();
-        sessionManager.setGlobalSessionTimeout(1800000);
+        sessionManager.setGlobalSessionTimeout(18000000);
         sessionManager.setDeleteInvalidSessions(true);
         return sessionManager;
 

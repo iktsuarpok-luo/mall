@@ -18,4 +18,8 @@ public interface CategoryService {
     Category getCurrentCategory(int id);
 
     List<Category> getSubCategory(int id);
+
+    List<Category> getCategoryByPid();
+
+    List<Category> filterCategoryList();
 }

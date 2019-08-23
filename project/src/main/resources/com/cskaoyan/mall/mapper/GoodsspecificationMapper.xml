@@ -266,6 +266,7 @@
 	cmgs.pic_url,
 	cmgs.add_time,
 	cmgs.update_time,
+	cmgs.value,
 	cmgs.deleted
 from cskaoyan_mall_goods_specification cmgs
 LEFT JOIN cskaoyan_mall_goods cmg ON cmgs.goods_id = cmg.id

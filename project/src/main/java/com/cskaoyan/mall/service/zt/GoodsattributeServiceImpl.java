@@ -1,6 +1,7 @@
 package com.cskaoyan.mall.service.zt;
 
 import com.cskaoyan.mall.bean.Goodsattribute;
+import com.cskaoyan.mall.bean.GoodsattributeExample;
 import com.cskaoyan.mall.mapper.GoodsattributeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,5 +25,12 @@ public class GoodsattributeServiceImpl implements GoodsattributeService {
             attribute.setGoodsId(new Integer(goodsSn));
             goodsattributeMapper.insert(attribute);
         }
+    }
+
+    @Override
+    public List<Goodsattribute> findGoodsattributesByGoods(int id) {
+        GoodsattributeExample goodsattributeExample = new GoodsattributeExample();
+        goodsattributeExample.createCriteria().andGoodsIdEqualTo(id);
+        return goodsattributeMapper.selectByExample(goodsattributeExample);
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.management.Attribute;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -89,7 +90,7 @@ public class GoodsServiceImpl implements GoodsService {
             if(!specIds.contains(specificationId)){
                 Goodsspecification spec = goodsspecificationMapper.selectByPrimaryKey(specificationId);
                 spec.setDeleted(true);
-                goodsspecificationMapper.updateByPrimaryKey(spec);
+                goodsspecificationMapper.deleteByPrimaryKey(spec.getId());
             }
         }
 
@@ -116,7 +117,8 @@ public class GoodsServiceImpl implements GoodsService {
             if(!attrbuteIds.contains(attributeId)){
                 Goodsattribute goodsattribute = goodsattributeMapper.selectByPrimaryKey(attributeId);
                 goodsattribute.setDeleted(true);
-                goodsattributeMapper.updateByPrimaryKey(goodsattribute);
+                //goodsattributeMapper.updateByPrimaryKey(goodsattribute);
+                goodsattributeMapper.deleteByPrimaryKey(goodsattribute.getId());
             }
         }
 
@@ -132,6 +134,159 @@ public class GoodsServiceImpl implements GoodsService {
         goods.setDeleted(false);
         goods.setId(new Integer(goods.getGoodsSn()));
         goodsMapper.insert(goods);
+    }
+
+    @Override
+    public List<Goods> findRelatedGoods(Goods goods) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(goods.getCategoryId());
+        List<Goods> result = goodsMapper.selectByExample(goodsExample);
+        if(result.size()<6){
+            GoodsExample goodsExample2 = new GoodsExample();
+            goodsExample2.createCriteria().andBrandIdEqualTo(goods.getBrandId());
+            result.addAll(goodsMapper.selectByExample(goodsExample2));
+        }
+        return result;
+    }
+
+    // 热销商品
+    @Override
+    public List<Goods> getHotGoodsList() {
+        List<Goods> goods = null;
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(true);
+        goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    // 最新上市商品
+    @Override
+    public List<Goods> getNewGoodsList() {
+        List<Goods> goods = null;
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(true);
+        goods = goodsMapper.selectByExample(goodsExample);
+
+        return goods;
+    }
+
+    @Override
+    public List<Goods> getFloorGoodsList(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsList(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int count(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public int countByIsNew(boolean isNew) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsNew(boolean isNew,String order,String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int countByIsHot(boolean isHot) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsHot(boolean isHot, String order, String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsHotAndId(boolean isHot, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsNewAndId(boolean isNew, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int CountAllGoods() {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andGoodsSnIsNotNull();
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public int countByKeyword(String keyword) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywodLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywodLike);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByKeyword(String keyword, String order, String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywordLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywordLike);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByKeywordAndId(String keyword, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywordLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywordLike).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
     }
 }
 

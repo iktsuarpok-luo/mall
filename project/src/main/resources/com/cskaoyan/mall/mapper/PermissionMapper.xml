@@ -236,4 +236,9 @@
      delete from cskaoyan_mall_permission
     where role_id = #{roleid,jdbcType=INTEGER}
   </delete>
+
+  <select id="getApi" parameterType="java.lang.String" resultType="java.lang.String">
+    select api from cskaoyan_mall_list
+    where id = #{permission,jdbcType=VARCHAR}
+  </select>
 </mapper>

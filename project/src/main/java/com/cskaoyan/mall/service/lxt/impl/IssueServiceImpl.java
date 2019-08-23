@@ -56,4 +56,9 @@ public class IssueServiceImpl implements IssueService {
         issueMapper.updateByPrimaryKey(issue);
         return issue;
     }
+
+    @Override
+    public List<Issue> getAllIssue() {
+        return issueMapper.selectByExample(new IssueExample());
+    }
 }

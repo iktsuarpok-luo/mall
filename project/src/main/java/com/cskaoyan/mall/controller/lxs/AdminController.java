@@ -9,8 +9,11 @@ import com.cskaoyan.mall.bean.lxs.lxsAdmin;
 import com.cskaoyan.mall.bean.lxs.lxsAdminTwo;
 import com.cskaoyan.mall.bean.lxs.lxsRole;
 import com.cskaoyan.mall.mapper.PermissionMapper;
+import com.cskaoyan.mall.realm.CustomRealm;
 import com.cskaoyan.mall.service.lxs.AdminService;
 import com.cskaoyan.mall.util.AnnotationLog;
+import com.cskaoyan.mall.util.Md5Utils;
+import org.apache.shiro.realm.Realm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +32,8 @@ public class AdminController {
     AdminService adminService;
     @Autowired
     PermissionMapper permissionMapper;
+    @Autowired
+    CustomRealm customRealm;
     @RequestMapping("admin/list")
     public Map getList(String username,int page,int limit){
         if(username==null) {
@@ -98,11 +103,14 @@ public class AdminController {
             map.put("errno",602);
             return map;
         }
+        admin.setPassword(Md5Utils.Md5Again(admin.getPassword()));
         lxsAdminTwo aa=adminService.selectById(admin.getId());
         Map map = new HashMap();
         map.put("data",aa);
         map.put("errmsg","成功");
         map.put("errno",0);
+
+        customRealm.clearCache();
         return map;
     }
 
@@ -254,6 +262,8 @@ public class AdminController {
 
         map.put("errmsg","成功");
         map.put("errno",0);
+
+        customRealm.clearCache();
         return map;
     }
 

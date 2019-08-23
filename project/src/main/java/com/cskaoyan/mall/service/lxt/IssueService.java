@@ -14,4 +14,6 @@ public interface IssueService {
     void delete(Integer id);
 
     Issue update(Issue issue);
+
+    List<Issue> getAllIssue();
 }

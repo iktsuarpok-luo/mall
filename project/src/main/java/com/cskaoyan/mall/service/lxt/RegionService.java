@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface RegionService {
     List<Region> getRegionList();
+
+    List<Region> getRegionListByPid(int pid);
 }
