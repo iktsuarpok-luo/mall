@@ -94,5 +94,39 @@ public class WxCouponController {
         baseRespModel.setErrno(0);
         return baseRespModel;
     }
-
+    @RequestMapping("mylist")
+    public BaseRespModel getMyList(Integer page,Integer size,short status){
+        PageHelper.startPage(page,size);
+        BaseRespModel<HashMap<String, Object>> baseRespModel = new BaseRespModel<>();
+        List<Coupon> couponList = couponService.selectListBystatus(status);
+        HashMap<String, Object> data = new HashMap<>();
+        PageInfo<Coupon> pageInfo = new PageInfo<>(couponList);
+        long total = pageInfo.getTotal();
+        data.put("count",total);
+        data.put("data",couponList);
+        baseRespModel.setData(data);
+        baseRespModel.setErrmsg("成功");
+        baseRespModel.setErrno(0);
+        return baseRespModel;
+    }
+    @RequestMapping("exchange")
+    public BaseRespModel exchange(@RequestBody JSONObject Jcode){
+        BaseRespModel<HashMap<String, Object>> respModel = new BaseRespModel<>();
+        String code = Jcode.getString("code");
+        List<Coupon> couponList = couponService.selectListByCode(code);
+        if (couponList==null){
+            respModel.setErrno(742);
+            respModel.setErrmsg("找不到该优惠券");
+            return respModel;
+        }else {
+            HashMap<String, Object> data = new HashMap<>();
+            PageInfo<Coupon> pageInfo = new PageInfo<>(couponList);
+            long total = pageInfo.getTotal();
+            data.put("count",total);
+            data.put("data",couponList);
+            respModel.setData(data);
+            respModel.setErrmsg("成功");
+            return respModel;
+        }
+    }
 }

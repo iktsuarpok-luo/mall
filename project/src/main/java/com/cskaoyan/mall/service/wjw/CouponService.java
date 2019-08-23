@@ -20,6 +20,9 @@ public interface CouponService {
 
     String generateCode();
 
-
     List<Coupon> selectLimitList(int i, String sort, String order);
+
+    List<Coupon> selectListBystatus(short status);
+
+    List<Coupon> selectListByCode(String code);
 }

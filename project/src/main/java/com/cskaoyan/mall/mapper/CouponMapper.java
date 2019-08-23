@@ -31,4 +31,8 @@ public interface CouponMapper {
     int updateByPrimaryKey(Coupon record);
 
     List<Coupon> selectByWx();
+
+    List<Coupon> selectListByStatus(short status);
+
+    List<Coupon> selectListByCode(String code);
 }

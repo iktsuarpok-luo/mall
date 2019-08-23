@@ -1,6 +1,7 @@
 package com.cskaoyan.mall.controller.xw;
 
 import com.cskaoyan.mall.bean.BaseRespModel;
+import com.cskaoyan.mall.mapper.GoodsMapper;
 import com.cskaoyan.mall.service.lxt.BrandService;
 import com.cskaoyan.mall.service.lxt.CategoryService;
 import com.cskaoyan.mall.service.wjw.AdService;

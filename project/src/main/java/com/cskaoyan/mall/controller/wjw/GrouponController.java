@@ -92,7 +92,9 @@ public class GrouponController {
         grouponrules.setPicUrl(goods.getPicUrl());
         grouponrules.setDeleted(false);
         int i = groupRuleService.add(grouponrules);
+//        List<Grouponrules> grouponrulesList = groupRuleService.getList(null, null, grouponrules.getGoodsId());
         if (i>0){
+            baseRespModel.setData(grouponrules);
             baseRespModel.setErrmsg("成功");
             baseRespModel.setErrno(0);
             return baseRespModel;

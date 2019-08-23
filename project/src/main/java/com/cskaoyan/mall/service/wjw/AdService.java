@@ -17,4 +17,6 @@ public interface AdService {
 
 
     List<Ad> selectList(String name, String content);
+
+    Ad selectById(Integer id);
 }

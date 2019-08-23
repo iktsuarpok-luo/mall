@@ -48,7 +48,10 @@ public class AdController {
     public BaseRespModel create(@RequestBody Ad ad){
         int i = adService.add(ad);
         BaseRespModel<Ad> baseRespModel = new BaseRespModel<>();
-        baseRespModel.setData(ad);
+        String content = ad.getContent();
+        String name = ad.getName();
+        List<Ad> adList = adService.selectList(name, content);
+        baseRespModel.setData(adList.get(0));
         baseRespModel.setErrmsg("成功");
         baseRespModel.setErrno(0);
         return baseRespModel;
