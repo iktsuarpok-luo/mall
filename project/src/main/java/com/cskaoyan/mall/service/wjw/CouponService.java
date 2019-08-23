@@ -25,4 +25,6 @@ public interface CouponService {
     List<Coupon> selectListBystatus(short status);
 
     List<Coupon> selectListByCode(String code);
+
+    Coupon selectByName(String name);
 }

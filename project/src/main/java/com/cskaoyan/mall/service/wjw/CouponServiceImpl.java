@@ -83,4 +83,9 @@ public class CouponServiceImpl implements CouponService{
     public List<Coupon> selectListByCode(String code) {
         return couponMapper.selectListByCode(code);
     }
+
+    @Override
+    public Coupon selectByName(String name) {
+        return couponMapper.selectByName(name);
+    }
 }

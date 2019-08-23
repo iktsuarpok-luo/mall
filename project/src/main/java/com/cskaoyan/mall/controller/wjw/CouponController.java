@@ -83,9 +83,9 @@ public class CouponController {
         }
         BaseRespModel<Coupon> baseRespModel = new BaseRespModel<>();
         int i = couponService.add(coupon);
-//        List<Coupon> couponList = couponService.selectList(coupon.getName(), coupon.getStatus(), coupon.getType(), null, null);
+        Coupon coupon1 = couponService.selectByName(coupon.getName());
         if (i>0){
-            baseRespModel.setData(coupon);
+            baseRespModel.setData(coupon1);
             baseRespModel.setErrmsg("成功");
             baseRespModel.setErrno(0);
             return baseRespModel;

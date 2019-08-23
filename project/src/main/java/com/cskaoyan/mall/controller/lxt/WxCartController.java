@@ -96,7 +96,7 @@ public class WxCartController {
             cart.setGoodsName(goods.getName());
             cart.setGoodsSn(goods.getGoodsSn());
             cart.setPicUrl(goods.getPicUrl());
-            cart.setPrice(BigDecimal.valueOf(goods.getRetailPrice().intValue() * addCart.getNumber()));
+//            cart.setPrice(BigDecimal.valueOf(goods.getRetailPrice().intValue() * addCart.getNumber()));
             Goodsproduct goodsproduct = new Goodsproduct();
             goodsproduct = goodsproductMapper.selectByPrimaryKey(addCart.getProductId());
             cart.setSpecifications(Arrays.toString(goodsproduct.getSpecifications()));
@@ -174,7 +174,7 @@ public class WxCartController {
             cart.setGoodsName(goods.getName());
             cart.setGoodsSn(goods.getGoodsSn());
             cart.setPicUrl(goods.getPicUrl());
-            cart.setPrice(BigDecimal.valueOf(goods.getRetailPrice().intValue() * fastAdd.getNumber()));
+//            cart.setPrice(BigDecimal.valueOf(goods.getRetailPrice().intValue() * fastAdd.getNumber()));
             Goodsproduct goodsproduct = new Goodsproduct();
             goodsproduct = goodsproductMapper.selectByPrimaryKey(fastAdd.getProductId());
             cart.setSpecifications(Arrays.toString(goodsproduct.getSpecifications()));

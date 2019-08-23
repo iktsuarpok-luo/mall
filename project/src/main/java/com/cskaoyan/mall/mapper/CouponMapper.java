@@ -35,4 +35,6 @@ public interface CouponMapper {
     List<Coupon> selectListByStatus(short status);
 
     List<Coupon> selectListByCode(String code);
+
+    Coupon selectByName(String name);
 }

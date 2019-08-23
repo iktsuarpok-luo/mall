@@ -136,6 +136,12 @@
     from cskaoyan_mall_coupon
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectByName" parameterType="string" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from cskaoyan_mall_coupon
+    where name = #{name,jdbcType=VARCHAR}
+  </select>
 
   <select id="selectListByStatus" parameterType="short" resultMap="BaseResultMap">
     select
