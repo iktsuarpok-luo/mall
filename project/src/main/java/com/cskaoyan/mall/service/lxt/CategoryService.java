@@ -20,4 +20,6 @@ public interface CategoryService {
     List<Category> getSubCategory(int id);
 
     List<Category> getCategoryByPid();
+
+    List<Category> filterCategoryList();
 }

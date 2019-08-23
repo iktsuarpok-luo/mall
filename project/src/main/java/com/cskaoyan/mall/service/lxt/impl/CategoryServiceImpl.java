@@ -130,4 +130,11 @@ public class CategoryServiceImpl implements CategoryService {
         }
         return list;
     }
+
+    @Override
+    public List<Category> filterCategoryList() {
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.createCriteria().andLevelEqualTo("L2");
+        return categoryMapper.selectByExample(categoryExample);
+    }
 }

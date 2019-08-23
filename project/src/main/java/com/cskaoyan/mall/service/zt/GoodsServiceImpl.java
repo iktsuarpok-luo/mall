@@ -177,6 +177,117 @@ public class GoodsServiceImpl implements GoodsService {
         List<Goods> goods = goodsMapper.selectByExample(goodsExample);
         return goods;
     }
+
+    @Override
+    public List<Goods> goodsList(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int count(int id) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andCategoryIdEqualTo(id);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public int countByIsNew(boolean isNew) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsNew(boolean isNew,String order,String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int countByIsHot(boolean isHot) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsHot(boolean isHot, String order, String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsHotAndId(boolean isHot, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsHotEqualTo(isHot).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByIsNewAndId(boolean isNew, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andIsNewEqualTo(isNew).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public int CountAllGoods() {
+        GoodsExample goodsExample = new GoodsExample();
+        goodsExample.createCriteria().andGoodsSnIsNotNull();
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public int countByKeyword(String keyword) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywodLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywodLike);
+        int count = ((int) goodsMapper.countByExample(goodsExample));
+        return count;
+    }
+
+    @Override
+    public List<Goods> goodsListByKeyword(String keyword, String order, String sort) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywordLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywordLike);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
+
+    @Override
+    public List<Goods> goodsListByKeywordAndId(String keyword, String order, String sort, Integer categoryId) {
+        GoodsExample goodsExample = new GoodsExample();
+        String keywordLike = "%" + keyword + "%";
+        goodsExample.createCriteria().andNameLike(keywordLike).andCategoryIdEqualTo(categoryId);
+        goodsExample.setOrderByClause(sort + " " + order);
+
+        List<Goods> goods = goodsMapper.selectByExample(goodsExample);
+        return goods;
+    }
 }
 
 
